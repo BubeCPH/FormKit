@@ -1,0 +1,118 @@
+<div class='cover'>
+    <div class="inner"><h1>Settings</h1></div>
+</div>
+<div class='container'>
+    <div class='inner'>
+        <section class='page'>
+            <div class='settings-wrapper'>
+                <nav>
+                    <ul>
+                        <li class="profile"><a href="/<?= $this->appConfig->values['application']['path']; ?>/<?= $this->view; ?>/Profile">Your profile</a></li>
+                        <li class="sessions"><a href="/<?= $this->appConfig->values['application']['path']; ?>/<?= $this->view; ?>/Sessions">Active sessions</a></li>
+                        <li class="settings"><a href="/<?= $this->appConfig->values['application']['path']; ?>/<?= $this->view; ?>/Settings">Organization</a></li>
+                        <li class="users active"><a href="/<?= $this->appConfig->values['application']['path']; ?>/<?= $this->view; ?>/Users">Users</a></li>
+                        <li class="clients"><a href="/<?= $this->appConfig->values['application']['path']; ?>/<?= $this->view; ?>/Clients">Clients</a></li>
+                        <li class="subscription"><a href="/<?= $this->appConfig->values['application']['path']; ?>/<?= $this->view; ?>/Subscription">Plans &amp; billing</a></li>
+                        <li class="receipts"><a href="/<?= $this->appConfig->values['application']['path']; ?>/<?= $this->view; ?>/Receipts">Receipts</a></li>
+                    </ul>
+
+                </nav>
+                <div class='content '>
+                    <div class='page-header'>
+                        <h1>Users</h1>
+                    </div>
+                    <ul>
+                        <li data-model-data='{"id":3298,"name":"Claus Hjort Bube","email":"chb@kalna.dk","avatar":"https://secure.gravatar.com/avatar/f6ac6862baaffdcf62f4e0047007ddf9.png?d=https%3A%2F%2Fdingapp-static.s3.amazonaws.com%2Favatar.png\u0026r=PG\u0026s=80","admin":true}' data-model='User'>
+                            <div class='info'>
+                                <div class="avatar" size="small" title="Claus Hjort Bube"><span class="overlay"></span><img alt="F6ac6862baaffdcf62f4e0047007ddf9.png?d=https%3a%2f%2fdingapp static.s3.amazonaws.com%2favatar" src="https://secure.gravatar.com/avatar/f6ac6862baaffdcf62f4e0047007ddf9.png?d=https%3A%2F%2Fdingapp-static.s3.amazonaws.com%2Favatar.png&amp;r=PG&amp;s=80" /></div>
+                                <div class='name'>
+                                    <span class='user_name'>Claus Hjort Bube</span>
+                                    <a class='edit-button' href='#'>
+                                        Edit
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class='add-user'>
+                            <a class="button button-save" data-add-user="" href="#">Add new user</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+        <section class='time-tracker' data-time-tracker=''>
+            <div class='tab-bar' data-tab-switcher=''>
+                <a class='active' href='#'>Log time</a>
+                <a class='timer' href='#'>Timer</a>
+            </div>
+            <div class='tabs' data-tabs=''>
+                <div class='active log-time tab'>
+                    <div class='form-wrapper' data-logger=''>
+                        <form accept-charset="UTF-8" action="/entries" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="iBVahSp7wwiAL/hPQBG1BVYPBkgi9P2uKmiJh0ARb9M=" /></div><div class='time-and-date'>
+                                <div class='time'>
+                                    <input class="time" id="entry_time" name="entry[time]" tabindex="1" type="text" />
+                                </div>
+                                <div class='date' data-date-picker=''>
+                                    <input id="entry_date" name="entry[date]" type="hidden" value="today" />
+                                    <a class='opener' data-opener='' href='#' tabindex='2'>
+                                        <span data-label=''>Today</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class='project' data-clients='[{"id":3468,"name":"Lund Elmer Sandager"},{"id":3391,"name":"test"}]' data-last-project='{"id":5020,"name":"test","client":"test"}' data-project-picker='' data-projects='[{"id":5184,"name":"Konsulentbistand","client":"Lund Elmer Sandager"}]'>
+                                <input data-id-field="" id="entry_project_id" name="entry[project_id]" type="hidden" value="5020" />
+                                <a class='opener' data-opener='' href='#'>
+                                    <span class='client-name'>test</span>
+                                    <span class='project-name'>test</span>
+                                </a>
+                            </div>
+
+                            <div class='comment'>
+                                <textarea data-behaviour="textarea_autogrow" id="entry_comment" name="entry[comment]" placeholder="Optional comment" tabindex="4">
+                                </textarea>
+                            </div>
+                            <div class='actions'>
+                                <button class="submit-button disabled" name="button" tabindex="5" type="submit">Log time</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                <div class='tab timer' data-timer=''>
+                    <div class='time'>
+                        <div class='elapsed-time' data-time-field=''>
+                            <span class='hours'>00</span>
+                            <span class='separator'>:</span>
+                            <span class='minutes'>00</span>
+                            <span class='separator'>:</span>
+                            <span class='seconds'>00</span>
+                        </div>
+                        <a class='play toggle-timer' data-toggle-timer='' href='#'></a>
+                    </div>
+                    <div class='spent-on'>
+                        <span>Spent working on</span>
+                    </div>
+                    <div class='project' data-clients='[{"id":3468,"name":"Lund Elmer Sandager"},{"id":3391,"name":"test"}]' data-last-project='{"id":5020,"name":"test","client":"test"}' data-project-picker='' data-projects='[{"id":5184,"name":"Konsulentbistand","client":"Lund Elmer Sandager"}]'>
+                        <input data-id-field="" id="timer_project_id" name="timer_project_id" type="hidden" value="5020" />
+                        <a class='opener' data-opener='' href='#'>
+                            <span class='client-name'>test</span>
+                            <span class='project-name'>test</span>
+                        </a>
+                    </div>
+
+                    <div class='comment'>
+                        <textarea data-comment-field="" id="comment" name="comment" placeholder="Optional comment">
+                        </textarea>
+                    </div>
+                    <div class='actions'>
+                        <a class="button" data-delete="" href="#"><i class='icon-delete'></i>
+                        </a><a class="button" data-finish="" href="#"><i class='icon-finish'></i>
+                        </a></div>
+                </div>
+            </div>
+            <div class='notifications' data-time-tracker-notifications=''></div>
+        </section>
+
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <!-- Uncomment this if you have PEAR Log installed
+  <log>
+    <type>file</type>
+    <name>/path/to/propel.log</name>
+    <ident>propel-bookstore</ident>
+    <level>7</level>
+  </log>
+  -->
+  <propel>
+    <datasources default="time">
+      <datasource id="time">
+        <adapter>mysql</adapter> <!-- sqlite, mysql, mssql, oracle, or pgsql -->
+        <connection>
+          <dsn>mysql:host=db11.meebox.net;dbname=kalnadk_udv_time</dsn>
+          <user>kalnadk_klndb</user>
+          <password>57642122</password>
+        </connection>
+      </datasource>
+    </datasources>
+  </propel>
+</config>

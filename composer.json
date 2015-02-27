@@ -1,0 +1,10 @@
+{
+    "name": "InkassoPortal <cb at kalna.dk>",
+    
+    "autoload": {
+        "psr-4":{
+            "App\\": "App",
+            "KalnaBase\\": "vendor/KalnaBase"
+        }
+    }
+}

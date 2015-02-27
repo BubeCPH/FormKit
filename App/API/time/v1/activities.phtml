@@ -1,0 +1,110 @@
+<?php
+
+require_once REPO_PATH . 'Activities.php';
+require_once UTILPATH . 'ApiToken.php';
+$act = new Activities('json');
+$apiToken = new ApiToken();
+
+switch ($this->method) {
+    case 'GET':
+
+        $startdate = trim(filter_input(INPUT_GET, 'startdatetime'), "'\"");
+        $enddate = trim(filter_input(INPUT_GET, 'enddatetime'), "'\"");
+        $date = trim(filter_input(INPUT_GET, 'date'), "'\"");
+        $activityId = trim(filter_input(INPUT_GET, 'activityid'), "'\"");
+        $token = trim(filter_input(INPUT_GET, 'token'), "'\"");
+        $valueArray = $apiToken->getTokenValues($token);
+        $timestamp = $valueArray['timestamp'];
+        $userId = $valueArray['userId'];
+
+
+        if (!empty($this->task) && is_numeric($this->task)) {
+            echo $act->getActivity('id', $this->task);
+        } elseif ($this->task == 'total') {
+            echo $act->getActivityTotal();
+        } elseif (empty($this->task)) {
+            /**
+             * TODO: Return error message
+             * move HTTP-header logic into seperate class, to be called directly from here
+             */
+            $onlyFavorites = trim(filter_input(INPUT_GET, 'onlyFavorites'), "'\"");
+            $of = !empty($onlyFavorites) ? $onlyFavorites : 0;
+            echo $act->getActivities($of);
+//            $rep->filterBy('UserId', $userId);
+//            if (!empty($date)) {
+//                $rep->filterBy('StartDate', $date);
+//            } else {
+//                if (!empty($startdate)) {
+//                    $rep->filterBy('StartDate', $startdate, Criteria::GREATER_EQUAL);
+//                }
+//                if (!empty($enddate)) {
+//                    $rep->filterBy('EndDate', $enddate, Criteria::LESS_EQUAL);
+//                }
+//            }
+//            if (!empty($activityId)) {
+//                $rep->filterBy('ActivityId', $activityId, Criteria::EQUAL);
+//            }
+//            $rep->find();
+//            //echo $apiToken->getToken(1);
+//            echo $rep->getJSON();
+        } else {
+            //$rep->findAll();
+            //echo $rep->getJSON();
+            echo 'TEST';
+        }
+        break;
+    case 'POST':
+        $data = json_decode(file_get_contents("php://input"));
+        $activityId = $data->activityid;
+        $parentId = $data->parentid;
+        $startTime = $data->code;
+        $description = $data->description;
+        $endTime = $data->favorite;
+        $sortOrder = $data->sortorder;
+        /**
+         * Parse JSON
+         */
+        if (!empty($this->task) && is_numeric($this->task)) {
+            $activityId = $this->task;
+            if (!empty($startTime) || !empty($endTime) || !empty($description)) {
+                echo $act->update($userId, (int)$activityId, (int)$startTime, (int)$endTime, $description);
+            }
+        }
+        break;
+    case 'PUT':
+        $data = json_decode(file_get_contents("php://input"));
+        $parentId = $data->parentid;
+        $code = $data->code;
+        $description = $data->description;
+        $favorite = $data->favorite;
+        $sortOrder = $data->sortorder;
+        if (!empty($this->task) && is_numeric($this->task)) {
+            $parentId = $this->task;
+            if (!empty($code) || !empty($description)) {
+                echo $act->add((int)$parentId, $code, $description, (int)$favorite, (int)$sortOrder);
+            }
+        } elseif (is_numeric($parentId)) {
+            if (!empty($code) || !empty($description)) {
+                echo $act->add((int)$parentId, $code, $description, (int)$favorite, (int)$sortOrder);
+            }
+        } elseif (empty($this->task) && !is_numeric($parentId)) {
+            if (!empty($code) || !empty($description)) {
+                echo $act->add(null, $code, $description, (int)$favorite, (int)$sortOrder);
+            }
+        }
+        break;
+    case 'DELETE':
+        /**
+         * Parse JSON
+         */
+        if (!empty($this->task) && is_numeric($this->task)) {
+            echo $act->delete($userId, $this->task);
+        } else {
+            echo NULL;
+        }
+        break;
+
+    default:
+        echo $this->method;
+        break;
+}

@@ -1,0 +1,139 @@
+<div class='cover'>
+    <div class="inner"><h1>Settings</h1></div>
+</div>
+<div class='container'>
+    <div class='inner'>
+        <section class='page'>
+            <div class='settings-wrapper'>
+                <nav>
+                    <ul>
+                        <li class="profile active"><a href="/<?= $this->appConfig->values['application']['path']; ?>/<?= $this->view; ?>/Profile">Your profile</a></li>
+                        <li class="sessions"><a href="/<?= $this->appConfig->values['application']['path']; ?>/<?= $this->view; ?>/Sessions">Active sessions</a></li>
+                        <li class="settings"><a href="/<?= $this->appConfig->values['application']['path']; ?>/<?= $this->view; ?>/Settings">Organization</a></li>
+                        <li class="users"><a href="/<?= $this->appConfig->values['application']['path']; ?>/<?= $this->view; ?>/Users">Users</a></li>
+                        <li class="clients"><a href="/<?= $this->appConfig->values['application']['path']; ?>/<?= $this->view; ?>/Clients">Clients</a></li>
+                        <li class="subscription"><a href="/<?= $this->appConfig->values['application']['path']; ?>/<?= $this->view; ?>/Subscription">Plans &amp; billing</a></li>
+                        <li class="receipts"><a href="/<?= $this->appConfig->values['application']['path']; ?>/<?= $this->view; ?>/Receipts">Receipts</a></li>
+                    </ul>
+
+                </nav>
+                <div class='content '>
+                    <div class='page-header'>
+                        <h1>Your profile</h1>
+                    </div>
+                    <form accept-charset="UTF-8" action="/profile" class="edit_user" enctype="multipart/form-data" id="edit_user_3298" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="patch" /><input name="authenticity_token" type="hidden" value="iBVahSp7wwiAL/hPQBG1BVYPBkgi9P2uKmiJh0ARb9M=" /></div>
+                        <div class='profile-picture'>
+                            <div class='avatar' data-action='select-file'>
+                                <img alt="Profile picture" class="image" height="128" src="https://d1svzc13qlipt8.cloudfront.net/assets/time-tracker/profile-picture-placeholder-13094c26240996f490bcc26ba7434ef5.png" width="128" />
+                            </div>
+                            <h2>Profile picture</h2>
+                            <p>The picture is shown next to your entries.</p>
+                            <input id="user_avatar" name="user[avatar]" type="file" />
+                            <div class='actions'>
+                                <a class="button button-cancel" data-action="select-file" href="#">Change</a>
+                            </div>
+                        </div>
+                        <div class="form-row text-field" data-field-name="name"><label for="user_name">Name</label><div class="controls"><input id="user_name" name="user[name]" type="text" value="Claus Hjort Bube" /></div></div>
+                        <div class="form-row email-field" data-field-name="email"><label for="user_email">Email</label><div class="controls"><input id="user_email" name="user[email]" type="email" value="chb@kalna.dk" /></div></div>
+                        <h2>Personal settings</h2>
+                        <div class='form-row clock-format'>
+                            <label>Time format</label>
+                            <div class='controls radio'>
+                                <label for='user_time_format_24_hour'>
+                                    <input checked id='user_time_format_24_hour' name='user[time_format]' type='radio' value='24 hour'>
+                                    24 hour
+                                </label>
+                                <label for='user_time_format_12_hour'>
+                                    <input id='user_time_format_12_hour' name='user[time_format]' type='radio' value='12 hour'>
+                                    12 hour
+                                </label>
+                            </div>
+                        </div>
+                        <h2>
+                            Change password
+                            <span class='light'>(or leave this blank)</span>
+                        </h2>
+                        <div class="form-row password-field" data-field-name="password"><label for="user_password">Password</label><div class="controls"><input id="user_password" name="user[password]" type="password" /></div></div>
+                        <div class="form-row password-field" data-field-name="password_confirmation"><label for="user_password_confirmation">Confirm</label><div class="controls"><input id="user_password_confirmation" name="user[password_confirmation]" type="password" /></div></div>
+                        <input class="button button-save" name="commit" type="submit" value="Save" />
+                    </form>
+
+                </div>
+            </div>
+
+        </section>
+        <section class='time-tracker' data-time-tracker=''>
+            <div class='tab-bar' data-tab-switcher=''>
+                <a class='active' href='#'>Log time</a>
+                <a class='timer' href='#'>Timer</a>
+            </div>
+            <div class='tabs' data-tabs=''>
+                <div class='active log-time tab'>
+                    <div class='form-wrapper' data-logger=''>
+                        <form accept-charset="UTF-8" action="/entries" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="iBVahSp7wwiAL/hPQBG1BVYPBkgi9P2uKmiJh0ARb9M=" /></div><div class='time-and-date'>
+                                <div class='time'>
+                                    <input class="time" id="entry_time" name="entry[time]" tabindex="1" type="text" />
+                                </div>
+                                <div class='date' data-date-picker=''>
+                                    <input id="entry_date" name="entry[date]" type="hidden" value="today" />
+                                    <a class='opener' data-opener='' href='#' tabindex='2'>
+                                        <span data-label=''>Today</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class='project' data-clients='[{"id":3468,"name":"Lund Elmer Sandager"},{"id":3391,"name":"test"}]' data-last-project='{"id":5020,"name":"test","client":"test"}' data-project-picker='' data-projects='[{"id":5184,"name":"Konsulentbistand","client":"Lund Elmer Sandager"}]'>
+                                <input data-id-field="" id="entry_project_id" name="entry[project_id]" type="hidden" value="5020" />
+                                <a class='opener' data-opener='' href='#'>
+                                    <span class='client-name'>test</span>
+                                    <span class='project-name'>test</span>
+                                </a>
+                            </div>
+
+                            <div class='comment'>
+                                <textarea data-behaviour="textarea_autogrow" id="entry_comment" name="entry[comment]" placeholder="Optional comment" tabindex="4">
+                                </textarea>
+                            </div>
+                            <div class='actions'>
+                                <button class="submit-button disabled" name="button" tabindex="5" type="submit">Log time</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                <div class='tab timer' data-timer=''>
+                    <div class='time'>
+                        <div class='elapsed-time' data-time-field=''>
+                            <span class='hours'>00</span>
+                            <span class='separator'>:</span>
+                            <span class='minutes'>00</span>
+                            <span class='separator'>:</span>
+                            <span class='seconds'>00</span>
+                        </div>
+                        <a class='play toggle-timer' data-toggle-timer='' href='#'></a>
+                    </div>
+                    <div class='spent-on'>
+                        <span>Spent working on</span>
+                    </div>
+                    <div class='project' data-clients='[{"id":3468,"name":"Lund Elmer Sandager"},{"id":3391,"name":"test"}]' data-last-project='{"id":5020,"name":"test","client":"test"}' data-project-picker='' data-projects='[{"id":5184,"name":"Konsulentbistand","client":"Lund Elmer Sandager"}]'>
+                        <input data-id-field="" id="timer_project_id" name="timer_project_id" type="hidden" value="5020" />
+                        <a class='opener' data-opener='' href='#'>
+                            <span class='client-name'>test</span>
+                            <span class='project-name'>test</span>
+                        </a>
+                    </div>
+
+                    <div class='comment'>
+                        <textarea data-comment-field="" id="comment" name="comment" placeholder="Optional comment">
+                        </textarea>
+                    </div>
+                    <div class='actions'>
+                        <a class="button" data-delete="" href="#"><i class='icon-delete'></i>
+                        </a><a class="button" data-finish="" href="#"><i class='icon-finish'></i>
+                        </a></div>
+                </div>
+            </div>
+            <div class='notifications' data-time-tracker-notifications=''></div>
+        </section>
+
+    </div>
+</div>

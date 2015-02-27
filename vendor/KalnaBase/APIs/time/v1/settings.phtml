@@ -1,0 +1,41 @@
+<?php
+
+require_once REPO_PATH . 'Settings.php';
+$rep = new Settings();
+
+switch ($this->method) {
+    case 'GET':
+        if (!empty($this->task) && is_numeric($this->task)) {
+            $rep->findById($this->task);
+            echo $rep->getJSON();
+        } elseif (!empty($this->task)) {
+            /**
+             * TODO: Return error message
+             * move HTTP-header logic into seperate class, to be called directly from here
+             */
+            //echo $rep->getJSON();
+        } else {
+            $rep->findAll();
+            echo $rep->getJSON();
+        }
+        break;
+    case 'POST':
+        if (!empty($this->task) && is_numeric($this->task)) {
+            $rep->findById($this->task);
+            echo $rep->getJSON();
+        } elseif (!empty($this->task)) {
+            /**
+             * TODO: Return error message
+             * move HTTP-header logic into seperate class, to be called directly from here
+             */
+            echo $rep->getJSON();
+        } else {
+            $rep->findAll();
+            echo $rep->getJSON();
+        }
+        break;
+
+    default:
+        echo $this->method;
+        break;
+}

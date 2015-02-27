@@ -1,0 +1,142 @@
+<div class='container'>
+    <div class='inner'>
+        <section class='page'>
+            <div class='active-projects'>
+                <div class='page-header'>
+                    <h1>Active projects</h1>
+                    <div class='actions'>
+                        <div class='button-group'>
+                            <a class="button new" href="/projects/new">Add new</a>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class='clients' data-scope='active'>
+                    <li class='client' data-id='3468'>
+                        <h2>Lund Elmer Sandager</h2>
+                        <ul class='projects'>
+                            <li data-project='{"id":5184,"slug":"konsulentbistand","name":"Konsulentbistand","client":{"id":3468,"slug":"lund-elmer-sandager","name":"Lund Elmer Sandager"},"archived":null,"budget":0.0,"minutes_spent":360}'>
+                                <span class='progress' style='width: 0%'></span>
+                                <a href="/clients/lund-elmer-sandager/projects/konsulentbistand"><h3>Konsulentbistand</h3>
+                                    <div class='budget'>
+                                        6h 
+                                    </div>
+                                </a><div class='actions' data-project-dropdown=''>
+                                    <a class="opener" data-opener="" href="#">Actions</a>
+                                    <ul data-dropdown-container=''>
+                                        <li><a href="/clients/lund-elmer-sandager/projects/konsulentbistand/edit">Edit project</a></li>
+                                        <li><a data-mark-as-billed="" data-url="/clients/lund-elmer-sandager/projects/konsulentbistand/mark-all-as-billed" href="#">Mark as billed</a></li>
+                                        <li><a data-toggle-archived="" href="#">Set to archived</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class='client' data-id='3391'>
+                        <h2>test</h2>
+                        <ul class='projects'>
+                            <li data-project='{"id":5020,"slug":"test","name":"test","client":{"id":3391,"slug":"test","name":"test"},"archived":false,"budget":100.0,"minutes_spent":0}'>
+                                <span class='progress' style='width: 0%'></span>
+                                <a href="/clients/test/projects/test"><h3>test</h3>
+                                    <div class='budget'>
+                                        0h of 100h 
+                                    </div>
+                                </a><div class='actions' data-project-dropdown=''>
+                                    <a class="opener" data-opener="" href="#">Actions</a>
+                                    <ul data-dropdown-container=''>
+                                        <li><a href="/clients/test/projects/test/edit">Edit project</a></li>
+                                        <li><a data-mark-as-billed="" data-url="/clients/test/projects/test/mark-all-as-billed" href="#">Mark as billed</a></li>
+                                        <li><a data-toggle-archived="" href="#">Set to archived</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <div class='archived-projects'>
+                <div class='page-header'>
+                    <h1>Archived projects</h1>
+                </div>
+                <div class='no-projects'>
+                    <p>Done with a project? Archive it, and it will end up here. Archived projects stays out of your way, but still count in statistics. You can of course bring it back whenever you like.</p>
+                </div>
+            </div>
+
+        </section>
+        <section class='time-tracker' data-time-tracker=''>
+            <div class='tab-bar' data-tab-switcher=''>
+                <a class='active' href='#'>Log time</a>
+                <a class='timer' href='#'>Timer</a>
+            </div>
+            <div class='tabs' data-tabs=''>
+                <div class='active log-time tab'>
+                    <div class='form-wrapper' data-logger=''>
+                        <form accept-charset="UTF-8" action="/entries" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="iBVahSp7wwiAL/hPQBG1BVYPBkgi9P2uKmiJh0ARb9M=" /></div><div class='time-and-date'>
+                                <div class='time'>
+                                    <input class="time" id="entry_time" name="entry[time]" tabindex="1" type="text" />
+                                </div>
+                                <div class='date' data-date-picker=''>
+                                    <input id="entry_date" name="entry[date]" type="hidden" value="today" />
+                                    <a class='opener' data-opener='' href='#' tabindex='2'>
+                                        <span data-label=''>Today</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class='project' data-clients='[{"id":3468,"name":"Lund Elmer Sandager"},{"id":3391,"name":"test"}]' data-last-project='{"id":5020,"name":"test","client":"test"}' data-project-picker='' data-projects='[{"id":5184,"name":"Konsulentbistand","client":"Lund Elmer Sandager"},{"id":5020,"name":"test","client":"test"}]'>
+                                <input data-id-field="" id="entry_project_id" name="entry[project_id]" type="hidden" value="5020" />
+                                <a class='opener' data-opener='' href='#'>
+                                    <span class='client-name'>test</span>
+                                    <span class='project-name'>test</span>
+                                </a>
+                            </div>
+
+                            <div class='comment'>
+                                <textarea data-behaviour="textarea_autogrow" id="entry_comment" name="entry[comment]" placeholder="Optional comment" tabindex="4">
+                                </textarea>
+                            </div>
+                            <div class='actions'>
+                                <button class="submit-button disabled" name="button" tabindex="5" type="submit">Log time</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                <div class='tab timer' data-timer=''>
+                    <div class='time'>
+                        <div class='elapsed-time' data-time-field=''>
+                            <span class='hours'>00</span>
+                            <span class='separator'>:</span>
+                            <span class='minutes'>00</span>
+                            <span class='separator'>:</span>
+                            <span class='seconds'>00</span>
+                        </div>
+                        <a class='play toggle-timer' data-toggle-timer='' href='#'></a>
+                    </div>
+                    <div class='spent-on'>
+                        <span>Spent working on</span>
+                    </div>
+                    <div class='project' data-clients='[{"id":3468,"name":"Lund Elmer Sandager"},{"id":3391,"name":"test"}]' data-last-project='{"id":5020,"name":"test","client":"test"}' data-project-picker='' data-projects='[{"id":5184,"name":"Konsulentbistand","client":"Lund Elmer Sandager"},{"id":5020,"name":"test","client":"test"}]'>
+                        <input data-id-field="" id="timer_project_id" name="timer_project_id" type="hidden" value="5020" />
+                        <a class='opener' data-opener='' href='#'>
+                            <span class='client-name'>test</span>
+                            <span class='project-name'>test</span>
+                        </a>
+                    </div>
+
+                    <div class='comment'>
+                        <textarea data-comment-field="" id="comment" name="comment" placeholder="Optional comment">
+                        </textarea>
+                    </div>
+                    <div class='actions'>
+                        <a class="button" data-delete="" href="#"><i class='icon-delete'></i>
+                        </a><a class="button" data-finish="" href="#"><i class='icon-finish'></i>
+                        </a></div>
+                </div>
+            </div>
+            <div class='notifications' data-time-tracker-notifications=''></div>
+        </section>
+
+    </div>
+</div>

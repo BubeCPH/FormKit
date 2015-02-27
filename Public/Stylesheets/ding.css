@@ -1,0 +1,4907 @@
+/*
+@font-face {
+    font-family: "ProximaNovaAlt";
+    font-style: normal;
+    font-weight: 200;
+    src: url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_thin-webfont-568d3eaa9ad93fcbc12d7951392b5260.eot?#iefix") format("embedded-opentype"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_thin-webfont-42354d90189a550970e01698978cc079.woff") format("woff"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_thin-webfont-b18a1754c959b1ca18766ee7cf9f87b2.ttf") format("truetype");
+}
+@font-face {
+    font-family: "ProximaNovaAlt";
+    font-style: italic;
+    font-weight: 200;
+    src: url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_thin_italic-webfont-1bf784be32b5bdec40beeff39420d9b1.eot?#iefix") format("embedded-opentype"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_thin_italic-webfont-911f4f32944503f7b24f2cf84610ebee.woff") format("woff"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_thin_italic-webfont-0158d97abe597a492aa0fb8d2a2312cc.ttf") format("truetype");
+}
+@font-face {
+    font-family: "ProximaNovaAlt";
+    font-style: normal;
+    font-weight: 300;
+    src: url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_light-webfont-f8a9fde4ee609ccf25b50fe6f9b5728d.eot?#iefix") format("embedded-opentype"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_light-webfont-8f3002b016882d3be384da21057c6d12.woff") format("woff"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_light-webfont-7bff586095be4963d5a89938d3521c2d.ttf") format("truetype");
+}
+@font-face {
+    font-family: "ProximaNovaAlt";
+    font-style: italic;
+    font-weight: 300;
+    src: url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_light_italic-webfont-9b1aca7d1a0b6a4ee4cf223df8430a5a.eot?#iefix") format("embedded-opentype"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_light_italic-webfont-98aa36fee0a563f7197a1f2c4d1422d2.woff") format("woff"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_light_italic-webfont-6b6f5b7f1ca0dcf64c72dcc113a7859c.ttf") format("truetype");
+}
+@font-face {
+    font-family: "ProximaNovaAlt";
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_regular-webfont-fecc906eff8c9d6b08a1c0807926e393.eot?#iefix") format("embedded-opentype"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_regular-webfont-ffc11a8f8efc93fcc091c90cc7bfcf64.woff") format("woff"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_regular-webfont-d89de094a7849bed2746fa2ae1ac3ee1.ttf") format("truetype");
+}
+@font-face {
+    font-family: "ProximaNovaAlt";
+    font-style: italic;
+    font-weight: 400;
+    src: url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_regular_italic-webfont-8fb345f5d30eda2e337d2ca2cbdecb14.eot?#iefix") format("embedded-opentype"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_regular_italic-webfont-5bd7afdc34f57c683b6ff7f50fb9398a.woff") format("woff"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_regular_italic-webfont-e32abb9e9e91305d3e9c77e77338240d.ttf") format("truetype");
+}
+@font-face {
+    font-family: "ProximaNovaAlt";
+    font-style: normal;
+    font-weight: 600;
+    src: url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_semibold-webfont-0a877947a533db1266abeb87e047abd4.eot?#iefix") format("embedded-opentype"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_semibold-webfont-ddfd24205ecf1daa7d7ba108c6a87006.woff") format("woff"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_semibold-webfont-bc96d2009ec66b70542bfae56a9b793e.ttf") format("truetype");
+}
+@font-face {
+    font-family: "ProximaNovaAlt";
+    font-style: italic;
+    font-weight: 600;
+    src: url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_semibold_italic-webfont-d85727e0c955417e13b40e7436122213.eot?#iefix") format("embedded-opentype"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_semibold_italic-webfont-6a8c0a3fd7c300bc1c6f18f937d52357.woff") format("woff"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_semibold_italic-webfont-84beb69572a57480787e1cbea28409a8.ttf") format("truetype");
+}
+@font-face {
+    font-family: "ProximaNovaAlt";
+    font-style: normal;
+    font-weight: 800;
+    src: url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_bold-webfont-f46244270d91eaf580f0f209be864c35.eot?#iefix") format("embedded-opentype"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_bold-webfont-9a7e4786a7f3529cf110980cc7d9e111.woff") format("woff"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_bold-webfont-e0478fd90997eb76f3af613d795be0cd.ttf") format("truetype");
+}
+@font-face {
+    font-family: "ProximaNovaAlt";
+    font-style: italic;
+    font-weight: 800;
+    src: url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_bold_italic-webfont-2716f756f34fb5f4b4994b43cf79dc12.eot?#iefix") format("embedded-opentype"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_bold_italic-webfont-dffb193652e7f07382457ffbaeb00e59.woff") format("woff"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_bold_italic-webfont-805d4dcb8550e7657fe5f9320038ba7a.ttf") format("truetype");
+}
+@font-face {
+    font-family: "ProximaNovaAlt";
+    font-style: normal;
+    font-weight: 900;
+    src: url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_black-webfont-e448e8075283c734bba7db8e6a9a5c10.eot?#iefix") format("embedded-opentype"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_black-webfont-6a8adf8cc2d1826befa731af934db538.woff") format("woff"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_black-webfont-f43a55943a1f7d7822d9e9ae4bc18960.ttf") format("truetype");
+}
+@font-face {
+    font-family: "ProximaNovaAlt";
+    font-style: italic;
+    font-weight: 900;
+    src: url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_black_italic-webfont-09edf45f7baf30b03bbfcb162ffc4e0b.eot?#iefix") format("embedded-opentype"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_black_italic-webfont-56cb2c18e845da832f04e82969787e30.woff") format("woff"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Proxima/proxima_nova_alt_black_italic-webfont-c33592642ae4e2de4d67cc691ad26738.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    src: url("https://d1svzc13qlipt8.cloudfront.net/assets/Montserrat/montserrat-regular-webfont-733d7b7d2f393fa383766bebcc4c5532.eot?#iefix") format("embedded-opentype"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Montserrat/montserrat-regular-webfont-89c8c2c290d9309ee26226fcd66c0b1e.woff") format("woff"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Montserrat/montserrat-regular-webfont-6f55d66a7b0242bd3fb49bc41cf6d465.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    src: url("https://d1svzc13qlipt8.cloudfront.net/assets/Montserrat/montserrat-bold-webfont-910f9773d5b6080242026a21797289ab.eot?#iefix") format("embedded-opentype"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Montserrat/montserrat-bold-webfont-fb3d506e5785c3a508f8b6a0fe81ad60.woff") format("woff"), url("https://d1svzc13qlipt8.cloudfront.net/assets/Montserrat/montserrat-bold-webfont-f978b597d17edb54b1e07eed4fe63d25.ttf") format("truetype");
+}*/
+.kalendae {
+    background: none repeat scroll 0 0 #edeae6;
+    border: 0 none;
+    font-size: 14px;
+    padding: 5px;
+}
+.kalendae:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.kalendae .k-calendar {
+}
+.kalendae .k-calendar:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.kalendae .k-title {
+    padding: 4px 0 7px;
+    position: relative;
+    text-align: center;
+}
+.kalendae .k-btn-previous-year, .kalendae .k-btn-next-year {
+    display: none;
+}
+.kalendae .k-btn-previous-month, .kalendae .k-btn-next-month {
+    border-radius: 22px;
+    color: #4b4b4b;
+    font-size: 25px;
+    font-weight: bold;
+    height: 22px;
+    line-height: 1.25;
+    position: absolute;
+    top: 3px;
+    width: 22px;
+}
+.kalendae .k-btn-previous-month:hover, .kalendae .k-btn-next-month:hover {
+    background: none repeat scroll 0 0 #d1ceca;
+}
+.kalendae .k-btn-previous-month:after, .kalendae .k-btn-next-month:after {
+    position: relative;
+    top: -6px;
+}
+.kalendae .k-btn-previous-month {
+    left: 0;
+}
+.kalendae .k-btn-previous-month:after {
+    content: "‹";
+}
+.kalendae .k-btn-next-month {
+    right: 0;
+}
+.kalendae .k-btn-next-month:after {
+    content: "›";
+}
+.kalendae .k-caption {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1;
+    text-transform: none;
+}
+.kalendae .k-header, .kalendae .k-days {
+}
+.kalendae .k-header:after, .kalendae .k-days:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.kalendae .k-header > span, .kalendae .k-days > span {
+    border: 0 none;
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 14.2857%;
+}
+.kalendae .k-header {
+    font-size: 14px;
+    padding: 0 0 2px;
+}
+.kalendae .k-header span {
+    color: #4b4b4b;
+    font-weight: 600;
+}
+.kalendae .k-title {
+    padding: 4px 0 7px;
+}
+.kalendae .k-days span {
+    border-radius: 2px;
+    color: #999999;
+    height: 30px;
+    line-height: 1;
+    padding: 9px 0 0;
+    text-align: center;
+}
+.kalendae .k-days span.k-active {
+    background: none repeat scroll 0 0 transparent;
+    color: #333333;
+    transition-duration: 0.15s;
+    transition-property: background;
+}
+.kalendae .k-days span.k-active:hover {
+    background: none repeat scroll 0 0 white;
+    cursor: pointer;
+}
+.kalendae .k-days span.k-selected {
+    background: none repeat scroll 0 0 white;
+}
+.kalendae .k-days span.k-today {
+    font-weight: bold;
+    text-decoration: none;
+}
+.kalendae .k-days span.in-month {
+    color: #afaba5;
+}
+.kalendae .k-days span.k-out-of-month {
+    color: #d1ceca;
+}
+.kalendae .k-days span.k-range {
+    background: none repeat scroll 0 0 #c2f3c9;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    -moz-font-feature-settings: inherit;
+    -moz-font-language-override: inherit;
+    border: 0 none;
+    font-family: inherit;
+    font-size: 100%;
+    font-size-adjust: inherit;
+    font-stretch: inherit;
+    font-style: inherit;
+    font-variant: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+html {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none outside none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+caption, th, td {
+    font-weight: normal;
+    text-align: left;
+    vertical-align: middle;
+}
+q, blockquote {
+    quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+    content: none;
+}
+a img {
+    border: medium none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+    display: block;
+}
+body {
+    background: url("/Public/Images/Backgrounds/colorful-grunge-texture-1.jpg") repeat scroll 0 0 #f2f1ec;
+    color: #474646;
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.3;
+    min-width: 320px;
+    overflow-y: scroll;
+}
+body, input[type="text"], input[type="email"], input[type="number"], input[type="password"], textarea, button {
+    background: none repeat scroll 0 0 #f2f0ed;
+    color: #474646;
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+input[type="text"], input[type="email"], input[type="number"], textarea, button {
+    border-radius: 2px;
+}
+input[type="text"], input[type="email"], input[type="number"], input[type="submit"], textarea, button {
+    -moz-appearance: none;
+}
+a {
+    color: #4aad59;
+    text-decoration: none;
+}
+a:hover {
+    color: #429f4f;
+}
+b, strong {
+    font-weight: bold;
+}
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+@media screen and (max-width: 350px) {
+    h1 {
+        font-size: 25px;
+    }
+}
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+b, strong {
+    font-weight: bold;
+}
+*::-moz-selection {
+    background-color: rgba(0, 0, 0, 0.2);
+    text-shadow: none;
+}
+.hidden {
+    display: none;
+}
+.avatar, .client-image {
+    background: none repeat scroll 0 0 #f2f2f2;
+    border-radius: 19px;
+    display: block;
+    height: 38px;
+    position: relative;
+    width: 38px;
+}
+.avatar .overlay, .client-image .overlay {
+    border-radius: 19px;
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.avatar img, .client-image img {
+    border-radius: 19px;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.notification {
+    background: none repeat scroll 0 0 #eeeeee;
+    border-radius: 2px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    padding: 9px 10px 8px 9px;
+}
+.notification.alert {
+    background: none repeat scroll 0 0 #ee6b5f;
+    color: white;
+}
+.notification.notice {
+    background: none repeat scroll 0 0 #59c96e;
+    box-shadow: 0 2px 0 #59c96e inset;
+    color: white;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+*::-moz-selection {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    text-shadow: none;
+}
+.select2-results {
+    margin: 0;
+    padding: 0;
+}
+.select2-search input {
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+.select2-container .select2-choice {
+    background-color: #f2f0ed;
+    background-image: none !important;
+    border-radius: 3px;
+    color: #4b4b4b;
+}
+.select2-drop {
+    border-radius: 0;
+}
+.select2-drop ul.select2-results li.select2-highlighted {
+    color: #4b4b4b;
+}
+.select2-drop ul.select2-results li.select2-results-dept-0 .select2-result-label {
+    background: none repeat scroll 0 0 #f2f0ed;
+    color: #6f6e6d;
+    font-size: 12px;
+    margin: 0;
+    padding: 2px 7px 1px;
+    text-transform: uppercase;
+}
+.select2-drop ul.select2-results li.select2-results-dept-0 li.select2-results-dept-1 .select2-result-label {
+    background: none repeat scroll 0 0 white;
+    color: #4b4b4b;
+    font-size: 16px;
+    padding: 5px 0 5px 6px;
+    text-transform: none;
+}
+.select2-drop ul.select2-results li.select2-results-dept-0 li.select2-results-dept-1.select2-highlighted .select2-result-label {
+    background: none repeat scroll 0 0 #edeae6;
+}
+.select2-drop, .select2-choice, .select2-container-active {
+    box-shadow: none !important;
+}
+.select2-container-active .select2-choice {
+    border: 1px solid #aaaaaa;
+}
+.activity-indicator {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -8px -344px;
+    background-repeat: no-repeat;
+    display: block;
+    height: 8px;
+    left: 50%;
+    margin-left: -18px;
+    margin-top: -4px;
+    position: absolute;
+    top: 50%;
+    width: 36px;
+}
+@media not all {
+    .activity-indicator {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.activity-indicator-dark, .dropdown-list li a .activity-indicator, header nav .account ul li a .activity-indicator, .projects.index ul.projects li .actions ul li a .activity-indicator, .projects.archived ul.projects li .actions ul li a .activity-indicator, ol.entry-log ul.entries li.entry .actions .dropdown li a .activity-indicator {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -58px -344px;
+    background-repeat: no-repeat;
+}
+@media not all {
+    .activity-indicator-dark, .dropdown-list li a .activity-indicator, header nav .account ul li a .activity-indicator, .projects.index ul.projects li .actions ul li a .activity-indicator, .projects.archived ul.projects li .actions ul li a .activity-indicator, ol.entry-log ul.entries li.entry .actions .dropdown li a .activity-indicator {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.button {
+    background: none repeat scroll 0 0 #edeae6;
+    border: 0 none;
+    border-radius: 2px;
+    color: #6f6e6d;
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    margin-right: 4px;
+    padding: 13px 17px 11px;
+    text-transform: uppercase;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+.button:hover {
+    background: none repeat scroll 0 0 #e4e1dc;
+    color: #6f6e6d;
+    cursor: pointer;
+}
+.button.button-save {
+    background: none repeat scroll 0 0 #59c96e;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.button.button-save:hover {
+    background: none repeat scroll 0 0 #4aad59;
+    color: white;
+}
+.button.button-save:active {
+    background: none repeat scroll 0 0 #4aad59;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1) inset;
+}
+.button.button-cancel {
+    background: none repeat scroll 0 0 #f2f0ed;
+    color: #6f6e6d;
+}
+.button.button-cancel:hover {
+    background: none repeat scroll 0 0 #e8e5e1;
+    color: #6f6e6d;
+}
+.button.button-delete {
+    background: none repeat scroll 0 0 #ee6b5f;
+    color: white;
+    font-weight: 800;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+}
+.button.button-delete:hover {
+    background: none repeat scroll 0 0 #d54a43;
+    color: white;
+}
+.button.button-delete-light {
+    background: none repeat scroll 0 0 transparent;
+    border-color: transparent;
+    font-weight: 400;
+    padding-left: 0;
+}
+.button.button-delete-light:hover {
+    color: #d54a43;
+}
+.button.disabled {
+    background: none repeat scroll 0 0 #c1bbb6;
+    box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.1) inset;
+}
+.button.disabled:hover, .button.disabled:active {
+    background: none repeat scroll 0 0 #c1bbb6;
+    cursor: default;
+}
+.button.button-small {
+    font-size: 12px;
+}
+a.button {
+    display: inline-block;
+}
+html, body {
+    height: 100%;
+}
+header {
+    margin-bottom: 30px;
+}
+.wrap {
+    height: auto !important;
+    margin-bottom: -96px;
+    min-height: 100%;
+    position: relative;
+}
+.wrap > *:last-child:after {
+    content: " ";
+    display: block;
+    height: 131px;
+}
+.container {
+    margin: 0 auto;
+    width: 960px;
+}
+.container .inner {
+    margin-left: -20px;
+}
+.container .inner:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.container .inner > section {
+    float: left;
+}
+.container .inner section.page {
+    float: left;
+    margin-left: 20px;
+    padding: 23px;
+    width: 620px;
+}
+.container .inner section.time-tracker {
+    float: left;
+    margin-left: 20px;
+    padding: 16px;
+    width: 242px;
+}
+/*header .container {
+    position: fixed;
+    margin-left: 25%;
+}*/
+.with-cover header {
+    margin-bottom: 0;
+}
+.with-cover .cover .inner > h1 {
+    margin-bottom: 0;
+}
+footer {
+    position: relative;
+    width: 100%;
+}
+footer .inner {
+    margin: 0 auto;
+    width: 960px;
+}
+@media only screen and (max-width: 1023px) {
+    .cover {
+        display: none;
+    }
+    .with-cover .wrap > .container {
+        margin-top: 0;
+    }
+    .wrap > .container {
+        max-width: 666px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 30px;
+        width: auto;
+    }
+    footer .inner {
+        margin: 0 auto;
+        max-width: 666px;
+        padding: 0 10px;
+    }
+    .wrap > .container .inner {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+    }
+    .wrap > .container .inner section.page, .wrap > .container .inner section.time-tracker {
+        float: none;
+        margin-left: 0;
+        width: auto;
+    }
+    .wrap > .container .inner section.time-tracker {
+        margin-bottom: 38px;
+        order: 1;
+        z-index: 80;
+    }
+    .wrap > .container .inner section.page {
+        order: 2;
+    }
+}
+@media screen and (max-width: 599px) {
+    .wrap {
+        height: auto;
+        margin-bottom: 0;
+        min-height: 0;
+    }
+    .wrap > *:last-child:after {
+        display: none;
+    }
+    .wrap > .container {
+        max-width: 500px;
+        min-width: 300px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@media screen and (max-width: 450px) {
+    header {
+        margin-bottom: 0;
+    }
+    .with-cover .wrap > .container, .wrap > .container {
+        padding-top: 0;
+    }
+    .wrap > .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .wrap > .container .inner section.page {
+        box-shadow: none;
+    }
+    .wrap > .container .inner section.time-tracker {
+        margin-bottom: 25px;
+        margin-top: 25px;
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+}
+header {
+    background: none repeat scroll 0 0 rgba(45,62,80,0.4);
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 999;
+}
+header:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+header .brand {
+    float: left;
+    font-size: 14px;
+    padding-top: 12px;
+}
+header .brand span.logo {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -102px top;
+    background-repeat: no-repeat;
+    display: block;
+    float: left;
+    height: 28px;
+    margin-right: 7px;
+    margin-top: 7px;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 28px;
+}
+@media not all {
+    header .brand span.logo {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+header .brand a {
+    color: #4b4b4b;
+    display: block;
+    line-height: 40px;
+    opacity: 0.8;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+header .brand a span.organization {
+    color: white;
+}
+header .brand a:hover {
+    opacity: 1;
+}
+header nav {
+    float: right;
+}
+header nav ul.main {
+    float: left;
+}
+header nav ul.main li {
+    float: left;
+}
+header nav ul.main li a {
+    color: white;
+    display: block;
+    height: 61px;
+    line-height: 61px;
+    margin: 0;
+    opacity: 0.8;
+    padding: 0 16px 0 38px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+header nav ul.main li a i.icon {
+    display: block;
+    left: 14px;
+    margin-top: -10px;
+    position: absolute;
+    top: 50%;
+}
+header nav ul.main li a:hover {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.1);
+}
+header nav ul.main li a:active {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
+    opacity: 1;
+}
+header nav ul.main li.active a {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.25);
+}
+header nav ul.main li.active a i.icon {
+    opacity: 1;
+}
+header nav ul.main li.activity a i.icon {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: 0 top;
+    background-repeat: no-repeat;
+    display: block;
+    height: 18px;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 18px;
+}
+@media not all {
+    header nav ul.main li.activity a i.icon {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+header nav ul.main li.overview a i.icon {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -53px -22px;
+    background-repeat: no-repeat;
+    display: block;
+    height: 18px;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 18px;
+}
+@media not all {
+    header nav ul.main li.overview a i.icon {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+header nav ul.main li.projects a i.icon {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -18px top;
+    background-repeat: no-repeat;
+    display: block;
+    height: 18px;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 18px;
+}
+@media not all {
+    header nav ul.main li.projects a i.icon {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+header nav ul.main li.settings a i.icon {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -36px top;
+    background-repeat: no-repeat;
+    display: block;
+    height: 18px;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 18px;
+}
+@media not all {
+    header nav ul.main li.settings a i.icon {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+header nav .account {
+    float: left;
+    margin-left: 14px;
+    padding: 8px 0;
+    position: relative;
+}
+header nav .account .opener {
+    border-radius: 3px;
+    display: block;
+    padding: 2px 24px 1px 4px;
+    position: relative;
+}
+header nav .account .opener i.arrow {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -54px top;
+    background-repeat: no-repeat;
+    display: block;
+    height: 13px;
+    margin-top: -7px;
+    outline: medium none;
+    position: absolute;
+    right: 5px;
+    text-indent: -9999px;
+    top: 50%;
+    width: 15px;
+}
+@media not all {
+    header nav .account .opener i.arrow {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+header nav .account .opener .overlay {
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.3) inset;
+}
+header nav .account .opener .avatar {
+    background: none repeat scroll 0 0 transparent;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 21px;
+}
+header nav .account .opener:hover .avatar {
+    opacity: 0.7;
+}
+header nav .account .opener:hover .avatar .overlay {
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.3) inset;
+}
+header nav .account ul {
+    right: 0;
+    width: 150px;
+}
+header nav .account ul.account-dropdown .header, header nav .account ul.account-dropdown li a {
+    background: none repeat scroll 0 0 #f2f0ed;
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    padding: 6px;
+    text-transform: none;
+}
+header nav .account ul.account-dropdown .header {
+    border: 1px solid #c1bbb6;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    font-weight: bold;
+}
+header nav .account ul.account-dropdown a:hover {
+    background: none repeat scroll 0 0 #e4e1dc;
+}
+@media only screen and (max-width: 1023px) {
+    header {
+        padding: 0 20px;
+    }
+    header .container {
+        width: auto;
+    }
+}
+@media only screen and (max-width: 870px) {
+    header {
+        padding: 0;
+    }
+    header .brand, header nav {
+        float: none;
+    }
+    header .brand {
+        margin: 0 auto;
+        max-width: 666px;
+        padding: 7px 10px;
+    }
+    header nav {
+        border-top: 1px solid rgba(0, 0, 0, 0.25);
+    }
+    header nav .nav-wrapper {
+        margin: 0 auto;
+        max-width: 666px;
+        padding: 0 10px;
+        position: relative;
+    }
+    header nav ul.main li a {
+        height: auto;
+        line-height: 1;
+        padding-bottom: 9px;
+        padding-top: 9px;
+    }
+    header nav .account {
+        float: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 10px;
+        top: -51px;
+    }
+}
+@media only screen and (max-width: 520px) {
+    header nav {
+    }
+    header nav:after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+    header nav .nav-wrapper {
+        padding: 0;
+        width: 100%;
+    }
+    header nav ul.main {
+        float: none;
+    }
+    header nav ul.main li {
+        width: 25%;
+    }
+    header nav ul.main li a {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+    header nav ul.main li a i.icon {
+        display: none !important;
+    }
+}
+@media only screen and (max-width: 350px) {
+    header nav ul.main li a {
+        font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: none;
+    }
+}
+footer {
+    border-top: 1px solid #e4e1dc;
+    color: #4b4b4b;
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    padding: 18px 0 35px;
+    text-align: center;
+    text-transform: uppercase;
+}
+footer .inner {
+    margin: 0 auto;
+    padding-top: 0;
+}
+footer .inner:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+footer .inner a {
+    color: #4b4b4b;
+    display: inline-block;
+    opacity: 0.75;
+}
+footer .inner a:hover {
+    opacity: 1;
+}
+footer .inner .madebytight {
+    font-size: 13px;
+}
+footer .inner .footerlinks {
+    padding-top: 6px;
+}
+footer .inner .footerlinks a {
+    margin-left: 14px;
+    opacity: 0.5;
+    padding-top: 6px;
+}
+footer .inner .footerlinks a:hover {
+    opacity: 0.8;
+}
+footer .inner .footerlinks a:first-child {
+    margin-left: 0;
+}
+footer .inner .footerlinks .supportmail, footer .inner .footerlinks .twitter, footer .inner .footerlinks .app {
+    margin-left: 15px;
+}
+footer .inner .footerlinks .supportmail:before, footer .inner .footerlinks .twitter:before, footer .inner .footerlinks .app:before {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    float: left;
+    height: 14px;
+    margin-left: -2px;
+    margin-right: 3px;
+    margin-top: 0;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 15px;
+}
+@media not all {
+    footer .inner .footerlinks .supportmail:before, footer .inner .footerlinks .twitter:before, footer .inner .footerlinks .app:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+footer .inner .footerlinks .supportmail:before {
+    background-position: -124px -122px;
+}
+footer .inner .footerlinks .twitter:before {
+    background-position: -144px -122px;
+    margin-right: 4px;
+}
+footer .inner .footerlinks .app:before {
+    background-position: -163px -122px;
+    margin-right: 1px;
+}
+@media only screen and (max-width: 1023px) {
+    footer {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 666px;
+        width: auto;
+    }
+    footer .inner {
+        width: auto;
+    }
+}
+@media screen and (max-width: 450px) {
+    footer {
+        border: 0 none;
+        margin-top: 0;
+        padding-left: 23px;
+        padding-right: 23px;
+    }
+    footer .inner {
+        padding: 0;
+    }
+    footer .inner {
+        width: auto;
+    }
+    footer .inner .footerlinks a:first-child {
+        margin-left: 14px;
+    }
+}
+form .form-row {
+    margin-bottom: 10px;
+}
+form .form-row:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+form .form-row label {
+    display: block;
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.1;
+    padding: 3px 6px 3px 0;
+    text-align: left;
+    text-transform: uppercase;
+    width: 117px;
+}
+form .form-row .controls {
+    margin-left: 127px;
+}
+form .form-row .controls label {
+    text-align: left;
+}
+form .form-row .controls.radio {
+}
+form .form-row .controls.radio:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+form .form-row .controls.radio label {
+    float: left;
+}
+form .form-row input[type="radio"] {
+    width: auto;
+}
+form .form-row select {
+    height: 32px;
+    width: 282px;
+}
+form .form-row.error .error-message {
+    margin-top: 5px;
+}
+form .form-actions {
+    padding: 10px 10px 10px 127px;
+}
+form .error-message {
+    background: none repeat scroll 0 0 #ea8c8c;
+    border-radius: 2px;
+    color: white;
+    display: inline-block;
+    font-weight: 800;
+    margin-bottom: 10px;
+    margin-top: 8px;
+    padding: 9px 10px 8px 9px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.form-input-field, form .form-row input[type="text"], form .form-row input[type="password"], form .form-row input[type="email"], form .form-row input[type="number"], form .form-row select, form .form-row textarea, .form-select-replacement .opener, .organizations.edit .settings-wrapper .form-row .select .opener, .organizations.update .settings-wrapper .form-row .select .opener, .dropdown .searchable-list-container .search-field-container input, .project-form .client .controls .select .opener {
+    border: 0 none;
+    border-radius: 2px;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+    padding: 8px 8px 6px;
+    width: 266px;
+}
+.form-input-field:focus, form .form-row input[type="text"]:focus, form .form-row input[type="password"]:focus, form .form-row input[type="email"]:focus, form .form-row input[type="number"]:focus, form .form-row select:focus, form .form-row textarea:focus, .form-select-replacement .opener:focus, .organizations.edit .settings-wrapper .form-row .select .opener:focus, .organizations.update .settings-wrapper .form-row .select .opener:focus, .dropdown .searchable-list-container .search-field-container input:focus, .project-form .client .controls .select .opener:focus {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.14) inset;
+    outline: 0 none;
+}
+.form-select-replacement .opener, .organizations.edit .settings-wrapper .form-row .select .opener, .organizations.update .settings-wrapper .form-row .select .opener {
+    background: none repeat scroll 0 0 #f2f0ed;
+    position: relative;
+    width: auto;
+}
+.form-select-replacement .opener:hover, .organizations.edit .settings-wrapper .form-row .select .opener:hover, .organizations.update .settings-wrapper .form-row .select .opener:hover {
+    background: none repeat scroll 0 0 #e4e1dc;
+    cursor: pointer;
+}
+.form-select-replacement .opener i, .organizations.edit .settings-wrapper .form-row .select .opener i, .organizations.update .settings-wrapper .form-row .select .opener i {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -93px -59px;
+    background-repeat: no-repeat;
+    display: block;
+    height: 8px;
+    margin-top: -3px;
+    outline: medium none;
+    position: absolute;
+    right: 10px;
+    text-indent: -9999px;
+    top: 50%;
+    width: 12px;
+}
+@media not all {
+    .form-select-replacement .opener i, .organizations.edit .settings-wrapper .form-row .select .opener i, .organizations.update .settings-wrapper .form-row .select .opener i {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.form-vertical .form-row label, .project-form .form-row label {
+    display: block;
+    float: none;
+}
+.form-vertical .form-row .controls, .project-form .form-row .controls {
+    margin-left: 0;
+}
+.dropdown {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #f2f0ed;
+    border-color: -moz-use-text-color #c8c5c0 #c8c5c0;
+    border-image: none;
+    border-radius: 0 0 2px 2px;
+    border-right: 1px solid #c8c5c0;
+    border-style: none solid solid;
+    border-width: 0 1px 1px;
+    box-sizing: border-box;
+    left: 0;
+    margin-top: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+}
+.dropdown input:focus {
+}
+.dropdown .searchable-list-container .search-field-container {
+    background: none repeat scroll 0 0 #d1ceca;
+    padding: 6px 5px;
+}
+.dropdown .searchable-list-container .search-field-container input {
+    background: none repeat scroll 0 0 white;
+    box-shadow: none;
+    box-sizing: border-box;
+    padding-bottom: 5px;
+    padding-top: 7px;
+    width: 100%;
+}
+.dropdown .searchable-list-container .search-field-container input:focus {
+    box-shadow: none;
+}
+.dropdown .searchable-list-container a {
+    color: #4b4b4b;
+}
+.dropdown .searchable-list-container .no-results {
+    line-height: 1.2;
+    padding: 7px 9px;
+}
+.dropdown .searchable-list-container .no-results a {
+    color: #4b4b4b;
+    padding: 0;
+}
+.dropdown ul li a {
+    border-top: 1px solid #d1ceca;
+    display: block;
+    padding: 5px 10px;
+}
+.dropdown ul li a:hover {
+    background: none repeat scroll 0 0 #e4e1dc;
+}
+.dropdown ul li:first-child a {
+    border-top: 0 none;
+}
+.dropdown ul li.dropdown-item-highlighted {
+    background: none repeat scroll 0 0 #e4e1dc;
+}
+.dropdown-list, header nav .account ul, .projects.index ul.projects li .actions ul, .projects.archived ul.projects li .actions ul, ol.entry-log ul.entries li.entry .actions .dropdown {
+    display: none;
+    position: absolute;
+}
+.dropdown-list li, header nav .account ul li, .projects.index ul.projects li .actions ul li, .projects.archived ul.projects li .actions ul li, ol.entry-log ul.entries li.entry .actions .dropdown li {
+    float: none;
+    margin: 0;
+    padding: 0;
+}
+.dropdown-list li a, header nav .account ul li a, .projects.index ul.projects li .actions ul li a, .projects.archived ul.projects li .actions ul li a, ol.entry-log ul.entries li.entry .actions .dropdown li a {
+    border-color: #c1bbb6 !important;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-radius: 0;
+    border-right-style: solid;
+    border-right-width: 1px;
+    box-shadow: 0 -1px 0 #cfcac4 inset;
+    color: #414141;
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+    padding: 12px 9px 9px;
+}
+.dropdown-list li:first-child a, header nav .account ul li:first-child a, .projects.index ul.projects li .actions ul li:first-child a, .projects.archived ul.projects li .actions ul li:first-child a, ol.entry-log ul.entries li.entry .actions .dropdown li:first-child a {
+    border-top: 1px solid;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.dropdown-list li:last-child a, header nav .account ul li:last-child a, .projects.index ul.projects li .actions ul li:last-child a, .projects.archived ul.projects li .actions ul li:last-child a, ol.entry-log ul.entries li.entry .actions .dropdown li:last-child a {
+    border-bottom: 1px solid;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: none;
+}
+.project-picker-dropdown {
+    z-index: 200;
+}
+.project-picker-dropdown input {
+    border: 0 none;
+    outline: 0 none;
+    resize: none;
+}
+.project-picker-dropdown input:focus, .project-picker-dropdown input:active {
+    box-shadow: none;
+}
+.project-picker-dropdown ul {
+    max-height: 190px;
+    overflow-y: auto;
+}
+.project-picker-dropdown .new-project-button {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-top: 1px solid #d1ceca;
+    color: #4b4b4b;
+    display: block;
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    opacity: 0.75;
+    padding: 8px 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.project-picker-dropdown .new-project-button:hover {
+    background: none repeat scroll 0 0 #e4e1dc;
+}
+.project-picker-dropdown .project-picker-item a {
+    color: #4b4b4b;
+    padding: 9px 10px 7px;
+}
+.project-picker-dropdown .project-picker-item .client-name, .project-picker-dropdown .project-picker-item .project-name {
+    display: block;
+}
+.project-picker-dropdown .project-picker-item .client-name {
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    margin: 0 0 3px;
+    opacity: 0.5;
+    text-transform: uppercase;
+}
+.project-picker-dropdown .project-picker-item .project-name {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.1;
+}
+section.page {
+    background: none repeat scroll 0 0 white;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.09);
+    position: relative;
+    z-index: 40;
+}
+section.page .page-header {
+    margin-bottom: 11px;
+}
+section.page .page-header:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+section.page .page-header h1 {
+    float: left;
+    padding: 1px 0 3px;
+}
+section.page .page-header .actions {
+    float: right;
+}
+section.page .page-header .actions .button-group {
+    float: left;
+    font-size: 13px;
+    margin-left: 10px;
+}
+section.page .page-header .actions .button-group .button {
+    margin: 2px 0 0;
+}
+section.page .page-header .actions .button-group .new {
+    background: none repeat scroll 0 0 #59c96e;
+    border: 0 none;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+section.page .page-header .actions .button-group .new:hover {
+    background: none repeat scroll 0 0 #4aad59;
+}
+section.page .page-header .actions .button-group .new:active {
+    background: none repeat scroll 0 0 #4aad59;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1) inset;
+}
+section.page .page-header .actions .button-group.tabs .button {
+    border: 0 none;
+    border-radius: 0;
+    display: block;
+    float: left;
+    font-size: 12px;
+    margin-left: 0;
+}
+section.page .page-header .actions .button-group.tabs .button:first-child {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+section.page .page-header .actions .button-group.tabs .button:last-child {
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+section.page .page-header .actions .button {
+    background: none repeat scroll 0 0 #f2f0ed;
+    color: #6f6e6d;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    padding: 8px 13px 7px;
+    text-decoration: none;
+}
+section.page .page-header .actions .button.active {
+    background: none repeat scroll 0 0 #969592;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1) inset;
+    color: white;
+    font-weight: 800;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+.container .inner section.time-tracker {
+    padding: 0;
+    width: 274px;
+}
+section.time-tracker .tab-bar {
+    position: relative;
+    z-index: 30;
+}
+section.time-tracker .tab-bar:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+section.time-tracker .tab-bar a {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.03);
+    border-radius: 2px 2px 0 0;
+    box-sizing: border-box;
+    color: #6f6e6d;
+    float: left;
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1;
+    padding: 12px 0 11px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: 49.2%;
+}
+section.time-tracker .tab-bar a:hover {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.07);
+    color: #626160;
+}
+section.time-tracker .tab-bar a.active {
+    background: none repeat scroll 0 0 white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
+    color: #4b4b4b;
+}
+section.time-tracker .tab-bar a:first-child {
+    float: left;
+}
+section.time-tracker .tab-bar a:last-child {
+    float: right;
+}
+section.time-tracker .tab-bar a.timer.timer-started:before, section.time-tracker .tab-bar a.timer.timer-paused:before {
+    border-radius: 5px;
+    content: "";
+    display: block;
+    height: 10px;
+    left: 50%;
+    margin-left: -40px;
+    margin-top: -5px;
+    position: absolute;
+    top: 50%;
+    width: 10px;
+}
+section.time-tracker .tab-bar a.timer.timer-started:before {
+    background: none repeat scroll 0 0 #59c96e;
+}
+section.time-tracker .tab-bar a.timer.timer-paused:before {
+    background: none repeat scroll 0 0 #9b9b9b;
+}
+section.time-tracker .tabs .tab {
+    display: none;
+}
+section.time-tracker .tabs .tab.active {
+    display: block;
+}
+section.time-tracker .form-wrapper, section.time-tracker .timer, section.time-tracker .expired {
+    background: none repeat scroll 0 0 white;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
+    padding: 15px;
+    position: relative;
+    z-index: 30;
+}
+section.time-tracker .form-wrapper input, section.time-tracker .form-wrapper textarea, section.time-tracker .form-wrapper button, section.time-tracker .form-wrapper a.opener, section.time-tracker .timer input, section.time-tracker .timer textarea, section.time-tracker .timer button, section.time-tracker .timer a.opener {
+    background: none repeat scroll 0 0 #f2f0ed;
+    border: 0 none;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.05) inset, 0 2px 0 rgba(0, 0, 0, 0.03) inset;
+    box-sizing: border-box;
+    display: block;
+    font-size: 15px;
+    margin: 0;
+    min-height: 29px;
+    outline: 0 none;
+    padding: 9px 7px;
+    width: 100%;
+}
+section.time-tracker .form-wrapper button.submit-button, section.time-tracker .timer button.submit-button {
+    -moz-appearance: none;
+    background: none repeat scroll 0 0 #59c96e;
+    border: 0 none;
+    box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.05) inset;
+    color: white;
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-top: 0;
+    padding: 12px 10px 10px;
+    position: relative;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.06);
+    text-transform: uppercase;
+    width: 100%;
+}
+section.time-tracker .form-wrapper button.submit-button:hover, section.time-tracker .timer button.submit-button:hover {
+    background: none repeat scroll 0 0 #4aad59;
+    cursor: pointer;
+}
+section.time-tracker .form-wrapper button.submit-button:active, section.time-tracker .timer button.submit-button:active {
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05) inset;
+}
+section.time-tracker .form-wrapper button.submit-button.disabled, section.time-tracker .timer button.submit-button.disabled {
+    background: none repeat scroll 0 0 #c1bbb6;
+    text-shadow: none;
+}
+section.time-tracker .form-wrapper button.submit-button.disabled:hover, section.time-tracker .form-wrapper button.submit-button.disabled:active, section.time-tracker .timer button.submit-button.disabled:hover, section.time-tracker .timer button.submit-button.disabled:active {
+    background: none repeat scroll 0 0 #c1bbb6;
+    cursor: default;
+}
+section.time-tracker .form-wrapper button.submit-button.disabled:active, section.time-tracker .timer button.submit-button.disabled:active {
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1) inset;
+}
+section.time-tracker .form-wrapper .dropdown-open a.opener, section.time-tracker .timer .dropdown-open a.opener {
+    background: none repeat scroll 0 0 #e4e1dc;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: none !important;
+}
+section.time-tracker .form-wrapper .dropdown-open a.opener:hover, section.time-tracker .timer .dropdown-open a.opener:hover {
+    background: none repeat scroll 0 0 #e4e1dc;
+}
+section.time-tracker .form-wrapper .dropdown-open a.opener:after, section.time-tracker .timer .dropdown-open a.opener:after {
+    opacity: 0.9;
+}
+section.time-tracker .form-wrapper a.opener, section.time-tracker .timer a.opener {
+    border-radius: 2px;
+    color: #4b4b4b;
+    padding: 4px 8px;
+    position: relative;
+}
+section.time-tracker .form-wrapper a.opener:after, section.time-tracker .timer a.opener:after {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -92px -56px;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 12px;
+    margin-top: -6px;
+    opacity: 0.4;
+    outline: medium none;
+    position: absolute;
+    right: 7px;
+    text-indent: -9999px;
+    top: 50%;
+    width: 14px;
+}
+@media not all {
+    section.time-tracker .form-wrapper a.opener:after, section.time-tracker .timer a.opener:after {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+section.time-tracker .form-wrapper a.opener:hover, section.time-tracker .timer a.opener:hover {
+    background: none repeat scroll 0 0 #e8e5e1;
+}
+section.time-tracker .form-wrapper a.opener:hover:after, section.time-tracker .timer a.opener:hover:after {
+    opacity: 0.9;
+}
+section.time-tracker .form-wrapper a.opener .client-name, section.time-tracker .timer a.opener .client-name {
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    margin: 3px 0;
+    opacity: 0.5;
+    text-transform: uppercase;
+}
+section.time-tracker .form-wrapper a.opener .project-name, section.time-tracker .timer a.opener .project-name {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.1;
+    padding-bottom: 2px;
+}
+section.time-tracker .form-wrapper a.opener .create-project, section.time-tracker .timer a.opener .create-project {
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 12px 0 8px;
+}
+section.time-tracker .form-wrapper .time-and-date, section.time-tracker .form-wrapper .project, section.time-tracker .form-wrapper .comment, section.time-tracker .timer .time-and-date, section.time-tracker .timer .project, section.time-tracker .timer .comment {
+    margin-bottom: 10px;
+}
+section.time-tracker .form-wrapper .time-and-date, section.time-tracker .timer .time-and-date {
+}
+section.time-tracker .form-wrapper .time-and-date:after, section.time-tracker .timer .time-and-date:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+section.time-tracker .form-wrapper .time-and-date > div, section.time-tracker .timer .time-and-date > div {
+    float: left;
+}
+section.time-tracker .form-wrapper .time-and-date .time, section.time-tracker .timer .time-and-date .time {
+    position: relative;
+    width: 129px;
+}
+section.time-tracker .form-wrapper .time-and-date .time:before, section.time-tracker .timer .time-and-date .time:before {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -134px -1px;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 22px;
+    left: 4px;
+    margin-top: -11px;
+    outline: medium none;
+    position: absolute;
+    text-indent: -9999px;
+    top: 50%;
+    width: 22px;
+    z-index: 99;
+}
+@media not all {
+    section.time-tracker .form-wrapper .time-and-date .time:before, section.time-tracker .timer .time-and-date .time:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+section.time-tracker .form-wrapper .time-and-date .time input, section.time-tracker .timer .time-and-date .time input {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 11px 1px 10px 31px;
+    position: relative;
+}
+section.time-tracker .form-wrapper .time-and-date .date, section.time-tracker .timer .time-and-date .date {
+    margin-left: 8px;
+    position: relative;
+    width: 107px;
+}
+section.time-tracker .form-wrapper .time-and-date .date:before, section.time-tracker .timer .time-and-date .date:before {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -114px -55px;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 16px;
+    left: 10px;
+    margin-top: -8px;
+    outline: medium none;
+    position: absolute;
+    text-indent: -9999px;
+    top: 50%;
+    width: 16px;
+    z-index: 99;
+}
+@media not all {
+    section.time-tracker .form-wrapper .time-and-date .date:before, section.time-tracker .timer .time-and-date .date:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+section.time-tracker .form-wrapper .time-and-date .date .opener, section.time-tracker .timer .time-and-date .date .opener {
+    box-shadow: 0 -2px rgba(0, 0, 0, 0.03) inset;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 13px 8px 10px 30px;
+}
+section.time-tracker .form-wrapper .time-and-date .date .dropdown, section.time-tracker .timer .time-and-date .date .dropdown {
+    border: 1px solid #e4e1dc;
+    box-shadow: 0 -2px rgba(0, 0, 0, 0.04) inset;
+    box-sizing: border-box;
+    left: auto;
+    margin-top: 7px;
+    right: 0;
+    width: 244px;
+    z-index: 1000;
+}
+section.time-tracker .form-wrapper .time-and-date .date .dropdown:after, section.time-tracker .timer .time-and-date .date .dropdown:after {
+    background: none repeat scroll 0 0 #edeae6;
+    content: "";
+    height: 15px;
+    position: absolute;
+    right: 20px;
+    top: -4px;
+    transform: rotate(45deg);
+    width: 15px;
+}
+section.time-tracker .form-wrapper .project, section.time-tracker .timer .project {
+    position: relative;
+}
+section.time-tracker .form-wrapper .project .opener, section.time-tracker .timer .project .opener {
+    box-shadow: 0 -2px rgba(0, 0, 0, 0.03) inset;
+}
+section.time-tracker .form-wrapper .project .opener span, section.time-tracker .timer .project .opener span {
+    display: block;
+}
+section.time-tracker .form-wrapper .project .opener .client-name, section.time-tracker .timer .project .opener .client-name {
+    margin-top: 3px;
+}
+section.time-tracker .form-wrapper .project .opener .project-name, section.time-tracker .timer .project .opener .project-name {
+    margin-right: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+section.time-tracker .form-wrapper .comment textarea, section.time-tracker .timer .comment textarea {
+    font-size: 16px;
+    max-width: 100%;
+    min-height: 54px;
+    resize: none;
+    transition-duration: 0.1s;
+    transition-property: height;
+}
+section.time-tracker .form-wrapper .actions, section.time-tracker .timer .actions {
+    margin-bottom: 0;
+}
+section.time-tracker .form-wrapper .actions:after, section.time-tracker .timer .actions:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+section.time-tracker .form-wrapper .actions .button, section.time-tracker .timer .actions .button {
+    box-sizing: border-box;
+    height: 39px;
+    margin: 0;
+    position: relative;
+    text-indent: -9999px;
+    width: 48.9%;
+}
+section.time-tracker .form-wrapper .actions .button .icon-delete, section.time-tracker .form-wrapper .actions .button .icon-finish, section.time-tracker .timer .actions .button .icon-delete, section.time-tracker .timer .actions .button .icon-finish {
+    left: 50%;
+    margin-left: -10px;
+    position: absolute;
+    top: 11px;
+}
+section.time-tracker .form-wrapper .actions .button .icon-delete, section.time-tracker .timer .actions .button .icon-delete {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -380px -140px;
+    background-repeat: no-repeat;
+    display: block;
+    height: 20px;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 20px;
+}
+@media not all {
+    section.time-tracker .form-wrapper .actions .button .icon-delete, section.time-tracker .timer .actions .button .icon-delete {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+section.time-tracker .form-wrapper .actions .button .icon-finish, section.time-tracker .timer .actions .button .icon-finish {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -352px -140px;
+    background-repeat: no-repeat;
+    display: block;
+    height: 20px;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 20px;
+}
+@media not all {
+    section.time-tracker .form-wrapper .actions .button .icon-finish, section.time-tracker .timer .actions .button .icon-finish {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+section.time-tracker .form-wrapper .actions .button:first-child, section.time-tracker .timer .actions .button:first-child {
+    float: left;
+}
+section.time-tracker .form-wrapper .actions .button:last-child, section.time-tracker .timer .actions .button:last-child {
+    background-color: #59c96e;
+    float: right;
+}
+section.time-tracker .form-wrapper .actions .button:last-child:hover, section.time-tracker .timer .actions .button:last-child:hover {
+    background-color: #4aad59;
+}
+section.time-tracker .form-wrapper .actions .button:last-child:active, section.time-tracker .timer .actions .button:last-child:active {
+    background-color: #3a9144;
+}
+section.time-tracker .notifications .notification {
+    background: none repeat scroll 0 0 transparent;
+    font-weight: normal;
+    margin: 13px 0 4px;
+    opacity: 1;
+    padding: 0 16px 0 36px;
+    position: relative;
+    top: 0;
+    transition-duration: 0.15s;
+    transition-property: opacity, top;
+}
+section.time-tracker .notifications .notification:before {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -270px 1px;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 32px;
+    left: 0;
+    margin-top: -15px;
+    outline: medium none;
+    position: absolute;
+    text-indent: -9999px;
+    top: 50%;
+    width: 32px;
+}
+@media not all {
+    section.time-tracker .notifications .notification:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+section.time-tracker .notifications .notification.error:before {
+    background-position: -301px 1px;
+}
+section.time-tracker .notifications .notification.fade-in {
+    display: block;
+    opacity: 0;
+    top: -30px;
+}
+section.time-tracker .notifications .notification.fade-out {
+    opacity: 0;
+    top: 30px;
+}
+section.time-tracker .tabs .timer .time {
+    padding: 10px 0;
+    position: relative;
+}
+section.time-tracker .tabs .timer .time:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+section.time-tracker .tabs .timer .time span {
+    float: left;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1;
+}
+section.time-tracker .tabs .timer .time a.toggle-timer {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -348px -41px;
+    background-repeat: no-repeat;
+    display: block;
+    height: 39px;
+    margin-top: -20px;
+    outline: medium none;
+    position: absolute;
+    right: 0;
+    text-indent: -9999px;
+    top: 50%;
+    width: 39px;
+}
+@media not all {
+    section.time-tracker .tabs .timer .time a.toggle-timer {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+section.time-tracker .tabs .timer .time a.toggle-timer:hover {
+    background-position: -348px -87px;
+}
+section.time-tracker .tabs .timer .time a.toggle-timer.play {
+    background-position: -395px -41px;
+}
+section.time-tracker .tabs .timer .time a.toggle-timer.play:hover {
+    background-position: -395px -87px;
+}
+section.time-tracker .tabs .timer .spent-on {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.1);
+    height: 1px;
+    margin: 20px 0;
+    position: relative;
+}
+@media screen and (min-width: 525px) and (max-width: 1023px) {
+    section.time-tracker .tabs .timer .spent-on {
+        display: none;
+    }
+}
+section.time-tracker .tabs .timer .spent-on span {
+    background: none repeat scroll 0 0 white;
+    color: #a2a09e;
+    display: block;
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    left: 50%;
+    letter-spacing: 1px;
+    margin-left: -80px;
+    margin-top: -8px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 50%;
+    width: 160px;
+}
+section.time-tracker .tabs .timer .project {
+    margin-bottom: 0;
+}
+section.time-tracker .tabs .timer .comment, section.time-tracker .tabs .timer .actions {
+    display: none;
+}
+section.time-tracker .tabs .timer .comment.active, section.time-tracker .tabs .timer .actions.active {
+    display: block;
+}
+section.time-tracker .tabs .timer .comment {
+    margin-top: 10px;
+}
+section.time-tracker .tabs .timer .error-message {
+    color: #f18177;
+    margin-top: 10px;
+}
+@media screen and (min-width: 525px) and (max-width: 1023px) {
+    section.time-tracker .tabs .timer {
+        min-height: 59px;
+    }
+    section.time-tracker .tabs .timer .time {
+        float: left;
+        max-width: 215px;
+        width: 45%;
+    }
+    section.time-tracker .tabs .timer .project {
+        float: right;
+        margin: 5px 0 17px;
+        width: 49%;
+    }
+}
+@media screen and (min-width: 525px) and (max-width: 1023px) and (min-width: 717px) {
+    section.time-tracker .tabs .timer .project {
+        width: 60%;
+    }
+}
+section.time-tracker .expired {
+    border-radius: 2px;
+}
+section.time-tracker .expired h2 {
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+section.time-tracker .calendar {
+    border-radius: 3px;
+}
+@media screen and (max-width: 700px) and (min-width: 500px) {
+    .log-time .project {
+        float: left;
+        width: 49%;
+    }
+    .log-time .project .opener {
+        height: 54px;
+    }
+    .log-time .comment {
+        float: right;
+        width: 49%;
+    }
+}
+@media screen and (max-width: 1023px) and (min-width: 710px) {
+    .container .inner section.time-tracker {
+        width: auto;
+    }
+    section.time-tracker .form-wrapper {
+        padding-right: 143px;
+        position: relative;
+    }
+    section.time-tracker .form-wrapper .time-and-date, section.time-tracker .form-wrapper .project {
+        float: left;
+    }
+    section.time-tracker .form-wrapper .time-and-date .time {
+        width: 149px;
+    }
+    section.time-tracker .form-wrapper .time-and-date .date {
+        width: 117px;
+    }
+    section.time-tracker .form-wrapper .project {
+        margin-left: 8px;
+        width: 226px;
+    }
+    section.time-tracker .form-wrapper .project a.opener .create-project {
+        padding-bottom: 5px;
+        padding-top: 8px;
+    }
+    section.time-tracker .form-wrapper .project a.opener .client-name {
+        margin: 0;
+    }
+    section.time-tracker .form-wrapper .project a.opener .project-name {
+        font-size: 18px;
+        padding-bottom: 0;
+    }
+    section.time-tracker .form-wrapper .comment {
+        margin-bottom: 0;
+    }
+    section.time-tracker .form-wrapper .comment textarea {
+        background: none repeat scroll 0 0 transparent;
+        box-shadow: none;
+        height: 22px;
+        min-height: 0;
+        padding: 0;
+    }
+    section.time-tracker .form-wrapper .actions {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        width: 120px;
+    }
+}
+@media screen and (max-width: 1023px) and (min-width: 710px) and (max-width: 700px) {
+    section.time-tracker .form-wrapper {
+        padding-right: 123px;
+    }
+    section.time-tracker .form-wrapper .time-and-date > .time {
+        width: 129px;
+    }
+    section.time-tracker .form-wrapper .time-and-date .date {
+        width: 107px;
+    }
+    section.time-tracker .form-wrapper .project {
+        width: 206px;
+    }
+    section.time-tracker .form-wrapper .actions {
+        width: 100px;
+    }
+}
+@media screen and (max-width: 709px) {
+    .container .inner section.time-tracker {
+        width: 100%;
+    }
+    section.time-tracker .form-wrapper .time-and-date .time {
+        width: 54%;
+    }
+    section.time-tracker .form-wrapper .time-and-date .time .time {
+        width: 100%;
+    }
+    section.time-tracker .form-wrapper .time-and-date .date {
+        margin-left: 2%;
+        width: 44%;
+    }
+}
+@media screen and (max-width: 1023px) {
+    section.time-tracker {
+        display: none;
+    }
+    .pages.activity section.time-tracker {
+        display: block;
+    }
+}
+@media screen and (max-width: 1023px) {
+    section.time-tracker .notifications {
+        position: absolute;
+    }
+    section.time-tracker .notifications .notification {
+        font-size: 15px;
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+}
+.projects.index ul.clients li, .projects.archived ul.clients li {
+    margin-bottom: 20px;
+}
+.projects.index ul.clients li h2, .projects.archived ul.clients li h2 {
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.projects.index ul.clients li h3, .projects.archived ul.clients li h3 {
+    font-size: 19px;
+    font-weight: 600;
+}
+.projects.index ul.clients li span.no-projects, .projects.archived ul.clients li span.no-projects {
+    display: block;
+    margin: 5px 0;
+}
+.projects.index ul.clients li a, .projects.archived ul.clients li a {
+    border-radius: 2px;
+}
+.projects.index ul.projects li, .projects.archived ul.projects li {
+    background: none repeat scroll 0 0 #f2f0ed;
+    border-radius: 2px;
+    margin: 0;
+    position: relative;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+.projects.index ul.projects li:hover, .projects.archived ul.projects li:hover {
+    background: none repeat scroll 0 0 #6de27e;
+}
+.projects.index ul.projects li a, .projects.archived ul.projects li a {
+    color: #4b4b4b;
+    display: block;
+    margin: 5px 42px 6px 2px;
+    padding: 13px 10px 10px;
+    position: relative;
+    text-decoration: none;
+    transition: background-color 0.08s linear 0s;
+}
+.projects.index ul.projects li a .budget, .projects.archived ul.projects li a .budget {
+    position: absolute;
+    right: 0;
+    top: 14px;
+}
+.projects.index ul.projects li .progress, .projects.archived ul.projects li .progress {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.05);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.projects.index ul.projects li .actions, .projects.archived ul.projects li .actions {
+    height: 20px;
+    margin-top: -10px;
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    width: 20px;
+}
+.projects.index ul.projects li .actions .opener, .projects.archived ul.projects li .actions .opener {
+    background-color: white;
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -2px -50px;
+    background-repeat: no-repeat;
+    border-radius: 24px;
+    display: block;
+    height: 24px;
+    margin: -2px 0 0;
+    outline: medium none;
+    padding: 0;
+    text-indent: -9999px;
+    transition: none 0s ease 0s ;
+    width: 24px;
+}
+@media not all {
+    .projects.index ul.projects li .actions .opener, .projects.archived ul.projects li .actions .opener {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.projects.index ul.projects li .actions .opener:hover, .projects.archived ul.projects li .actions .opener:hover {
+    background-color: #6f6e6d;
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -28px -50px;
+    background-repeat: no-repeat;
+    display: block;
+    height: 24px;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 24px;
+}
+@media not all {
+    .projects.index ul.projects li .actions .opener:hover, .projects.archived ul.projects li .actions .opener:hover {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.projects.index ul.projects li .actions ul, .projects.archived ul.projects li .actions ul {
+    left: -65px;
+    top: 24px;
+    width: 150px;
+    z-index: 1000;
+}
+.projects.index ul.projects li .actions ul li, .projects.index ul.projects li .actions ul li:hover, .projects.archived ul.projects li .actions ul li, .projects.archived ul.projects li .actions ul li:hover {
+    background: none repeat scroll 0 0 #f2f0ed;
+}
+.projects.index ul.projects li .actions ul a:hover, .projects.archived ul.projects li .actions ul a:hover {
+    background: none repeat scroll 0 0 #e8e5e1;
+}
+.projects.index .archived-projects .page-header, .projects.archived .archived-projects .page-header {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.projects.index .archived-projects .page-header h1, .projects.archived .archived-projects .page-header h1 {
+    margin: 20px 0 8px;
+}
+.projects.index .archived-projects ul.clients > li, .projects.archived .archived-projects ul.clients > li {
+    border-top: 1px solid #cfcac4;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    position: relative;
+}
+.projects.index .archived-projects ul.clients > li:last-child, .projects.archived .archived-projects ul.clients > li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.projects.index .archived-projects h2, .projects.archived .archived-projects h2 {
+    font-size: 15px;
+    position: absolute;
+    top: 14px;
+}
+.projects.index .archived-projects ul.projects, .projects.archived .archived-projects ul.projects {
+    margin-left: 200px;
+    padding-top: 8px;
+}
+.projects.index .archived-projects ul.projects:after, .projects.archived .archived-projects ul.projects:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.projects.index .archived-projects ul.projects li a h3, .projects.archived .archived-projects ul.projects li a h3 {
+    font-size: 16px;
+}
+.projects.index .archived-projects ul.projects li .budget, .projects.archived .archived-projects ul.projects li .budget {
+    display: none;
+}
+.projects .empty {
+    padding-bottom: 15px;
+    padding-top: 8px;
+}
+.projects.show .notification {
+    margin-bottom: 20px;
+}
+.projects.show .page-header h1 {
+    line-height: 1;
+    max-width: 373px;
+}
+.projects.show .page-header h1 span.client {
+    display: block;
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.projects.show .page .budget {
+    float: right;
+    width: 200px;
+}
+.projects.show .page .budget .progress-bar {
+    background: none repeat scroll 0 0 #f2f0ed;
+    border-radius: 2px;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.06) inset, 0 0 2px rgba(0, 0, 0, 0.1) inset;
+    height: 19px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.projects.show .page .budget .progress-bar .bar {
+    background: none repeat scroll 0 0 #59c96e;
+    border-radius: 2px;
+    box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.04) inset;
+    height: 19px;
+    margin-left: -1px;
+    margin-top: -1px;
+    padding-left: 2px;
+    transition-duration: 0.2s;
+    transition-property: width, background;
+}
+.projects.show .page .budget .progress-bar .bar.over {
+    background: none repeat scroll 0 0 #f06c5d;
+}
+.projects.show .page .project-actions {
+    border-bottom: 1px solid #e8e5e1;
+    border-top: 1px solid #e8e5e1;
+    margin-bottom: 20px;
+    padding: 5px 0;
+}
+.projects.show .page .project-actions:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.projects.show .page .project-actions ul {
+    float: left;
+}
+.projects.show .page .project-actions ul:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.projects.show .page .project-actions ul.right {
+    float: right;
+}
+.projects.show .page .project-actions ul li {
+    float: left;
+}
+.projects.show .page .project-actions ul li a {
+    color: #6f6e6d;
+    display: block;
+    padding: 5px 10px 5px 0;
+}
+.projects.show .page .project-actions ul li a:hover {
+    color: #4b4b4b;
+}
+.projects.show .page .project-actions ul li a.edit:hover:before, .projects.show .page .project-actions ul li a.markall:hover:before {
+    opacity: 1;
+}
+.projects.show .page .project-actions ul li .edit:before, .projects.show .page .project-actions ul li .markall:before {
+    content: "";
+    display: block;
+    float: left;
+    opacity: 0.7;
+}
+.projects.show .page .project-actions ul li .edit:before {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -77px -28px;
+    background-repeat: no-repeat;
+    display: block;
+    height: 22px;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 22px;
+}
+@media not all {
+    .projects.show .page .project-actions ul li .edit:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.projects.show .page .project-actions ul li .markall:before {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -98px -28px;
+    background-repeat: no-repeat;
+    display: block;
+    height: 22px;
+    margin-right: 2px;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 23px;
+}
+@media not all {
+    .projects.show .page .project-actions ul li .markall:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.projects.show ol.entry-log ul.entries li.entry .project {
+    display: none;
+}
+@media screen and (max-width: 699px) {
+    .projects.index ul.projects li .actions ul {
+        left: auto;
+        right: -10px;
+    }
+    .projects.show .page-header h1 {
+        float: none;
+        margin-bottom: 8px;
+        width: auto;
+    }
+    .projects.show .page .budget {
+        display: block;
+        float: none;
+        width: auto;
+    }
+    .projects.show .page .budget .progress-bar {
+        margin-bottom: 3px;
+    }
+}
+@media screen and (max-width: 1023px) {
+    .projects.index .archived-projects ul.clients > li.client {
+        border-top: 0 none;
+    }
+    .projects.index .archived-projects ul.clients > li.client h2 {
+        position: static;
+    }
+    .projects.index .archived-projects ul.clients > li.client ul.projects {
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 340px) {
+    .projects.show .page .project-actions ul li a {
+        font-size: 14px;
+        padding-bottom: 3px;
+    }
+    .projects.show .page .project-actions ul li a:before {
+        margin-top: -2px;
+    }
+}
+.organizations .cover .inner h1, .users .cover .inner h1, .clients .cover .inner h1, .subscriptions .cover .inner h1, .invoices .cover .inner h1, .sessions .cover .inner h1 {
+    margin-top: 60px;
+}
+.clients-delete-modal, .organization-delete-modal {
+    width: 360px;
+}
+.clients-delete-modal p, .organization-delete-modal p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.clients-delete-modal .form-row input, .organization-delete-modal .form-row input {
+    width: 344px;
+}
+.clients-delete-modal .form-actions, .organization-delete-modal .form-actions {
+    padding: 0;
+}
+.settings-wrapper {
+}
+.settings-wrapper:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.settings-wrapper nav {
+    float: left;
+    margin-left: -23px;
+    width: 173px;
+}
+.settings-wrapper nav ul li a {
+    color: #4b4b4b;
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    opacity: 0.5;
+    padding: 6px 5px 6px 39px;
+    position: relative;
+    text-transform: uppercase;
+}
+.settings-wrapper nav ul li a:hover {
+    opacity: 1;
+}
+.settings-wrapper nav ul li a:before {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 18px;
+    left: 14px;
+    margin-top: -9px;
+    opacity: 0.75;
+    position: absolute;
+    top: 50%;
+    width: 18px;
+}
+@media not all {
+    .settings-wrapper nav ul li a:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.settings-wrapper nav ul li.active a {
+    opacity: 1;
+}
+.settings-wrapper nav ul li.disabled {
+    opacity: 0.5;
+}
+.settings-wrapper nav ul li.disabled a:hover {
+    cursor: default;
+}
+.settings-wrapper nav ul li.profile a:before {
+    background-position: -53px -118px;
+}
+.settings-wrapper nav ul li.sessions a:before {
+    background-position: -74px -100px;
+}
+.settings-wrapper nav ul li.settings a:before {
+    background-position: -4px -100px;
+}
+.settings-wrapper nav ul li.users a:before {
+    background-position: -5px -118px;
+}
+.settings-wrapper nav ul li.clients a:before {
+    background-position: -52px -100px;
+}
+.settings-wrapper nav ul li.subscription a:before {
+    background-position: -30px -119px;
+}
+.settings-wrapper nav ul li.receipts a:before {
+    background-position: -29px -100px;
+}
+.settings-wrapper .content {
+    float: left;
+    margin-left: 22px;
+    width: 438px;
+}
+.settings-wrapper .content .page-header h1 {
+    font-size: 26px;
+}
+.settings-wrapper .button {
+    margin-top: 13px;
+}
+.settings-wrapper .notification {
+    display: inline-block;
+}
+.settings-wrapper form .form-row {
+    margin-bottom: 0;
+    position: relative;
+}
+.settings-wrapper form .form-row label {
+    font-size: 12px;
+    margin-bottom: 3px;
+    padding: 12px 10px 0 0;
+    text-align: left;
+    text-transform: uppercase;
+    width: 100px;
+}
+.settings-wrapper form .form-row .controls {
+    margin-left: 0;
+}
+.settings-wrapper form .form-row .controls input {
+    border: 0 none;
+    font-size: 17px;
+    max-width: 310px;
+    position: relative;
+}
+.settings-wrapper form .form-row.select label, .settings-wrapper form .form-row.time-zone-select label {
+    padding-top: 17px;
+}
+.settings-wrapper form .form-row.select .controls select, .settings-wrapper form .form-row.time-zone-select .controls select {
+    width: 326px;
+}
+.settings-wrapper form .form-row .help {
+    font-size: 15px;
+    margin-top: 6px;
+    max-width: 310px;
+}
+.settings-wrapper form .form-actions {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    padding: 5px 0;
+}
+.settings-wrapper form .form-actions .error-message {
+    display: block;
+    margin-top: 10px;
+}
+.settings-wrapper form h2 {
+    font-weight: bold;
+    margin: 23px 0 2px;
+}
+.settings-wrapper form h2 span.light {
+    color: #4b4b4b;
+    font-weight: 500;
+}
+.organizations.edit .settings-wrapper label, .organizations.update .settings-wrapper label {
+    float: none;
+    font-weight: 500;
+    text-align: left;
+    width: auto;
+}
+.organizations.edit .settings-wrapper .form-row, .organizations.update .settings-wrapper .form-row {
+    margin-left: 0;
+}
+.organizations.edit .settings-wrapper .form-row input, .organizations.update .settings-wrapper .form-row input {
+    width: 360px;
+}
+.organizations.edit .settings-wrapper .form-row input.hourly-rate, .organizations.update .settings-wrapper .form-row input.hourly-rate {
+    max-width: 90px;
+}
+.organizations.edit .settings-wrapper .form-actions, .organizations.update .settings-wrapper .form-actions {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    padding-left: 0;
+}
+.organizations.edit .settings-wrapper .form-row .select, .organizations.update .settings-wrapper .form-row .select {
+    background: none repeat scroll 0 0 #f2f0ed;
+    border-radius: 2px;
+    width: 326px;
+}
+.organizations.edit .settings-wrapper .form-row .select .dropdown, .organizations.update .settings-wrapper .form-row .select .dropdown {
+    width: 326px;
+    z-index: 100;
+}
+.organizations.edit .settings-wrapper .form-row .select .dropdown ul, .organizations.update .settings-wrapper .form-row .select .dropdown ul {
+    max-height: 300px;
+    overflow: auto;
+}
+.organizations.edit .settings-wrapper .delete-account, .organizations.update .settings-wrapper .delete-account {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    padding-top: 30px;
+}
+.organizations.edit .settings-wrapper .delete-account h1, .organizations.update .settings-wrapper .delete-account h1 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.users.index .settings-wrapper .content ul, .clients.index .settings-wrapper .content ul, .clients.inactive .settings-wrapper .content ul {
+    border-top: 1px solid #f2f0ed;
+}
+.users.index .settings-wrapper .content ul li, .clients.index .settings-wrapper .content ul li, .clients.inactive .settings-wrapper .content ul li {
+    border-bottom: 1px solid #f2f0ed;
+    min-height: 58px;
+    padding: 0 5px;
+    position: relative;
+}
+.users.index .settings-wrapper .content ul li .name, .clients.index .settings-wrapper .content ul li .name, .clients.inactive .settings-wrapper .content ul li .name {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 19px 0 0;
+    position: relative;
+}
+.users.index .settings-wrapper .content ul li .name .edit-button, .clients.index .settings-wrapper .content ul li .name .edit-button, .clients.inactive .settings-wrapper .content ul li .name .edit-button {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -27px -22px;
+    background-repeat: no-repeat;
+    display: block;
+    height: 24px;
+    outline: medium none;
+    position: absolute;
+    right: 0;
+    text-indent: -9999px;
+    top: 16px;
+    width: 24px;
+}
+@media not all {
+    .users.index .settings-wrapper .content ul li .name .edit-button, .clients.index .settings-wrapper .content ul li .name .edit-button, .clients.inactive .settings-wrapper .content ul li .name .edit-button {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.users.index .settings-wrapper .content ul li.inactive .info .avatar, .clients.index .settings-wrapper .content ul li.inactive .info .avatar, .clients.inactive .settings-wrapper .content ul li.inactive .info .avatar {
+    opacity: 0.6;
+}
+.users.index .settings-wrapper .content ul li.inactive .info .name, .clients.index .settings-wrapper .content ul li.inactive .info .name, .clients.inactive .settings-wrapper .content ul li.inactive .info .name {
+    color: #9f9e9d;
+}
+.users.index .settings-wrapper .content .edit-form, .clients.index .settings-wrapper .content .edit-form, .clients.inactive .settings-wrapper .content .edit-form {
+    padding: 10px 0;
+}
+.users.index .settings-wrapper .content .edit-form .form-row input, .clients.index .settings-wrapper .content .edit-form .form-row input, .clients.inactive .settings-wrapper .content .edit-form .form-row input {
+    width: 302px;
+}
+.users.index .settings-wrapper .content .edit-form .button-save, .clients.index .settings-wrapper .content .edit-form .button-save, .clients.inactive .settings-wrapper .content .edit-form .button-save {
+    min-width: 58px;
+    position: relative;
+}
+.users.index .settings-wrapper .content .edit-form .button-delete, .clients.index .settings-wrapper .content .edit-form .button-delete, .clients.inactive .settings-wrapper .content .edit-form .button-delete {
+    min-width: 49px;
+    position: relative;
+    text-align: center;
+}
+.users.index .settings-wrapper .content .button, .clients.index .settings-wrapper .content .button, .clients.inactive .settings-wrapper .content .button {
+    display: inline-block;
+}
+.users.index .settings-wrapper .content ul li {
+    padding-left: 60px;
+}
+.users.index .settings-wrapper .content ul li .avatar {
+    left: 5px;
+    position: absolute;
+    top: 10px;
+}
+.users.index .settings-wrapper .content ul li.add-user {
+    border: 0 none;
+    padding: 7px 0;
+}
+.users.index .settings-wrapper .content ul li.add-user p {
+    margin-top: 10px;
+}
+.users.index .settings-wrapper .content .edit-form .form-row label {
+    width: 80px;
+}
+.users.index .settings-wrapper .content .edit-form .form-row input {
+    width: 267px;
+}
+.users.index .settings-wrapper .content .edit-form .form-row.checkbox .controls {
+    padding-top: 15px;
+}
+.users.index .settings-wrapper .content .edit-form .form-row.checkbox .controls:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.users.index .settings-wrapper .content .edit-form .form-row.checkbox label {
+    display: block;
+    float: none;
+    padding: 0;
+    position: static;
+    width: auto;
+}
+.users.index .settings-wrapper .content .edit-form .form-row.checkbox label input {
+    margin-right: 3px;
+}
+.users.index .settings-wrapper .content .edit-form .form-row.checkbox input {
+    float: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+.users.edit_profile .profile-picture {
+    height: 128px;
+    margin-bottom: 40px;
+    padding-left: 148px;
+    position: relative;
+}
+.users.edit_profile .profile-picture .avatar {
+    border-radius: 64px;
+    height: 128px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 128px;
+}
+.users.edit_profile .profile-picture .avatar img.loader {
+    border-radius: 0;
+    display: none;
+    height: 11px;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -6px;
+    position: absolute;
+    top: 50%;
+    width: 16px;
+    z-index: 200;
+}
+.users.edit_profile .profile-picture .avatar img.image {
+    border-radius: 64px;
+}
+.users.edit_profile .profile-picture .avatar:hover {
+    cursor: pointer;
+}
+.users.edit_profile .profile-picture .avatar.uploading img.loader {
+    display: block;
+}
+.users.edit_profile .profile-picture .avatar.uploading img.image {
+    opacity: 0.5;
+}
+.users.edit_profile .profile-picture input {
+    border-radius: 2px;
+    display: none;
+    padding: 5px;
+    width: 280px;
+}
+.users.edit_profile .profile-picture h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0;
+}
+.users.edit_profile .profile-picture p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 150px;
+}
+.users.edit_profile .profile-picture .button {
+    display: inline-block;
+}
+.users.edit_profile .profile-picture.fallback .avatar:hover {
+    cursor: default;
+}
+.users.edit_profile .profile-picture.fallback input {
+    display: block;
+}
+.users.edit_profile .profile-picture.fallback .button {
+    display: none;
+}
+.users.edit_profile .form-row label {
+    width: auto;
+}
+.sessions .page-header + p {
+    padding-bottom: 20px;
+}
+.sessions ol.sessions li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 19px;
+    position: relative;
+}
+.sessions ol.sessions li div {
+    margin-bottom: 4px;
+    max-width: 314px;
+}
+.sessions ol.sessions li:first-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 22px;
+    padding-top: 20px;
+}
+.sessions ol.sessions li:last-child {
+    border-bottom: 0 none;
+    margin-bottom: 0;
+}
+.sessions ol.sessions li .location, .sessions ol.sessions li .ip {
+    font-size: 19px;
+}
+.sessions ol.sessions li .location {
+    font-weight: 800;
+}
+.sessions ol.sessions li .ip {
+    font-weight: 500;
+    margin-bottom: 9px;
+    margin-top: -4px;
+    opacity: 0.5;
+}
+.sessions ol.sessions li .source:before {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -224px -100px;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    float: left;
+    height: 22px;
+    margin-right: 4px;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 19px;
+}
+@media not all {
+    .sessions ol.sessions li .source:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.sessions ol.sessions li .accessed:before, .sessions ol.sessions li .created:before {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -244px -100px;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    float: left;
+    height: 22px;
+    margin-right: 4px;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 19px;
+}
+@media not all {
+    .sessions ol.sessions li .accessed:before, .sessions ol.sessions li .created:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.sessions ol.sessions li .button, .sessions ol.sessions li .current-session {
+    background: none repeat scroll 0 0 transparent;
+    box-shadow: none;
+    display: inline-block;
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.18;
+    margin-bottom: 3px;
+    margin-top: 15px;
+    padding: 8px 11px 7px 0;
+    position: relative;
+    text-align: left;
+    text-transform: uppercase;
+}
+@media screen and (min-width: 529px) {
+    .sessions ol.sessions li .button, .sessions ol.sessions li .current-session {
+        margin-top: -23px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+    }
+}
+.sessions ol.sessions li .button {
+    border: 2px solid #e15a51;
+    color: #d54a43;
+    min-width: 66px;
+    padding: 9px 11px 8px 32px;
+}
+.sessions ol.sessions li .button:before {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -303px -97px;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 22px;
+    left: 7px;
+    margin-top: -11px;
+    outline: medium none;
+    position: absolute;
+    text-indent: -9999px;
+    top: 50%;
+    width: 19px;
+}
+@media not all {
+    .sessions ol.sessions li .button:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.sessions ol.sessions li .button:hover, .sessions ol.sessions li .button.loading {
+    background-color: #e15a51;
+    color: white;
+}
+.sessions ol.sessions li .button:hover:before, .sessions ol.sessions li .button.loading:before {
+    background-position: -303px -119px;
+}
+.sessions ol.sessions li .button.loading {
+    cursor: default;
+}
+.sessions ol.sessions li .button.loading:before {
+    display: none;
+}
+.sessions ol.sessions li .current-session {
+    border: 2px solid #e4e1dc;
+    color: #afaba5;
+}
+.sessions ol.sessions li .current-session:before {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -272px -94px;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    float: left;
+    height: 28px;
+    margin: 0 5px;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 28px;
+}
+@media not all {
+    .sessions ol.sessions li .current-session:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+@media screen and (min-width: 529px) {
+    .sessions ol.sessions li .current-session {
+        margin-top: -32px;
+    }
+}
+@media screen and (max-width: 699px) {
+    .settings-wrapper nav {
+        border-bottom: 1px solid #e8e5e1;
+        float: none;
+        margin: 0 0 20px;
+        padding-bottom: 10px;
+        width: 100%;
+    }
+    .settings-wrapper nav ul {
+    }
+    .settings-wrapper nav ul:after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+    .settings-wrapper nav ul li {
+        float: left;
+        margin-right: 9px;
+    }
+    .settings-wrapper nav ul li a {
+        padding: 6px 2px 6px 22px;
+    }
+    .settings-wrapper nav ul li a:before {
+        left: 0;
+    }
+    .settings-wrapper > .content {
+        clear: both;
+        float: none;
+        margin-left: 0;
+        width: 100%;
+    }
+    .users.index .settings-wrapper .content .edit-form h2, .clients.index .settings-wrapper .content .edit-form h2, .organizations.edit .settings-wrapper .content .edit-form h2 {
+        font-size: 18px;
+    }
+    .users.index .settings-wrapper .form-row .controls input[type="text"], .users.index .settings-wrapper .form-row .controls input[type="number"], .users.index .settings-wrapper .form-row .controls input[type="email"], .users.index .settings-wrapper .form-row .controls select, .clients.index .settings-wrapper .form-row .controls input[type="text"], .clients.index .settings-wrapper .form-row .controls input[type="number"], .clients.index .settings-wrapper .form-row .controls input[type="email"], .clients.index .settings-wrapper .form-row .controls select, .organizations.edit .settings-wrapper .form-row .controls input[type="text"], .organizations.edit .settings-wrapper .form-row .controls input[type="number"], .organizations.edit .settings-wrapper .form-row .controls input[type="email"], .organizations.edit .settings-wrapper .form-row .controls select {
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .users.index .settings-wrapper .form-row .controls .select, .clients.index .settings-wrapper .form-row .controls .select, .organizations.edit .settings-wrapper .form-row .controls .select {
+        max-width: 310px;
+        width: 100%;
+    }
+    .users.index .settings-wrapper .form-row .controls .select .dropdown, .clients.index .settings-wrapper .form-row .controls .select .dropdown, .organizations.edit .settings-wrapper .form-row .controls .select .dropdown {
+        max-width: 310px;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 360px) {
+    .users.edit_profile .profile-picture {
+        padding-left: 105px;
+    }
+    .users.edit_profile .profile-picture .avatar {
+        height: 95px;
+        width: 95px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .users.index .settings-wrapper .content ul li .edit-form {
+        margin-left: -60px;
+    }
+    .users.index .settings-wrapper .content ul li .edit-form .avatar {
+        display: none;
+    }
+}
+@media screen and (max-width: 430px) {
+    .settings-wrapper form h2 span {
+        display: block;
+        font-size: 16px;
+    }
+}
+.subscriptions .edit-credit-card {
+    padding-top: 21px;
+}
+.subscriptions .edit-credit-card .actions {
+    margin-top: 5px;
+}
+.subscriptions .edit-credit-card .actions .button {
+    position: relative;
+    text-align: center;
+}
+.subscriptions .edit-credit-card .actions .notification {
+    margin-top: 15px;
+}
+.subscriptions .edit-credit-card .credit-card-form, .subscriptions .edit-credit-card .credit-card {
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.subscriptions .edit-credit-card .view-credit-card {
+    margin-right: 4px;
+    width: 160px;
+}
+.subscriptions .edit-credit-card .update-credit-card {
+    width: 160px;
+}
+.subscriptions .cancel-subscription {
+    padding-top: 21px;
+}
+.subscriptions .cancel-subscription .links {
+    margin-top: 10px;
+}
+.subscriptions .content p {
+    margin-bottom: 10px;
+}
+.subscriptions .content p.intro {
+    margin-bottom: 25px;
+}
+.subscriptions section.page .button-save {
+    min-width: 130px;
+    position: relative;
+    text-align: center;
+}
+.subscriptions section.page .content > div h2 {
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+.subscriptions section.page .content .plan-picker .actions .change-plan-button {
+    margin-right: 8px;
+}
+.subscriptions section.page .content .plan-picker .actions span.error {
+    color: #f18177;
+}
+.subscriptions section.page .content .plan-picker .actions span.success {
+    color: #4aad59;
+}
+.subscriptions section.page .payment-date {
+    font-size: 14px;
+}
+.subscriptions .plan-picker ul.plans {
+    margin: 0 -8px;
+}
+.subscriptions .plan-picker ul.plans:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.subscriptions .plan-picker ul.plans > li {
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    padding: 0 8px;
+    width: 50%;
+}
+.subscriptions .plan-picker ul.plans > li .inner {
+    background: none repeat scroll 0 0 #e4e1dc;
+    margin: 0;
+    padding: 13px;
+}
+.subscriptions .plan-picker ul.plans > li .name {
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 10px 0 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+.subscriptions .plan-picker ul.plans > li .price {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 30px;
+    position: relative;
+    text-align: center;
+}
+.subscriptions .plan-picker ul.plans > li .price .month {
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.6;
+    position: relative;
+    top: 0;
+}
+.subscriptions .plan-picker ul.plans > li .price:after {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.15);
+    bottom: -20px;
+    content: " ";
+    display: block;
+    height: 3px;
+    left: 50%;
+    margin-left: -10px;
+    position: absolute;
+    width: 20px;
+}
+.subscriptions .plan-picker ul.plans > li ul.features {
+    list-style: none outside none;
+    margin-bottom: 16px;
+    margin-left: 1px;
+    padding-top: 7px;
+}
+.subscriptions .plan-picker ul.plans > li ul.features li {
+    margin: 0 0 1px;
+}
+.subscriptions .plan-picker ul.plans > li ul.features li:before {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -155px -34px;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    float: left;
+    height: 10px;
+    margin: 7px 3px 0 0;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 10px;
+}
+@media not all {
+    .subscriptions .plan-picker ul.plans > li ul.features li:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.subscriptions .plan-picker ul.plans > li .button {
+    background: none repeat scroll 0 0 #c0bcb6;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #4b4b4b;
+    display: block;
+    margin: 0;
+    padding: 12px 7px 11px;
+    position: relative;
+    text-align: center;
+}
+.subscriptions .plan-picker ul.plans > li .button:hover {
+    background: none repeat scroll 0 0 #afaba5;
+}
+.subscriptions .plan-picker ul.plans > li .button.selected {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+    border-color: transparent;
+    color: #edeae6;
+    position: relative;
+    text-indent: 21px;
+}
+.subscriptions .plan-picker ul.plans > li .button.selected:before {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -99px -101px;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 17px;
+    left: 45px;
+    outline: medium none;
+    position: absolute;
+    text-indent: -9999px;
+    width: 17px;
+}
+@media not all {
+    .subscriptions .plan-picker ul.plans > li .button.selected:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.subscriptions .plan-picker ul.plans > li .button.selected:hover {
+    cursor: default;
+}
+.subscriptions .plan-picker .notification {
+    margin-top: 10px;
+}
+.subscriptions .content.create-subscription .payment-method {
+    transition-duration: 0.2s;
+    transition-property: opacity;
+}
+.subscriptions .content.create-subscription .payment-method.inactive {
+    opacity: 0.5;
+}
+.subscriptions .content.create-subscription h2 {
+    margin-bottom: 8px;
+}
+.subscriptions .content.create-subscription .credit-card-form {
+    margin-bottom: 25px;
+    margin-top: 30px;
+}
+.subscriptions .content.create-subscription .credit-card-form + .credit-card-form-errors {
+    margin-top: -10px;
+}
+@media screen and (max-width: 450px) {
+    .subscriptions .plan-picker ul.plans > li {
+        float: none;
+        margin: 0 auto 20px;
+        max-width: 260px;
+        width: 100%;
+    }
+    .subscriptions .plan-picker ul.plans > li:last-child {
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 470px) {
+    .subscriptions .edit-credit-card .actions {
+        margin-top: 10px;
+    }
+    .subscriptions .edit-credit-card .actions:after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+    .subscriptions .edit-credit-card .actions .view-credit-card, .subscriptions .edit-credit-card .actions .update-credit-card {
+        box-sizing: border-box;
+        float: left;
+        margin: 0 0 20px 1%;
+        width: 49.5%;
+    }
+    .subscriptions .edit-credit-card .actions .view-credit-card:first-child, .subscriptions .edit-credit-card .actions .update-credit-card:first-child {
+        margin-left: 0;
+    }
+    .subscriptions .edit-credit-card .actions .credit-card-form, .subscriptions .edit-credit-card .actions .credit-card {
+        clear: both;
+    }
+}
+.subscriptions .credit-card-form, .subscriptions .credit-card {
+    /*background: url("https://d1svzc13qlipt8.cloudfront.net/assets/time-tracker/creditcard_glare-c1b747fb9d0949670eda4fc5f473015a.png") no-repeat scroll -240px -77px #dad9d6;*/
+    border-radius: 8px;
+    box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.08) inset;
+    max-width: 315px;
+    padding: 70px 20px 18px;
+    position: relative;
+}
+.subscriptions .credit-card-form:after, .subscriptions .credit-card:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+@media not all {
+    .subscriptions .credit-card-form, .subscriptions .credit-card {
+        /*background-image: url("https://d1svzc13qlipt8.cloudfront.net/assets/time-tracker/creditcard_glare@2x-df42c0002c07338733b459e3216fad35.png");*/
+        background-size: 300px 213px;
+    }
+}
+.subscriptions .credit-card-form .logo, .subscriptions .credit-card .logo {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -52px -56px;
+    background-repeat: no-repeat;
+    display: block;
+    height: 35px;
+    left: 24px;
+    outline: medium none;
+    position: absolute;
+    text-indent: -9999px;
+    top: 21px;
+    width: 30px;
+}
+@media not all {
+    .subscriptions .credit-card-form .logo, .subscriptions .credit-card .logo {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.subscriptions .credit-card-form label, .subscriptions .credit-card label {
+    color: #4b4b4b;
+    display: block;
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    margin-bottom: 2px;
+    opacity: 0.7;
+    text-transform: uppercase;
+}
+.subscriptions .credit-card-form input, .subscriptions .credit-card-form span.value, .subscriptions .credit-card input, .subscriptions .credit-card span.value {
+    background: none repeat scroll 0 0 white;
+    border: 0 none;
+    border-radius: 1px;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    min-height: 40px;
+    padding: 9px;
+    width: 100%;
+}
+.subscriptions .credit-card-form input:focus, .subscriptions .credit-card-form span.value:focus, .subscriptions .credit-card input:focus, .subscriptions .credit-card span.value:focus {
+    outline: 0 none;
+}
+.subscriptions .credit-card-form span.value, .subscriptions .credit-card span.value {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.4);
+    display: block;
+}
+.subscriptions .credit-card-form .card-number, .subscriptions .credit-card .card-number {
+    margin-bottom: 14px;
+}
+.subscriptions .credit-card-form .expiration-date, .subscriptions .credit-card .expiration-date {
+    float: left;
+}
+.subscriptions .credit-card-form .expiration-date .fields .form-field, .subscriptions .credit-card .expiration-date .fields .form-field {
+    float: left;
+    width: 54px;
+}
+.subscriptions .credit-card-form .expiration-date .fields .form-field:first-child, .subscriptions .credit-card .expiration-date .fields .form-field:first-child {
+    margin-right: 7px;
+}
+.subscriptions .credit-card-form .cvv, .subscriptions .credit-card .cvv {
+    float: right;
+    position: relative;
+}
+.subscriptions .credit-card-form .cvv a.help, .subscriptions .credit-card .cvv a.help {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -212px -42px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: none;
+    height: 22px;
+    opacity: 0.6;
+    outline: medium none;
+    position: absolute;
+    right: 8px;
+    text-indent: -9999px;
+    top: 26px;
+    transition-duration: 0.2s;
+    transition-property: opacity;
+    width: 22px;
+}
+@media not all {
+    .subscriptions .credit-card-form .cvv a.help, .subscriptions .credit-card .cvv a.help {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.subscriptions .credit-card-form .cvv a.help:hover, .subscriptions .credit-card .cvv a.help:hover {
+    opacity: 1;
+}
+.subscriptions .credit-card-form .cvv .form-field, .subscriptions .credit-card .cvv .form-field {
+    float: right;
+    width: 73px;
+}
+.subscriptions .credit-card-form .cvv .form-field input, .subscriptions .credit-card .cvv .form-field input {
+    text-align: left;
+}
+.subscriptions .credit-card-form .cvv.valid a.help, .subscriptions .credit-card .cvv.valid a.help {
+    display: none;
+}
+.subscriptions .credit-card-form div.valid .form-field, .subscriptions .credit-card div.valid .form-field {
+    position: relative;
+}
+.subscriptions .credit-card-form div.valid .form-field:after, .subscriptions .credit-card div.valid .form-field:after {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -379px -5px;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 16px;
+    opacity: 0.75;
+    outline: medium none;
+    position: absolute;
+    right: 6px;
+    text-indent: -9999px;
+    top: 10px;
+    width: 16px;
+}
+@media not all {
+    .subscriptions .credit-card-form div.valid .form-field:after, .subscriptions .credit-card div.valid .form-field:after {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.subscriptions .credit-card-form-errors {
+    margin-top: 15px;
+}
+.subscriptions .credit-card-form-errors ul {
+    list-style: disc inside none;
+    margin-left: 6px;
+}
+@media screen and (max-width: 360px) {
+    .subscriptions .credit-card-form, .subscriptions .credit-card {
+        padding-top: 20px;
+    }
+    .subscriptions .credit-card-form .logo, .subscriptions .credit-card .logo {
+        display: none;
+    }
+}
+.receipts.index table.receipts {
+    width: 100%;
+}
+.receipts.index table.receipts th {
+    font-weight: bold;
+}
+.receipts.index table.receipts td, .receipts.index table.receipts th {
+    border-bottom: 1px solid lightgrey;
+    padding: 8px 5px;
+}
+.receipts.index table.receipts td.billed-on {
+    min-width: 90px;
+}
+.receipts.index table.receipts td.plan {
+    max-width: 60px;
+}
+.receipts.index table.receipts td.amount {
+    max-width: 60px;
+}
+.receipts.index table.receipts td.download {
+    white-space: nowrap;
+    width: 1px;
+}
+.receipts.index table.receipts td.download a {
+    color: #9f9e9d;
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.receipts.index table.receipts td.download a:hover {
+    color: #6f6e6d;
+}
+@media screen and (max-width: 460px) {
+    .receipts.index table.receipts th.period, .receipts.index table.receipts td.period {
+        display: none;
+    }
+}
+.get-started {
+    /*background-image: url("https://d1svzc13qlipt8.cloudfront.net/assets/time-tracker/getstarted-69f498d3c38d2b2537fcea9b5323d745.png");*/
+    background-position: left top;
+    background-repeat: no-repeat;
+    float: right;
+    height: 160px;
+    margin: -49px -21px 0 0;
+    width: 310px;
+}
+@media not all {
+    .get-started {
+        /*background-image: url("https://d1svzc13qlipt8.cloudfront.net/assets/time-tracker/getstarted@2x-aabcde757e31eb42a066fb8b4bfb5eb1.png");*/
+        background-size: 293px 121px;
+    }
+}
+ol.entry-log li {
+    margin-bottom: 24px;
+}
+ol.entry-log li.entry-billed:before {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -195px -102px;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 22px;
+    left: 0;
+    outline: medium none;
+    position: absolute;
+    text-indent: -9999px;
+    top: 0;
+    width: 22px;
+}
+@media not all {
+    ol.entry-log li.entry-billed:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+ol.entry-log h2 {
+    color: #4b4b4b;
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+ol.entry-log h2 .day-of-the-week {
+    opacity: 0.5;
+}
+ol.entry-log ul.entries {
+    line-height: 1.1;
+}
+ol.entry-log ul.entries li.entry {
+    background: none repeat scroll 0 0 #f4f2f0;
+    border-radius: 2px;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 6px 0 0;
+    min-height: 34px;
+    padding: 7px 10px 7px 54px;
+    position: relative;
+}
+ol.entry-log ul.entries li.entry:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+ol.entry-log ul.entries li.entry:first-child {
+    border-top: 0 none;
+}
+ol.entry-log ul.entries li.entry:nth-child(2n) {
+    background: none repeat scroll 0 0 #fbfaf9;
+}
+ol.entry-log ul.entries li.entry.in {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0) inset;
+    transition-delay: 2s;
+    transition-duration: 0.5s;
+    transition-property: box-shadow;
+}
+ol.entry-log ul.entries li.entry.out {
+    box-shadow: 0 0 3px #51bb64 inset;
+}
+ol.entry-log ul.entries li.entry .user, ol.entry-log ul.entries li.entry .avatar {
+    height: 34px;
+    width: 34px;
+}
+ol.entry-log ul.entries li.entry .user {
+    left: 10px;
+    position: absolute;
+    top: 12px;
+}
+ol.entry-log ul.entries li.entry .time-profit {
+    float: left;
+    width: 180px;
+}
+ol.entry-log ul.entries li.entry .time-profit:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+ol.entry-log ul.entries li.entry .time, ol.entry-log ul.entries li.entry .profit {
+    float: left;
+    font-size: 18px;
+    line-height: 1.05;
+    padding: 12px 8px 6px 1px;
+    position: relative;
+}
+ol.entry-log ul.entries li.entry .time {
+    width: auto;
+}
+ol.entry-log ul.entries li.entry .time:before {
+    background-position: -122px -97px;
+}
+ol.entry-log ul.entries li.entry .profit {
+    font-weight: 500;
+    opacity: 0.7;
+    padding: 12px 0;
+    width: 100px;
+}
+ol.entry-log ul.entries li.entry .project {
+    box-sizing: border-box;
+    float: left;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 7px 9px 0 0;
+    width: 160px;
+}
+ol.entry-log ul.entries li.entry .project span.client {
+    color: #4b4b4b;
+    display: block;
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    margin-bottom: 3px;
+    opacity: 0.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+ol.entry-log ul.entries li.entry .project a {
+    color: #4b4b4b;
+    font-size: 16px;
+    font-weight: 500;
+}
+ol.entry-log ul.entries li.entry .project a:hover {
+    color: #181818;
+}
+ol.entry-log ul.entries li.entry .comment {
+    float: right;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 7px 31px 7px 0;
+    padding: 1px 2px 0 26px;
+    position: relative;
+    width: 157px;
+    word-break: break-all;
+}
+ol.entry-log ul.entries li.entry .comment:before {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -3px -23px;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 18px;
+    left: 0;
+    outline: medium none;
+    position: absolute;
+    text-indent: -9999px;
+    top: 0;
+    width: 19px;
+}
+@media not all {
+    ol.entry-log ul.entries li.entry .comment:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+ol.entry-log ul.entries li.entry .comment span {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-radius: 2px;
+    display: inline-block;
+    padding: 0;
+    text-align: left;
+}
+ol.entry-log ul.entries li.entry .comment .wrapper {
+    position: relative;
+}
+ol.entry-log ul.entries li.entry .comment span.interval {
+    color: #666666;
+    font-weight: 600;
+}
+ol.entry-log ul.entries li.entry .comment span.no-comment {
+    color: #999999;
+}
+ol.entry-log ul.entries li.entry .actions {
+    margin-top: -11px;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    width: 23px;
+}
+ol.entry-log ul.entries li.entry .actions a.opener {
+    background-color: white;
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -2px -50px;
+    background-repeat: no-repeat;
+    border-radius: 24px;
+    display: block;
+    height: 24px;
+    margin: -2px 0 0;
+    outline: medium none;
+    padding: 0;
+    text-indent: -9999px;
+    transition: none 0s ease 0s ;
+    width: 24px;
+}
+@media not all {
+    ol.entry-log ul.entries li.entry .actions a.opener {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+ol.entry-log ul.entries li.entry .actions a.opener:hover {
+    background-color: #6f6e6d;
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -28px -50px;
+    background-repeat: no-repeat;
+    display: block;
+    height: 24px;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 24px;
+}
+@media not all {
+    ol.entry-log ul.entries li.entry .actions a.opener:hover {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+ol.entry-log ul.entries li.entry .actions .dropdown {
+    border: 0 none;
+    left: auto;
+    right: 0;
+    top: 28px;
+    width: 150px;
+    z-index: 100;
+}
+ol.entry-log ul.entries li.entry .actions .dropdown a {
+    border-top: 0 none;
+    position: relative;
+}
+ol.entry-log .load-more a {
+    background: none repeat scroll 0 0 #62d36c;
+    border-radius: 2px;
+    color: white;
+    display: block;
+    font-weight: 700;
+    padding: 12px 0 10px;
+    position: relative;
+    text-align: center;
+}
+ol.entry-log .load-more a:hover {
+    background: none repeat scroll 0 0 #59c96e;
+}
+ol.entry-log .load-more a:active {
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08) inset;
+}
+ol.entry-log.clock-24 li.entry .comment .interval.clock-24 {
+    display: inline-block;
+}
+ol.entry-log.clock-24 li.entry .comment .interval.clock-12 {
+    display: none;
+}
+ol.entry-log.clock-12 li.entry .comment .interval.clock-24 {
+    display: none;
+}
+ol.entry-log.clock-12 li.entry .comment .interval.clock-12 {
+    display: inline-block;
+}
+@media screen and (max-width: 1023px) {
+    .get-started {
+        display: none;
+    }
+}
+@media screen and (max-width: 690px) {
+    .container .inner section.page {
+        padding: 20px 15px;
+    }
+    ol.entry-log ul.entries li.entry {
+        margin: 7px 0 0;
+        padding: 7px 30px 7px 49px;
+    }
+    ol.entry-log ul.entries li.entry .user {
+        height: 28px;
+        left: 10px;
+        position: absolute;
+        top: 13px;
+        width: 28px;
+    }
+    ol.entry-log ul.entries li.entry .user .avatar {
+        height: 100%;
+        width: 100%;
+    }
+    ol.entry-log ul.entries li.entry .time, ol.entry-log ul.entries li.entry .profit {
+        box-sizing: border-box;
+        font-weight: 600;
+        opacity: 1;
+        padding-bottom: 6px;
+        padding-right: 12px;
+        padding-top: 9px;
+        position: relative;
+    }
+    ol.entry-log ul.entries li.entry .time:before, ol.entry-log ul.entries li.entry .profit:before {
+        content: "";
+        left: 0;
+        position: absolute;
+    }
+    ol.entry-log ul.entries li.entry .time {
+        padding-left: 24px;
+    }
+    ol.entry-log ul.entries li.entry .time:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-position: -141px -100px;
+        background-repeat: no-repeat;
+        display: block;
+        height: 20px;
+        outline: medium none;
+        text-indent: -9999px;
+        top: 11px;
+        width: 20px;
+    }
+    ol.entry-log ul.entries li.entry .profit {
+        padding-left: 27px;
+    }
+    ol.entry-log ul.entries li.entry .profit:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-position: -165px -101px;
+        background-repeat: no-repeat;
+        display: block;
+        height: 20px;
+        outline: medium none;
+        text-indent: -9999px;
+        top: 11px;
+        width: 21px;
+    }
+    ol.entry-log ul.entries li.entry .profit:after {
+        clear: both;
+        content: " ";
+        height: 1px;
+    }
+    ol.entry-log ul.entries li.entry .project {
+        box-sizing: border-box;
+        clear: both;
+        float: none;
+        padding: 8px 0 0;
+        position: static;
+        width: auto;
+    }
+    ol.entry-log ul.entries li.entry .comment {
+        clear: both;
+        float: none;
+        margin: 9px 10px 7px 0;
+        max-width: none;
+        width: auto;
+    }
+    ol.entry-log ul.entries li.entry .comment span {
+        padding: 0;
+    }
+}
+@media not all {
+    ol.entry-log ul.entries li.entry .time:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+@media not all {
+    ol.entry-log ul.entries li.entry .profit:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.cover {
+    padding: 30px 0 8px;
+    position: relative;
+    z-index: 10;
+}
+.cover .inner {
+    margin: 0 auto;
+    width: 960px;
+}
+.cover .inner > h1 {
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    margin-top: 54px;
+    text-transform: uppercase;
+}
+.cover .inner.stats {
+    padding-bottom: 22px;
+}
+.cover .inner.stats nav {
+    float: left;
+    width: 124px;
+}
+.cover .inner.stats nav ul li {
+    display: block;
+}
+.cover .inner.stats nav ul li a {
+    color: #4b4a49;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    height: 24px;
+    margin: 0;
+    opacity: 0.6;
+    padding: 5px 9px 0;
+    width: 82px;
+}
+.cover .inner.stats nav ul li a:hover {
+    opacity: 1;
+}
+.cover .inner.stats nav ul li.active a {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: 0 -164px;
+    background-repeat: no-repeat;
+    color: #4b4a49;
+    font-weight: 800;
+    opacity: 1;
+}
+@media not all {
+    .cover .inner.stats nav ul li.active a {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.cover .inner.stats .period {
+    display: none;
+}
+.cover .inner.stats .period:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.cover .inner.stats .period.active {
+    display: block;
+}
+.cover .inner.stats .period > div {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.6);
+    border-radius: 3px;
+    float: left;
+    height: 127px;
+    margin-left: 14px;
+    padding: 12px 10px 7px;
+    text-align: center;
+}
+.cover .inner.stats .period > div .value {
+    color: #4d4b49;
+    display: inline-block;
+    font-size: 54px;
+    font-weight: 300;
+    margin: 9px 0;
+    position: relative;
+}
+.cover .inner.stats .period > div .value:before {
+    content: " ";
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 50%;
+}
+.cover .inner.stats .period > div .value .hours {
+    padding-right: 13px;
+    position: relative;
+}
+.cover .inner.stats .period > div .value .hours:after {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -225px -3px;
+    background-repeat: no-repeat;
+    content: " ";
+    display: block;
+    height: 32px;
+    outline: medium none;
+    position: absolute;
+    right: 0;
+    text-indent: -9999px;
+    top: 16px;
+    width: 10px;
+}
+@media not all {
+    .cover .inner.stats .period > div .value .hours:after {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.cover .inner.stats .period > div .value .minutes {
+    margin-left: -6px;
+    padding-right: 13px;
+    position: relative;
+}
+.cover .inner.stats .period > div .value .minutes:after {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -254px -3px;
+    background-repeat: no-repeat;
+    content: " ";
+    display: block;
+    height: 32px;
+    outline: medium none;
+    position: absolute;
+    right: 0;
+    text-indent: -9999px;
+    top: 16px;
+    width: 10px;
+}
+@media not all {
+    .cover .inner.stats .period > div .value .minutes:after {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.cover .inner.stats .period > div:first-child {
+    margin-left: 0;
+}
+.cover .inner.stats .period > div span.description {
+    display: block;
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    margin-bottom: 0;
+    opacity: 0.5;
+    padding: 0 6px;
+    text-transform: uppercase;
+}
+.cover .inner.stats .period > div.money-earned {
+    width: 358px;
+}
+.cover .inner.stats .period > div.money-earned .value {
+    padding-left: 54px;
+}
+.cover .inner.stats .period > div.money-earned .value:before {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -12px -196px;
+    background-repeat: no-repeat;
+    display: block;
+    height: 53px;
+    margin-top: -27px;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 53px;
+}
+@media not all {
+    .cover .inner.stats .period > div.money-earned .value:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.cover .inner.stats .period > div.hours-logged {
+    width: 232px;
+}
+.cover .inner.stats .period > div.hours-logged .value {
+    padding-left: 52px;
+}
+.cover .inner.stats .period > div.hours-logged .value:before {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -64px -196px;
+    background-repeat: no-repeat;
+    display: block;
+    height: 53px;
+    margin-top: -27px;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 53px;
+}
+@media not all {
+    .cover .inner.stats .period > div.hours-logged .value:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.cover .inner.stats .period > div.hours-logged .value.icon-hidden {
+    padding-left: 0;
+}
+.cover .inner.stats .period > div.hours-logged .value.icon-hidden:before {
+    display: none;
+}
+.cover .inner.stats .period > div.active-projects {
+    width: 155px;
+}
+.cover .inner.stats .period > div.active-projects span.description {
+    text-indent: -1px;
+}
+.cover .inner.stats .period > div.active-projects .value {
+    padding-left: 52px;
+}
+.cover .inner.stats .period > div.active-projects .value:before {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -120px -196px;
+    background-repeat: no-repeat;
+    display: block;
+    height: 54px;
+    margin-top: -26.5px;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 53px;
+}
+@media not all {
+    .cover .inner.stats .period > div.active-projects .value:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.pages.activity ol.entry-log table.entries td.mark-as-billed {
+    display: none;
+}
+.pages.overview h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.pages.overview .generator {
+    font-size: 22px;
+    margin-bottom: 22px;
+    padding-top: 16px;
+}
+.pages.overview .generator:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.pages.overview .generator .filter-container {
+    margin-bottom: 15px;
+}
+.pages.overview .generator .filter-container:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.pages.overview .generator .filter-container > span {
+    float: left;
+    margin-bottom: 10px;
+    margin-right: 7px;
+}
+.pages.overview .generator span.selector {
+    position: relative;
+}
+.pages.overview .generator span.selector.disabled {
+    opacity: 0.8;
+}
+.pages.overview .generator span.selector.disabled a:hover {
+    cursor: default;
+}
+.pages.overview .generator span.selector > a {
+    background: none repeat scroll 0 0 #e5e2df;
+    border-radius: 3px;
+    color: #414141;
+    font-size: 21px;
+    font-weight: 600;
+    padding: 4px 26px 4px 8px;
+    position: relative;
+}
+.pages.overview .generator span.selector > a:after {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -92px -56px;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 12px;
+    margin-top: -6px;
+    outline: medium none;
+    position: absolute;
+    right: 7px;
+    text-indent: -9999px;
+    top: 50%;
+    width: 14px;
+}
+@media not all {
+    .pages.overview .generator span.selector > a:after {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.pages.overview .generator span.selector > a:hover {
+    background: none repeat scroll 0 0 #cfcac4;
+}
+.pages.overview .generator span.selector .dropdown {
+    border: 1px solid #c8c5c0;
+    border-radius: 2px;
+    font-size: 15px;
+    left: 50%;
+    margin-left: -85px;
+    margin-top: 12px;
+    width: 170px;
+    z-index: 200;
+}
+.pages.overview .generator span.selector .dropdown i.dropdown-arrow {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -118px -162px;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 7px;
+    left: 0;
+    outline: medium none;
+    position: absolute;
+    text-indent: -9999px;
+    top: -7px;
+    width: 15px;
+}
+@media not all {
+    .pages.overview .generator span.selector .dropdown i.dropdown-arrow {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.pages.overview .generator span.selector .dropdown i.dropdown-arrow.hover {
+}
+.pages.overview .generator span.selector .dropdown .all-link {
+    border-bottom: 1px solid #c8c5c0;
+    color: #4b4b4b;
+    display: block;
+    padding: 10px 10px 8px;
+}
+.pages.overview .generator span.selector .dropdown .all-link:hover {
+    background: none repeat scroll 0 0 #e4e1dc;
+}
+.pages.overview .generator span.selector .dropdown ul li a {
+    color: #4b4b4b;
+    display: block;
+    padding: 9px 10px 7px;
+}
+.pages.overview .generator span.selector .dropdown ul li:last-child a {
+    border-bottom: 0 none;
+}
+.pages.overview .generator span.selector .dropdown .searchable-list-container ul {
+    max-height: 200px;
+    overflow-y: auto;
+}
+.pages.overview .generator span.selector .project-picker-dropdown {
+    margin-left: -110px;
+    width: 220px;
+}
+.pages.overview .generator span.selector .date-dropdown {
+    margin-left: -120px;
+    width: 240px;
+}
+.pages.overview .generator span.selector .date-dropdown .options li {
+    position: relative;
+}
+.pages.overview .generator span.selector .date-dropdown .options li:hover {
+    background: none repeat scroll 0 0 #e4e1dc;
+}
+.pages.overview .generator span.selector .date-dropdown .options a {
+    background: none repeat scroll 0 0 transparent;
+    padding-right: 40px;
+}
+.pages.overview .generator span.selector .date-dropdown .options a:hover {
+    background: none repeat scroll 0 0 transparent;
+}
+.pages.overview .generator span.selector .date-dropdown .options .more-dates {
+    border: 0 none;
+    border-radius: 1000px;
+    height: 26px;
+    margin-top: -12px;
+    padding: 0;
+    position: absolute;
+    right: 3px;
+    text-indent: -9999px;
+    top: 50%;
+    width: 26px;
+}
+.pages.overview .generator span.selector .date-dropdown .options .more-dates:hover {
+    background: none repeat scroll 0 0 #d1ceca;
+}
+.pages.overview .generator span.selector .date-dropdown .options .more-dates:after {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -134px -55px;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 16px;
+    outline: medium none;
+    position: absolute;
+    right: 4px;
+    text-indent: -9999px;
+    top: 6px;
+    width: 16px;
+}
+@media not all {
+    .pages.overview .generator span.selector .date-dropdown .options .more-dates:after {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.pages.overview .generator span.selector .date-dropdown .calendar .kalendae {
+    background: none repeat scroll 0 0 transparent;
+    padding: 0;
+}
+.pages.overview .generator span.selector .date-dropdown .calendar .kalendae:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.pages.overview .generator span.selector .date-dropdown .calendar .k-calendar {
+    background: none repeat scroll 0 0 transparent;
+    box-sizing: border-box;
+}
+.pages.overview .generator span.selector .date-dropdown .detail-view .top-bar {
+    border-bottom: 1px solid #d4d1cd;
+    line-height: 1.15;
+    padding: 10px 39px 8px;
+    position: relative;
+}
+.pages.overview .generator span.selector .date-dropdown .detail-view .top-bar h1 {
+    font-size: 16px;
+    margin: 0;
+    text-align: center;
+}
+.pages.overview .generator span.selector .date-dropdown .detail-view .top-bar .cancel {
+    border-radius: 1000px;
+    display: block;
+    height: 26px;
+    left: 4px;
+    margin-top: -13px;
+    outline: medium none;
+    position: absolute;
+    text-indent: -9999px;
+    top: 50%;
+    width: 26px;
+}
+.pages.overview .generator span.selector .date-dropdown .detail-view .top-bar .cancel:hover {
+    background: none repeat scroll 0 0 #d4d1cd;
+}
+.pages.overview .generator span.selector .date-dropdown .detail-view .top-bar .cancel:hover:after {
+    opacity: 1;
+}
+.pages.overview .generator span.selector .date-dropdown .detail-view .top-bar .cancel:after {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -153px -55px;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 17px;
+    left: 8px;
+    opacity: 0.75;
+    outline: medium none;
+    position: absolute;
+    text-indent: -9999px;
+    top: 6px;
+    width: 10px;
+}
+@media not all {
+    .pages.overview .generator span.selector .date-dropdown .detail-view .top-bar .cancel:after {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.pages.overview .generator span.selector .date-dropdown .detail-view .content-container {
+    max-height: 250px;
+    overflow-y: auto;
+}
+.pages.overview .generator span.selector .date-dropdown .detail-view .subtitle {
+    opacity: 0.5;
+}
+.pages.overview .generator span.selector .date-dropdown .detail-view-calendar .content-container {
+    max-height: none;
+    overflow-y: auto;
+    padding: 10px;
+}
+.pages.overview .generator span.selector .date-dropdown .detail-view-calendar .content-container .actions {
+    text-align: center;
+}
+.pages.overview .generator span.selector .date-dropdown .detail-view-calendar .content-container p {
+    font-size: 15px;
+    padding: 12px 2px 14px;
+}
+.pages.overview .generator a.button-update-overview {
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    text-align: center;
+    width: 130px;
+}
+.pages.overview .result {
+    min-height: 100px;
+    position: relative;
+}
+.pages.overview .result.empty > h1, .pages.overview .result.empty > div, .pages.overview .result.empty > ol {
+    display: none;
+}
+.pages.overview .summary {
+    /*background-image: url("https://d1svzc13qlipt8.cloudfront.net/assets/time-tracker/summary_bg-a89b737bdd9b61dade6ff0b6010651eb.png");*/
+    background-position: left top;
+    background-repeat: repeat;
+    margin-bottom: 15px;
+}
+@media not all {
+    .pages.overview .summary {
+        /*background-image: url("https://d1svzc13qlipt8.cloudfront.net/assets/time-tracker/summary_bg@2x-a89b737bdd9b61dade6ff0b6010651eb.png");*/
+        background-size: 16px 16px;
+    }
+}
+.pages.overview .summary ul {
+}
+.pages.overview .summary ul:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.pages.overview .summary ul li {
+    background: none repeat scroll 0 0 #f2f1ec;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    float: left;
+    height: 101px;
+}
+.pages.overview .summary ul li .value:before {
+    content: "";
+    float: left;
+}
+.pages.overview .summary ul li.money-earned {
+    width: 371px;
+}
+.pages.overview .summary ul li.money-earned .value:before {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -8px -275px;
+    background-repeat: no-repeat;
+    display: block;
+    height: 52px;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 57px;
+}
+@media not all {
+    .pages.overview .summary ul li.money-earned .value:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.pages.overview .summary ul li.hours-worked {
+    border-right: 0 none;
+    width: 247px;
+}
+.pages.overview .summary ul li.hours-worked .value:before {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -62px -276px;
+    background-repeat: no-repeat;
+    display: block;
+    height: 52px;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 49px;
+}
+@media not all {
+    .pages.overview .summary ul li.hours-worked .value:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.pages.overview .summary ul li.active-projects {
+    border-bottom: 0 none;
+    width: 259px;
+}
+.pages.overview .summary ul li.active-projects .value:before {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -110px -275px;
+    background-repeat: no-repeat;
+    display: block;
+    height: 52px;
+    margin-right: 4px;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 51px;
+}
+@media not all {
+    .pages.overview .summary ul li.active-projects .value:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.pages.overview .summary ul li.people-involved {
+    border-bottom: 0 none;
+    width: 214px;
+}
+.pages.overview .summary ul li.people-involved .value:before {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -160px -274px;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    float: left;
+    height: 52px;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 47px;
+}
+@media not all {
+    .pages.overview .summary ul li.people-involved .value:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.pages.overview .summary ul li span.value {
+    display: block;
+    float: left;
+    font-size: 40px;
+    padding-left: 20px;
+    padding-top: 30px;
+}
+.pages.overview .summary ul li span.label {
+    display: block;
+    float: left;
+    margin-left: 10px;
+    padding-top: 35px;
+    width: 80px;
+}
+.pages.overview .download {
+    margin-bottom: 35px;
+    text-align: center;
+}
+.pages.overview .download .button {
+    background: none repeat scroll 0 0 #59c96e;
+    color: white;
+    font-size: 13px;
+    padding-bottom: 8px;
+    padding-top: 10px;
+}
+.pages.overview .download .button:hover {
+    background: none repeat scroll 0 0 #4aad59;
+}
+@media screen and (max-width: 415px) {
+    .pages.overview .download .button:first-child {
+        margin-bottom: 10px;
+    }
+}
+.pages.overview ol.entry-log table.entries td.mark-as-billed {
+    display: none;
+}
+@media screen and (max-width: 730px) {
+    .pages.overview .summary ul li {
+        box-sizing: border-box;
+    }
+    .pages.overview .summary ul li.money-earned {
+        width: 60%;
+    }
+    .pages.overview .summary ul li.hours-worked {
+        width: 40%;
+    }
+    .pages.overview .summary ul li.active-projects {
+        width: 40%;
+    }
+    .pages.overview .summary ul li.people-involved {
+        width: 40%;
+    }
+}
+@media screen and (max-width: 730px) {
+    .pages.overview .summary ul li.money-earned, .pages.overview .summary ul li.hours-worked, .pages.overview .summary ul li.active-projects, .pages.overview .summary ul li.people-involved {
+        border-right: 0 none;
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+    .pages.overview .summary ul li.money-earned span.value, .pages.overview .summary ul li.hours-worked span.value, .pages.overview .summary ul li.active-projects span.value, .pages.overview .summary ul li.people-involved span.value {
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    .pages.overview .summary ul li.money-earned span.label, .pages.overview .summary ul li.hours-worked span.label, .pages.overview .summary ul li.active-projects span.label, .pages.overview .summary ul li.people-involved span.label {
+        padding-top: 15px;
+    }
+    .pages.overview .summary ul li.active-projects {
+        border-bottom: 1px solid white;
+    }
+}
+@media screen and (max-width: 600px) {
+    .pages.overview .generator, .pages.overview .generator span.selector > a {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .pages.overview .generator, .pages.overview .generator span.selector > a {
+        font-size: 18px;
+    }
+    .pages.overview .summary ul li.money-earned, .pages.overview .summary ul li.hours-worked, .pages.overview .summary ul li.active-projects, .pages.overview .summary ul li.people-involved {
+        position: relative;
+    }
+    .pages.overview .summary ul li.money-earned span.value, .pages.overview .summary ul li.hours-worked span.value, .pages.overview .summary ul li.active-projects span.value, .pages.overview .summary ul li.people-involved span.value {
+        font-size: 30px;
+        height: auto;
+        min-height: 40px;
+        padding-left: 58px;
+    }
+    .pages.overview .summary ul li.money-earned span.value:before, .pages.overview .summary ul li.hours-worked span.value:before, .pages.overview .summary ul li.active-projects span.value:before, .pages.overview .summary ul li.people-involved span.value:before {
+        left: 5px;
+        margin-top: -26px;
+        position: absolute;
+        top: 50%;
+    }
+    .pages.overview .summary ul li.money-earned span.label, .pages.overview .summary ul li.hours-worked span.label, .pages.overview .summary ul li.active-projects span.label, .pages.overview .summary ul li.people-involved span.label {
+        font-size: 14px;
+        line-height: 1;
+    }
+}
+@media screen and (max-width: 430px) {
+    .pages.overview .generator, .pages.overview .generator span.selector > a {
+        font-size: 17px;
+    }
+}
+.modal-overlay {
+    background: none repeat scroll 0 0 #f2eee9;
+    height: 100%;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    transition-duration: 0.2s;
+    transition-property: opacity;
+    width: 100%;
+    z-index: 2000;
+}
+.modal-wrap {
+    background: none repeat scroll 0 0 white;
+    border: 5px solid rgba(217, 205, 208, 0.7);
+    border-radius: 2px;
+    box-shadow: 1px 0 0 #cfcac4 inset, -1px 0 0 #cfcac4 inset, 0 1px 0 #cfcac4 inset, 0 -1px 0 #cfcac4 inset;
+    padding: 19px;
+    position: fixed;
+    z-index: 2100;
+}
+.modal-wrap h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.modal-loading {
+    height: 250px;
+    width: 300px;
+}
+.modal-loading img.loader {
+    display: block;
+    margin: 0 auto;
+    padding-top: 108px;
+}
+.modal-edit-entry {
+    height: auto;
+    width: 500px;
+}
+.modal-edit-entry .date {
+    float: left;
+    margin-bottom: 20px;
+    width: 250px;
+}
+.modal-edit-entry .date .calendar {
+    margin-bottom: 5px;
+}
+.modal-edit-entry .date span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+.modal-edit-entry .entry {
+    float: left;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 230px;
+}
+.modal-edit-entry .entry .users {
+    margin-bottom: 10px;
+}
+.modal-edit-entry .entry .users h2 {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.modal-edit-entry .entry .users ul {
+}
+.modal-edit-entry .entry .users ul:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.modal-edit-entry .entry .users ul li {
+    float: left;
+    margin: 0 10px 10px 0;
+}
+.modal-edit-entry .entry .users ul li.selected .overlay {
+    box-shadow: 0 0 6px red;
+}
+.modal-edit-entry .entry .form-row .controls {
+    margin-left: 0;
+}
+.modal-edit-entry .entry .form-row .controls label {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.modal-edit-entry .entry .form-row.hours-project {
+}
+.modal-edit-entry .entry .form-row.hours-project:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.modal-edit-entry .entry .form-row.hours-project > div {
+    float: left;
+}
+.modal-edit-entry .entry .form-row.hours-project .hours {
+    width: 70px;
+}
+.modal-edit-entry .entry .form-row.hours-project .hours input {
+    width: 54px;
+}
+.modal-edit-entry .entry .form-row.hours-project .project {
+    margin-left: 10px;
+    width: 150px;
+}
+.modal-edit-entry .entry .form-row.hours-project .project select {
+    width: 150px;
+}
+.modal-edit-entry .entry .form-row.comment textarea {
+    width: 214px;
+}
+.modal-edit-entry .actions {
+    clear: both;
+}
+.modal-edit-entry .actions:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.modal-edit-entry .actions .button-delete-light {
+    box-shadow: none;
+}
+.modal-edit-entry .actions .button-delete-light:hover {
+    color: #4b4b4b;
+}
+.modal-edit-entry .actions .button-delete-light:hover:before {
+    opacity: 1;
+}
+.modal-edit-entry .actions .button-delete-light:before {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -125px -28px;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    float: left;
+    height: 18px;
+    margin-top: -3px;
+    opacity: 0.7;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 18px;
+}
+@media not all {
+    .modal-edit-entry .actions .button-delete-light:before {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.modal-edit-entry .actions .right {
+    float: right;
+}
+.modal-edit-entry .actions .right a:last-child {
+    margin-right: 0;
+}
+.modal-edit-entry .actions a {
+    display: inline-block;
+    margin-right: 5px;
+}
+@media screen and (max-width: 599px) {
+    .modal-open .wrap > .container {
+        display: none;
+    }
+    .modal-overlay {
+        display: none;
+    }
+    .modal-wrap {
+        background: none repeat scroll 0 0 transparent;
+        border: 0 none;
+        box-shadow: none;
+        margin: 0 auto;
+        max-width: 500px;
+        padding: 30px 10px;
+        position: static;
+    }
+    .modal-wrap .inner {
+        background: none repeat scroll 0 0 white;
+        border: 0 none;
+        border-radius: 2px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
+        padding: 15px;
+    }
+    .modal-wrap .inner.loading {
+        width: auto;
+    }
+    .modal-edit-entry {
+        width: auto;
+    }
+    .modal-edit-entry form {
+        display: flex;
+        flex-direction: column;
+    }
+    .modal-edit-entry form .entry, .modal-edit-entry form .date, .modal-edit-entry form .actions {
+        float: none;
+        margin: 0 0 20px;
+        padding: 0;
+        width: auto;
+    }
+    .modal-edit-entry form .entry {
+        order: 1;
+    }
+    .modal-edit-entry form .entry .form-row.hours-project .hours {
+        box-sizing: border-box;
+        padding-right: 10px;
+        width: 30%;
+    }
+    .modal-edit-entry form .entry .form-row.hours-project .hours input {
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .modal-edit-entry form .entry .form-row.hours-project .project {
+        margin: 0;
+        width: 70%;
+    }
+    .modal-edit-entry form .entry .form-row.hours-project .project select {
+        width: 100%;
+    }
+    .modal-edit-entry form .entry .form-row.comment textarea {
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .modal-edit-entry form .entry .users h2 {
+        margin-bottom: 4px;
+    }
+    .modal-edit-entry form .date {
+        order: 2;
+    }
+    .modal-edit-entry form .date .kalendae {
+        margin: 0 auto;
+    }
+    .modal-edit-entry form .actions {
+        order: 3;
+    }
+    .modal-edit-entry form .actions .right {
+        float: none;
+    }
+}
+.project-form {
+    max-width: 400px;
+}
+.project-form .client .controls .select {
+    position: relative;
+}
+.project-form .client .controls .select.dropdown-open .opener {
+    background: none repeat scroll 0 0 #e4e1dc;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.project-form .client .controls .select .opener {
+    background: none repeat scroll 0 0 #f2f0ed;
+    position: relative;
+    width: auto;
+}
+.project-form .client .controls .select .opener:hover {
+    background: none repeat scroll 0 0 #e4e1dc;
+    cursor: pointer;
+}
+.project-form .client .controls .select .opener i {
+    background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+    background-position: -93px -59px;
+    background-repeat: no-repeat;
+    display: block;
+    height: 8px;
+    margin-top: -3px;
+    outline: medium none;
+    position: absolute;
+    right: 10px;
+    text-indent: -9999px;
+    top: 50%;
+    width: 12px;
+}
+@media not all {
+    .project-form .client .controls .select .opener i {
+        background-image: url("/TimeKeeper/Public/Images/spritesheet.png");
+        background-size: 1024px 1024px;
+    }
+}
+.project-form .client .controls .select .activity-indicator {
+    left: auto;
+    margin-left: 0;
+    right: 10px;
+}
+.project-form .client .controls .select .dropdown {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #f2f0ed;
+    border-color: #d1ceca #e4e1dc #e4e1dc;
+    border-image: none;
+    border-radius: 0 0 3px 3px;
+    border-right: 2px solid #e4e1dc;
+    border-style: solid;
+    border-width: 2px;
+    box-sizing: border-box;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+}
+.project-form .client .controls .select .dropdown ul {
+    max-height: 220px;
+    overflow-y: auto;
+}
+.project-form .client .controls .select .dropdown ul a {
+    border-bottom: 2px solid #e4e1dc;
+    border-top: 0 none;
+    color: #474646;
+    display: block;
+    padding: 7px 10px;
+}
+.project-form .client .controls .select .dropdown ul a:hover {
+    background: none repeat scroll 0 0 #e4e1dc;
+}
+.project-form .client .controls .select .dropdown .new-client {
+    padding: 10px 64px 10px 10px;
+    position: relative;
+}
+.project-form .client .controls .select .dropdown .new-client input[type="text"], .project-form .client .controls .select .dropdown .new-client input[type="email"], .project-form .client .controls .select .dropdown .new-client input[type="number"], .project-form .client .controls .select .dropdown .new-client input[type="submit"] {
+    background: none repeat scroll 0 0 white;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+.project-form .client .controls .select .dropdown .new-client input[type="text"]:focus, .project-form .client .controls .select .dropdown .new-client input[type="email"]:focus, .project-form .client .controls .select .dropdown .new-client input[type="number"]:focus, .project-form .client .controls .select .dropdown .new-client input[type="submit"]:focus {
+    box-shadow: none;
+}
+.project-form .client .controls .select .dropdown .new-client a.button {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    box-shadow: none;
+    padding: 11px 0 9px;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    top: 10px;
+    width: 54px;
+}
+.project-form .form-row {
+    width: 100%;
+}
+.project-form .form-row label {
+    width: auto;
+}
+.project-form .form-row .controls {
+    width: auto;
+}
+.project-form .form-row .controls input[type="text"], .project-form .form-row .controls input[type="email"], .project-form .form-row .controls input[type="number"], .project-form .form-row .controls input[type="submit"] {
+    box-sizing: border-box;
+    width: 100%;
+}
+.project-form .form-row.meta-data {
+}
+.project-form .form-row.meta-data:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.project-form .form-row.meta-data .form-column:first-child {
+    margin-left: 0;
+}
+.project-form .form-column {
+    float: left;
+    margin-left: 2.875%;
+}
+.project-form .form-column.budget {
+    width: 34.55%;
+}
+.project-form .form-column.hourly-rate {
+    width: 29.7%;
+}
+.project-form .form-column.billable {
+    width: 30%;
+}
+.project-form .form-column.billable .controls {
+    margin-top: 19px;
+}
+.project-form .form-column.billable .controls label {
+    border-radius: 2px;
+    padding: 11px 7px 11px 5px;
+}
+.project-form .form-column.billable .controls input {
+    margin: 0 4px 0 0;
+}
+.project-form .form-actions {
+    padding-left: 0;
+}
+.project-form .form-actions .delete {
+    margin-left: 10px;
+}
+@media screen and (max-width: 400px) {
+    .project-form .form-column.budget, .project-form .form-column.hourly-rate {
+        margin-bottom: 10px;
+        width: 48.5%;
+    }
+    .project-form .form-column.hourly-rate {
+        margin-left: 3%;
+    }
+    .project-form .form-column.billable {
+        clear: both;
+        display: inline-block;
+        float: none;
+        margin-left: 0;
+        width: auto;
+    }
+}
+
+body {
+    background-image: url("/TimeKeeper/Public/Images/Backgrounds/colorful-grunge-texture-101.jpg");
+    background-size: cover;
+    color: #474646;
+    font-family: Lato,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.3;
+    min-width: 320px;
+    overflow-y: scroll;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.icons {
+    width: 18px;
+}

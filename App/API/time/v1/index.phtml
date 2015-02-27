@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>API overview</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div>This is the current version</div>
+        <div><?= 'method: ' . $this->method ?></div>
+        <div><?= 'url: ' . $this->url ?></div>
+        <div><?= 'query: '?><?php print_r($this->query) ?></div>
+        <div><?= 'api: ' . $this->api ?></div>
+        <div><?= 'apiPath: ' . $this->apiPath ?></div>
+        <div><?= 'apiVersion: ' . $this->apiVersion ?></div>
+        <div><?= 'action: ' . $this->action ?></div>
+        <div><?= 'task: ' . $this->task ?></div>
+        <div><?= 'debug: ' . $this->debug ?></div>
+        <div><?= 'debugI: ' . $this->debugI ?></div>
+        <div><?= 'file: ' . $this->file ?></div>
+    </body>
+</html>

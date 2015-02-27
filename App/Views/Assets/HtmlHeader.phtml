@@ -1,0 +1,47 @@
+<?php
+
+use KalnaBase\Utilities;
+?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="<?= $this->appConfig->values['application']['description']; ?>">
+        <meta name="section" content="<?= $this->view ?>">
+        <meta name="author" content="Kalna">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title><?= $this->appConfig->values['application']['name']; ?> <?= $this->view ?> :: <?= $this->section ?></title>
+        <!-- build:css -->
+        <!--<link href="bower_modules/components-bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+        <!--[if lt IE 7]>
+        <script>
+        window.top.location = 'http://desktop.sonspring.com/ie.html';
+        </script>
+        <![endif]-->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <?= Utilities\HTML::includeCss('reset'); ?>
+        <?= Utilities\HTML::includeCss('desktop'); ?>
+        <!--[if lt IE 9]>
+        <?= Utilities\HTML::includeCss('ie'); ?>
+        <![endif]-->
+        <!-- endbuild -->
+        <!-- build:js -->
+        <!--        <script src="app/require.config.js"></script>
+                <script data-main="app/startup" src="bower_modules/requirejs/require.js"></script>
+        <?= Utilities\HTML::includeJs('jquery.min'); ?>
+        <?= Utilities\HTML::includeJs('jquery.ui'); ?>-->
+        <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.2.0/knockout-debug.js"></script>-->
+        <?= Utilities\HTML::includeJs('knockout'); ?>
+        <?= Utilities\HTML::includeJs('knockout.viewmodel'); ?>
+        <?= Utilities\HTML::includeJs('knockout.ajax'); ?>
+        <?= Utilities\HTML::includeJs('knockout.protectedObservable'); ?>
+        <?= Utilities\HTML::includeJs('ensure'); ?>
+        <?= Utilities\HTML::includeJs('jquery.desktop'); ?>
+        <?= Utilities\HTML::includeJs('breeze.debug'); ?>
+        <!-- endbuild -->
+        
+    </head>

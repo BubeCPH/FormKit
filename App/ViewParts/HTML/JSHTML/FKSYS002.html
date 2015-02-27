@@ -1,0 +1,80 @@
+<div class="window_inner">
+    <div class="window_top">
+        <div class="nav">
+            <div class="panel">
+                <div class="buttonset">
+                    <button class="prev" title="Forrige (&uarr;)" data-bind="disable: vm().searchmode"><i class="fa fa-chevron-up"></i></button>
+                    <button class="next" title="Næste (&darr;)" data-bind="disable: vm().searchmode"><i class="fa fa-chevron-down"></i></button>
+                </div>
+                <div class="buttonset">
+                    <button class="add" title="Tilføj" data-bind="click: add(), disable: vm().searchmode"><i class="fa fa-plus"></i></button>
+                    <button class="remove" title="Slet" data-bind="disable: (vm().selectedId() === 0 || vm().searchmode), click: remove()"><i class="fa fa-minus"></i></button>
+                </div>
+                <div class="buttonset">
+                    <button class="save" title="Gem (⌘S)" data-bind="click: save(), disable: (!vm().isDirty() && !vm().containsDeleted()) || vm().searchmode"><i class="fa fa-check"></i></button>
+                    <button class="refresh" title="Genindlæs (⌘H)" data-bind="click: refetch(), disable: vm().searchmode"><i class="fa fa-refresh"></i></button>
+                </div>
+                <div class="buttonset">
+                    <button class="init_search" title="Start søgning (⌘F)" data-bind="click: initSearch(), disable: vm().searchmode"><i class="fa fa-search"></i></button>
+                    <button class="execute_search" title="Udfør søgning (⌘H)" data-bind="click: executeSearch(), disable: !vm().searchmode"><i class="fa fa-search"></i></button>
+                    <button class="redo_search" title="Gentag søgning (⌘G)" data-bind="click: redoSearch(), disable: !vm().searchmode"><i class="fa fa-search-plus"></i></button>
+                    <button class="cancel_search" title="Annuller søgning (esc)" data-bind="click: cancelSearch(), disable: !vm().searchmode">
+                        <i class="fa fa-search-minus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="window_controls">
+                <a href="#" class="window_min" title="Minimer vindue"></a>
+                <a href="#" class="window_resize" title="Maksimer vindue"></a>
+                <a href="#dock_FKSYS002" class="window_close" title="Luk vindue"></a>
+            </div>
+            <div class="titel">
+                <span>Datatyper</span>
+            </div>
+        </div>
+    </div>
+    <div class="window_content">
+        <!-- ko with: vm() -->
+        <table id="FKSYS002_table_001" class="data">
+            <thead>
+                <tr>
+                    <th hidden>
+                        id
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        MySQL data type
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: datatypes">
+                <tr data-bind="css: {deleted: deleteFlag(), active: $parent.isActiveDatatype($data)}, click: $parent.setActiveDatatype">
+                    <td hidden>
+                        <span class="id" data-bind="text: id"></span>
+                    </td>
+                    <td>
+                        <input data-bind="value: name, attr:{readonly: deleteFlag()}, event: {focus: $parent.setActiveDatatype, keydown: $parent.isActiveDatatype}" size="8" maxlength="30" />
+                    </td>
+                    <td>
+                        <input data-bind="value: datatype, attr:{readonly: deleteFlag()}, event: {focus: $parent.setActiveDatatype, keydown: $parent.isActiveDatatype}" size="15" maxlength="30" />
+                    </td>
+                    <td>
+                        <input data-bind="value: description, attr:{readonly: deleteFlag()}, event: {focus: $parent.setActiveDatatype, keydown: $parent.isActiveDatatype}" size="50" maxlength="250" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- /ko -->
+    </div>
+    <div class="abs window_bottom">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="center">Form: FKSYS002</div>
+    </div>
+    <span class="abs ui-resizable-handle ui-resizable-se"></span>
+</div>

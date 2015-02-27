@@ -1,0 +1,69 @@
+<?php
+
+require_once REPO_PATH . 'Summeries.php';
+require_once UTILPATH . 'ApiToken.php';
+$sum = new Summeries('json');
+$apiToken = new ApiToken();
+
+switch ($this->method) {
+    case 'GET':
+        $periodtype = trim(filter_input(INPUT_GET, 'periodtype'), "'\"");
+        $startdate = trim(filter_input(INPUT_GET, 'startdate'), "'\"");
+        $enddate = trim(filter_input(INPUT_GET, 'enddate'), "'\"");
+        $week = trim(filter_input(INPUT_GET, 'week'), "'\"");
+        $month = trim(filter_input(INPUT_GET, 'month'), "'\"");
+        $year = trim(filter_input(INPUT_GET, 'year'), "'\"");
+        $date = trim(filter_input(INPUT_GET, 'date'), "'\"");
+        $sumivityId = trim(filter_input(INPUT_GET, 'activityid'), "'\"");
+        $token = trim(filter_input(INPUT_GET, 'token'), "'\"");
+        $valueArray = $apiToken->getTokenValues($token);
+        $timestamp = $valueArray['timestamp'];
+        $userId = $valueArray['userId'];
+
+        if (!empty($this->task) && is_numeric($this->task)) {
+            echo $sum->getActivity('id', $this->task);
+        } elseif (empty($this->task) || $this->task == 'none') {
+            /**
+             * TODO: Return error message
+             * move HTTP-header logic into seperate class, to be called directly from here
+             */
+//            echo $sum->getSummeries($startdate, empty($enddate) ? NULL : $enddate);
+            $start = date_parse($startdate);
+            $end = empty($enddate) ? NULL : date_parse($enddate);
+            if ($periodtype == $sum->periodTypes[0]) {
+                $arg1 = $start['year'] . '-' . $start['month'] . '-' . $start['day'];
+                $arg2 = $end['year'] . '-' . $end['month'] . '-' . $end['day'];
+            } elseif ($periodtype == $sum->periodTypes[1]) {
+                if ($start != FALSE && $end != FALSE && empty($year) && empty($week)) {
+                    $arg1 = $start['year'] . '-' . $start['month'] . '-' . $start['day'];
+                    $arg2 = $end['year'] . '-' . $end['month'] . '-' . $end['day'];
+                    $periodtype = $sum->periodTypes[0];
+                } elseif (!empty($year) && !empty($week)) {
+                    $arg1 = $year;
+                    $arg2 = $week;
+                }
+            } elseif ($periodtype == $sum->periodTypes[2]) {
+                if ($start != FALSE && $end != FALSE && empty($year) && empty($month)) {
+                    $arg1 = $start['year'] . '-' . $start['month'] . '-' . $start['day'];
+                    $arg2 = $end['year'] . '-' . $end['month'] . '-' . $end['day'];
+                    $periodtype = $sum->periodTypes[0];
+                } elseif (!empty($year) && !empty($month)) {
+                    $arg1 = $year;
+                    $arg2 = $month;
+                }
+            }
+            $return = $sum->buildCalendar($periodtype, $arg1, $arg2);
+//            if ($return['error'] == 'exception') {
+//                header('HTTP/1.1 500 Internal Server Error');
+//                echo $return['message'];
+//            } else {
+            echo $return;
+//            }
+        } else {
+            echo $sum->getWeeksInYear(2014);
+        }
+        break;
+    default:
+        echo $this->method;
+        break;
+}

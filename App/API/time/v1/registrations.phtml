@@ -1,0 +1,115 @@
+<?php
+
+require_once REPO_PATH . 'Registrations.php';
+require_once UTILPATH . 'ApiToken.php';
+$rep = new Registrations();
+$apiToken = new ApiToken();
+
+$reg = new Registrations('json');
+switch ($this->method) {
+    case 'GET':
+
+        $startdate = trim(filter_input(INPUT_GET, 'startdatetime'), "'\"");
+        $enddate = trim(filter_input(INPUT_GET, 'enddatetime'), "'\"");
+        $date = trim(filter_input(INPUT_GET, 'date'), "'\"");
+        $time = trim(filter_input(INPUT_GET, 'time'), "'\"");
+        $startTime = trim(filter_input(INPUT_GET, 'startTime'), "'\"");
+        $endTime = trim(filter_input(INPUT_GET, 'endTime'), "'\"");
+        $description = trim(filter_input(INPUT_GET, 'description'), "'\"");
+        if (!preg_match("/(2[0-3]|[01][0-9]):[0-5][0-9]/", $time)) {
+            $time = NULL;
+        }
+        $activityId = trim(filter_input(INPUT_GET, 'activityid'), "'\"");
+        $token = trim(filter_input(INPUT_GET, 'token'), "'\"");
+        $valueArray = $apiToken->getTokenValues($token);
+        $timestamp = $valueArray['timestamp'];
+//        $userId = $_SESSION['userId']; //$valueArray['userId'];
+        $userId = trim(filter_input(INPUT_GET, 'userid'), "'\"");
+
+
+        if (!empty($this->task) && is_numeric($this->task)) {
+            $registrationId = $this->task;
+            if (!empty($startTime) || !empty($endTime) || !empty($description)) {
+                echo $reg->update($userId, $registrationId, $startTime, $endTime, $description);
+            } else {
+                echo $reg->get($userId, $registrationId);
+            }
+        } elseif ($this->task == 'activities') {
+            $onlyFavorites = trim(filter_input(INPUT_GET, 'onlyFavorites'), "'\"");
+//            $json = trim(filter_input(INPUT_GET, 'json'), "'\"");
+//            $data = json_decode($json);
+//            $date = $data->date;
+            echo $reg->getActivities($date, $onlyFavorites);
+//            echo $json;
+//            print_r($data);
+//            echo $date;
+        } elseif ($this->task == 'registrations') {
+            
+        } elseif ($this->task == 'summeries') {
+            echo $reg->getSummeries($date);
+        } elseif ($this->task == 'daytotal') {
+            echo $reg->getDayTotal($date);
+        } elseif (empty($this->task) || $this->task == 'none') {
+            echo $reg->getRegistrations($date);
+        } else {
+            //$rep->findAll();
+            //echo $rep->getJSON();
+            echo 'TEST' . $this->task;
+        }
+        break;
+    case 'POST':
+        $data = json_decode(file_get_contents("php://input"));
+        $activityId = $data->activityid;
+        $registrationId = $data->registrationid;
+        $date = $data->date;
+        $time = $data->time;
+        $startTime = $data->startTime;
+        $endTime = $data->endTime;
+        $description = $data->description;
+//        $date = trim(filter_input(INPUT_GET, 'date'), "'\"");
+//        $time = trim(filter_input(INPUT_GET, 'time'), "'\"");
+//        if (!preg_match("/(2[0-3]|[01][0-9]):[0-5][0-9]/", $time)) {
+//            $time = NULL;
+//        }
+//        $activityId = trim(filter_input(INPUT_GET, 'activityid'), "'\"");
+//        $userId = trim(filter_input(INPUT_GET, 'userid'), "'\"");
+//        $date = trim(filter_input(INPUT_POST, 'date'), "'\"");
+//        $time = trim(filter_input(INPUT_POST, 'time'), "'\"");
+        if (!preg_match("/(2[0-3]|[01][0-9]):[0-5][0-9]/", $time)) {
+            $time = NULL;
+        }
+//        $activityId = trim(filter_input(INPUT_POST, 'activityid'), "'\"");
+//        $userId = trim(filter_input(INPUT_POST, 'userid'), "'\"");
+        /**
+         * Parse JSON
+         */
+        if (!empty($this->task) && is_numeric($this->task)) {
+            $registrationId = $this->task;
+            if (!empty($startTime) || !empty($endTime) || !empty($description)) {
+                echo $reg->update($userId, (int)$registrationId, (int)$startTime, (int)$endTime, $description);
+            }
+        } elseif ($this->task == 'start') {
+            echo $reg->start($userId, $activityId, $date, $time);
+        } elseif ($this->task == 'stop') {
+//            echo '#'.$registrationId . $date . $time;
+            echo $reg->stop($userId, $registrationId, $date, $time);
+        } else {
+            $rep->findAll();
+            echo $rep->getJSON();
+        }
+        break;
+    case 'DELETE':
+        /**
+         * Parse JSON
+         */
+        if (!empty($this->task) && is_numeric($this->task)) {
+            echo $reg->delete($userId, $this->task);
+        } else {
+            echo NULL;
+        }
+        break;
+
+    default:
+        echo $this->method;
+        break;
+}

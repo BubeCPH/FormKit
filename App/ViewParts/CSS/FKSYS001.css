@@ -1,0 +1,28 @@
+#window_FKSYS001 {
+    height: 500px;
+}
+#FKSYS001_area_001 {
+    top: 0;
+    left: 0;
+    right: 0;
+    max-height: 200px;
+    overflow: scroll;
+}
+#FKSYS001_table_001 {
+    top: 0;
+    left: 0;
+    right: 0;
+}
+#FKSYS001_area_002 {
+    top: 200px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: scroll;
+}
+#FKSYS001_table_002 {
+    top: 200px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

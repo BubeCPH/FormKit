@@ -1,0 +1,100 @@
+<?php
+
+require_once REPO_PATH . 'Registrations.php';
+require_once UTILPATH . 'ApiToken.php';
+$rep = new Registrations();
+$token = new ApiToken();
+
+switch ($this->method) {
+    case 'GET':
+        if (!empty($this->task) && is_numeric($this->task)) {
+            $rep->findById($this->task);
+            echo $rep->getJSON();
+        } elseif ($this->task == 'login') {
+            /**
+             * Parse JSON
+             */
+            $tk = $token->getToken('TEST');
+            echo $tk;
+            /**
+             * TODO
+             * Check token
+             */
+//            $valueArray = $token->getTokenValues($tk);
+//            $timestamp = $valueArray->{'timestamp'};
+//            $userId = $valueArray->{'userId'};
+        } else {
+            $rep->findAll();
+            echo $rep->getJSON();
+        }
+        break;
+    case 'POST':
+        /**
+         * Parse JSON
+         */
+        if (!empty($this->task) && is_numeric($this->task)) {
+            $rep->findById($this->task);
+            echo $rep->getJSON();
+        } elseif ($this->task == 'login') {
+            $data = json_decode(file_get_contents("php://input"));
+            if (filter_var($data->{'username'}, FILTER_VALIDATE_EMAIL)) {
+                $username = $data->{'username'};
+                $password = $data->{'password'};
+                /**
+                 * TODO
+                 * Check credentials 
+                 */
+                echo json_encode(array('token' => $token->getToken($username), 'auth' => TRUE));
+                break;
+            }
+            echo json_encode(array('token' => $data->{'username'}, 'auth' => FALSE));
+        } else {
+            $rep->findAll();
+            echo $rep->getJSON();
+        }
+        break;
+    case 'PUT':
+        /**
+         * Parse JSON
+         */
+        /**
+         * Instead of $_PUT['data'] use the following:
+         * parse_str(file_get_contents("php://input"),$_PUT);
+         * $_PUT['data']
+         */
+        if (!empty($this->task) && is_numeric($this->task)) {
+            $rep->findById($this->task);
+            echo $rep->getJSON();
+        } elseif ($this->task == 'login') {
+            
+        } else {
+            $rep->findAll();
+            echo $rep->getJSON();
+        }
+        break;
+    case 'DELETE':
+        /**
+         * Parse JSON
+         */
+        /**
+         * Instead of $_DELETE['data'] use the following:
+         * parse_str(file_get_contents("php://input"),$_DELETE);
+         * $_DELETE['data']
+         */
+        if (!empty($this->task) && is_numeric($this->task)) {
+            $rep->findById($this->task);
+            echo $rep->getJSON();
+        } elseif ($this->task == 'login') {
+            $json = json_decode($_POST['data'], true);
+            $tk = $token->getToken($json->{'username'});
+            echo json_encode(array('token' => $tk, 'auth' => $token->getTokenValues($tk)));
+        } else {
+            $rep->findAll();
+            echo $rep->getJSON();
+        }
+        break;
+
+    default:
+        echo $this->method;
+        break;
+}

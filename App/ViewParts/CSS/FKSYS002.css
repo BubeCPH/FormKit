@@ -1,0 +1,10 @@
+#window_FKSYS002 {
+    height: 500px;
+}
+#window_FKSYS002 #FKSYS002_table_001 {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    overflow: scroll;
+}

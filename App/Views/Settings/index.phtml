@@ -1,0 +1,144 @@
+<div class='cover'>
+    <div class="inner"><h1>Settings</h1></div>
+</div>
+<div class='container'>
+    <div class='inner'>
+        <section class='page'>
+            <div class='settings-wrapper'>
+                <nav>
+                    <ul>
+                        <li class="profile"><a href="/<?= $this->appConfig->values['application']['path']; ?>/<?= $this->view; ?>/Profile">Your profile</a></li>
+                        <li class="sessions"><a href="/<?= $this->appConfig->values['application']['path']; ?>/<?= $this->view; ?>/Sessions">Active sessions</a></li>
+                        <li class="settings active"><a href="/<?= $this->appConfig->values['application']['path']; ?>/<?= $this->view; ?>/Settings">Organization</a></li>
+                        <li class="users"><a href="/<?= $this->appConfig->values['application']['path']; ?>/<?= $this->view; ?>/Users">Users</a></li>
+                        <li class="clients"><a href="/<?= $this->appConfig->values['application']['path']; ?>/<?= $this->view; ?>/Clients">Clients</a></li>
+                        <li class="subscription"><a href="/<?= $this->appConfig->values['application']['path']; ?>/<?= $this->view; ?>/Subscription">Plans &amp; billing</a></li>
+                        <li class="receipts"><a href="/<?= $this->appConfig->values['application']['path']; ?>/<?= $this->view; ?>/Receipts">Receipts</a></li>
+                    </ul>
+
+                </nav>
+                <div class='content '>
+                    <div class='page-header'>
+                        <h1>Organization</h1>
+                    </div>
+                    <form accept-charset="UTF-8" action="#" class="edit_organization" id="edit_organization_3086" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="patch" /><input name="authenticity_token" type="hidden" value="iBVahSp7wwiAL/hPQBG1BVYPBkgi9P2uKmiJh0ARb9M=" /></div>
+                        <div class="form-row text-field" data-field-name="name"><label for="organization_name">Name</label><div class="controls"><input id="organization_name" name="organization[name]" type="text" value="Claus Hjort Bube" /></div></div>
+                        <div class='form-row time-zone'>
+                            <input id="organization_time_zone" name="organization[time_zone]" type="hidden" value="Copenhagen" />
+                            <label>Time zone</label>
+                            <div class='controls'>
+                                <div class='select' data-field='organization_time_zone' data-options='[["(GMT-11:00) American Samoa", "American Samoa"], ["(GMT-11:00) International Date Line West", "International Date Line West"], ["(GMT-11:00) Midway Island", "Midway Island"], ["(GMT-10:00) Hawaii", "Hawaii"], ["(GMT-09:00) Alaska", "Alaska"], ["(GMT-08:00) Pacific Time (US &amp; Canada)", "Pacific Time (US &amp; Canada)"], ["(GMT-08:00) Tijuana", "Tijuana"], ["(GMT-07:00) Arizona", "Arizona"], ["(GMT-07:00) Chihuahua", "Chihuahua"], ["(GMT-07:00) Mazatlan", "Mazatlan"], ["(GMT-07:00) Mountain Time (US &amp; Canada)", "Mountain Time (US &amp; Canada)"], ["(GMT-06:00) Central America", "Central America"], ["(GMT-06:00) Central Time (US &amp; Canada)", "Central Time (US &amp; Canada)"], ["(GMT-06:00) Guadalajara", "Guadalajara"], ["(GMT-06:00) Mexico City", "Mexico City"], ["(GMT-06:00) Monterrey", "Monterrey"], ["(GMT-06:00) Saskatchewan", "Saskatchewan"], ["(GMT-05:00) Bogota", "Bogota"], ["(GMT-05:00) Eastern Time (US &amp; Canada)", "Eastern Time (US &amp; Canada)"], ["(GMT-05:00) Indiana (East)", "Indiana (East)"], ["(GMT-05:00) Lima", "Lima"], ["(GMT-05:00) Quito", "Quito"], ["(GMT-04:30) Caracas", "Caracas"], ["(GMT-04:00) Atlantic Time (Canada)", "Atlantic Time (Canada)"], ["(GMT-04:00) Georgetown", "Georgetown"], ["(GMT-04:00) La Paz", "La Paz"], ["(GMT-04:00) Santiago", "Santiago"], ["(GMT-03:30) Newfoundland", "Newfoundland"], ["(GMT-03:00) Brasilia", "Brasilia"], ["(GMT-03:00) Buenos Aires", "Buenos Aires"], ["(GMT-03:00) Greenland", "Greenland"], ["(GMT-03:00) Montevideo", "Montevideo"], ["(GMT-02:00) Mid-Atlantic", "Mid-Atlantic"], ["(GMT-01:00) Azores", "Azores"], ["(GMT-01:00) Cape Verde Is.", "Cape Verde Is."], ["(GMT+00:00) Casablanca", "Casablanca"], ["(GMT+00:00) Dublin", "Dublin"], ["(GMT+00:00) Edinburgh", "Edinburgh"], ["(GMT+00:00) Lisbon", "Lisbon"], ["(GMT+00:00) London", "London"], ["(GMT+00:00) Monrovia", "Monrovia"], ["(GMT+00:00) UTC", "UTC"], ["(GMT+01:00) Amsterdam", "Amsterdam"], ["(GMT+01:00) Belgrade", "Belgrade"], ["(GMT+01:00) Berlin", "Berlin"], ["(GMT+01:00) Bern", "Bern"], ["(GMT+01:00) Bratislava", "Bratislava"], ["(GMT+01:00) Brussels", "Brussels"], ["(GMT+01:00) Budapest", "Budapest"], ["(GMT+01:00) Copenhagen", "Copenhagen"], ["(GMT+01:00) Ljubljana", "Ljubljana"], ["(GMT+01:00) Madrid", "Madrid"], ["(GMT+01:00) Paris", "Paris"], ["(GMT+01:00) Prague", "Prague"], ["(GMT+01:00) Rome", "Rome"], ["(GMT+01:00) Sarajevo", "Sarajevo"], ["(GMT+01:00) Skopje", "Skopje"], ["(GMT+01:00) Stockholm", "Stockholm"], ["(GMT+01:00) Vienna", "Vienna"], ["(GMT+01:00) Warsaw", "Warsaw"], ["(GMT+01:00) West Central Africa", "West Central Africa"], ["(GMT+01:00) Zagreb", "Zagreb"], ["(GMT+02:00) Athens", "Athens"], ["(GMT+02:00) Bucharest", "Bucharest"], ["(GMT+02:00) Cairo", "Cairo"], ["(GMT+02:00) Harare", "Harare"], ["(GMT+02:00) Helsinki", "Helsinki"], ["(GMT+02:00) Istanbul", "Istanbul"], ["(GMT+02:00) Jerusalem", "Jerusalem"], ["(GMT+02:00) Kyiv", "Kyiv"], ["(GMT+02:00) Pretoria", "Pretoria"], ["(GMT+02:00) Riga", "Riga"], ["(GMT+02:00) Sofia", "Sofia"], ["(GMT+02:00) Tallinn", "Tallinn"], ["(GMT+02:00) Vilnius", "Vilnius"], ["(GMT+03:00) Baghdad", "Baghdad"], ["(GMT+03:00) Kuwait", "Kuwait"], ["(GMT+03:00) Minsk", "Minsk"], ["(GMT+03:00) Nairobi", "Nairobi"], ["(GMT+03:00) Riyadh", "Riyadh"], ["(GMT+03:30) Tehran", "Tehran"], ["(GMT+04:00) Abu Dhabi", "Abu Dhabi"], ["(GMT+04:00) Baku", "Baku"], ["(GMT+04:00) Moscow", "Moscow"], ["(GMT+04:00) Muscat", "Muscat"], ["(GMT+04:00) St. Petersburg", "St. Petersburg"], ["(GMT+04:00) Tbilisi", "Tbilisi"], ["(GMT+04:00) Volgograd", "Volgograd"], ["(GMT+04:00) Yerevan", "Yerevan"], ["(GMT+04:30) Kabul", "Kabul"], ["(GMT+05:00) Islamabad", "Islamabad"], ["(GMT+05:00) Karachi", "Karachi"], ["(GMT+05:00) Tashkent", "Tashkent"], ["(GMT+05:30) Chennai", "Chennai"], ["(GMT+05:30) Kolkata", "Kolkata"], ["(GMT+05:30) Mumbai", "Mumbai"], ["(GMT+05:30) New Delhi", "New Delhi"], ["(GMT+05:30) Sri Jayawardenepura", "Sri Jayawardenepura"], ["(GMT+05:45) Kathmandu", "Kathmandu"], ["(GMT+06:00) Almaty", "Almaty"], ["(GMT+06:00) Astana", "Astana"], ["(GMT+06:00) Dhaka", "Dhaka"], ["(GMT+06:00) Ekaterinburg", "Ekaterinburg"], ["(GMT+06:30) Rangoon", "Rangoon"], ["(GMT+07:00) Bangkok", "Bangkok"], ["(GMT+07:00) Hanoi", "Hanoi"], ["(GMT+07:00) Jakarta", "Jakarta"], ["(GMT+07:00) Novosibirsk", "Novosibirsk"], ["(GMT+08:00) Beijing", "Beijing"], ["(GMT+08:00) Chongqing", "Chongqing"], ["(GMT+08:00) Hong Kong", "Hong Kong"], ["(GMT+08:00) Krasnoyarsk", "Krasnoyarsk"], ["(GMT+08:00) Kuala Lumpur", "Kuala Lumpur"], ["(GMT+08:00) Perth", "Perth"], ["(GMT+08:00) Singapore", "Singapore"], ["(GMT+08:00) Taipei", "Taipei"], ["(GMT+08:00) Ulaanbaatar", "Ulaanbaatar"], ["(GMT+08:00) Urumqi", "Urumqi"], ["(GMT+09:00) Irkutsk", "Irkutsk"], ["(GMT+09:00) Osaka", "Osaka"], ["(GMT+09:00) Sapporo", "Sapporo"], ["(GMT+09:00) Seoul", "Seoul"], ["(GMT+09:00) Tokyo", "Tokyo"], ["(GMT+09:30) Adelaide", "Adelaide"], ["(GMT+09:30) Darwin", "Darwin"], ["(GMT+10:00) Brisbane", "Brisbane"], ["(GMT+10:00) Canberra", "Canberra"], ["(GMT+10:00) Guam", "Guam"], ["(GMT+10:00) Hobart", "Hobart"], ["(GMT+10:00) Melbourne", "Melbourne"], ["(GMT+10:00) Port Moresby", "Port Moresby"], ["(GMT+10:00) Sydney", "Sydney"], ["(GMT+10:00) Yakutsk", "Yakutsk"], ["(GMT+11:00) New Caledonia", "New Caledonia"], ["(GMT+11:00) Solomon Is.", "Solomon Is."], ["(GMT+11:00) Vladivostok", "Vladivostok"], ["(GMT+12:00) Auckland", "Auckland"], ["(GMT+12:00) Fiji", "Fiji"], ["(GMT+12:00) Kamchatka", "Kamchatka"], ["(GMT+12:00) Magadan", "Magadan"], ["(GMT+12:00) Marshall Is.", "Marshall Is."], ["(GMT+12:00) Wellington", "Wellington"], ["(GMT+12:45) Chatham Is.", "Chatham Is."], ["(GMT+13:00) Nuku&#x0027;alofa", "Nuku&#x0027;alofa"], ["(GMT+13:00) Samoa", "Samoa"], ["(GMT+13:00) Tokelau Is.", "Tokelau Is."]]' data-select-dropdown=''>
+                                    <div class='opener' data-opener=''>
+                                        <span class='label'>
+                                            (GMT+01:00) Copenhagen
+                                        </span>
+                                        <i></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-row currency'>
+                            <input id="organization_currency_id" name="organization[currency_id]" type="hidden" value="42" />
+                            <label>Currency</label>
+                            <div class='controls'>
+                                <div class='select' data-field='organization_currency_id' data-options='[["Afghan Afghani", 1], ["Albanian Leks", 2], ["Algerian Dinars", 3], ["Angolan Kwanzas", 4], ["Argentine Pesos", 5], ["Armenian Drams", 6], ["Aruban Florins", 7], ["Australian Dollars", 8], ["Azerbaijani Manats", 9], ["Bahamian Dollars", 10], ["Bahraini Dinars", 11], ["Bangladeshi Takas", 12], ["Barbadian Dollars", 13], ["Belarusian Rubles", 14], ["Belize Dollars", 15], ["Bermudian Dollars", 16], ["Bhutanese Ngultrums", 17], ["Bolivian Bolivianos", 18], ["Bosnia", 19], ["Botswana Pula", 20], ["Brazilian Reals", 21], ["British Pounds", 22], ["Brunei Dollars", 23], ["Bulgarian Levs", 24], ["Burundian Francs", 25], ["Cambodian Riels", 26], ["Canadian Dollars", 27], ["Cape Verdean Escudos", 28], ["Cayman Islands Dollars", 29], ["Central African Cfa Francs", 30], ["Cfp Francs", 31], ["Chilean Pesos", 32], ["Chinese Yuans", 33], ["Colombian Pesos", 34], ["Comorian Francs", 35], ["Congolese Francs", 36], ["Costa Rican Col", 37], ["Croatian Kunas", 38], ["Cuban Convertible Pesos", 39], ["Cuban Pesos", 40], ["Czech Korunas", 41], ["Danish Kroner", 42], ["Djiboutian Francs", 43], ["Dominican Pesos", 44], ["East Caribbean Dollars", 45], ["Egyptian Pounds", 46], ["Eritrean Nakfas", 47], ["Estonian Kroons", 48], ["Ethiopian Birrs", 49], ["Euros", 50], ["Falkland Islands Pounds", 51], ["Fijian Dollars", 52], ["Gambian Dalasis", 53], ["Georgian Lari", 54], ["Ghanaian Cedis", 55], ["Gibraltar Pounds", 56], ["Guatemalan Quetzals", 57], ["Guinean Francs", 58], ["Guyanese Dollars", 59], ["Haitian Gourdes", 60], ["Honduran Lempiras", 61], ["Hong Kong Dollars", 62], ["Hungarian Forints", 63], ["Icelandic Kr", 64], ["Indian Rupees", 65], ["Indonesian Rupiahs", 66], ["Iranian Rials", 67], ["Iraqi Dinars", 68], ["Israeli New Sheqels", 69], ["Jamaican Dollars", 70], ["Japanese Yen", 71], ["Jordanian Dinars", 72], ["Kazakhstani Tenges", 73], ["Kenyan Shillings", 74], ["Kuwaiti Dinars", 75], ["Kyrgyzstani Soms", 76], ["Lao Kip", 77], ["Latvian Lats", 78], ["Lebanese Pounds", 79], ["Lesotho Maloti", 80], ["Liberian Dollars", 81], ["Libyan Dinars", 82], ["Lithuanian Litas", 83], ["Macanese Patacas", 84], ["Macedonian Denari", 85], ["Malagasy Ariaries", 86], ["Malawian Kwacha", 87], ["Malaysian Ringgits", 88], ["Maldivian Rufiyaas", 89], ["Mauritanian Ouguiyas", 90], ["Mauritian Rupees", 91], ["Mexican Pesos", 92], ["Moldovan Lei", 93], ["Mongolian Tugriks", 94], ["Moroccan Dirhams", 95], ["Mozambican Meticals", 96], ["Myanma Kyats", 97], ["Namibian Dollars", 98], ["Nepalese Rupees", 99], ["Netherlands Antillean Guilders", 100], ["New Taiwan Dollars", 101], ["New Zealand Dollars", 102], ["Nicaraguan C", 103], ["Nigerian Nairas", 104], ["North Korean Won", 105], ["Norwegian Kroner", 106], ["Omani Rials", 107], ["Pakistani Rupees", 108], ["Panamanian Balboas", 109], ["Papua New Guinean Kinas", 110], ["Paraguayan Guaran", 111], ["Peruvian Nuevo Sols", 112], ["Philippine Pesos", 113], ["Polish Z", 114], ["Qatari Riyals", 115], ["Romanian Lei", 116], ["Russian Rubles", 117], ["Rwandan Francs", 118], ["Saint Helena Pounds", 119], ["Salvadoran Col", 120], ["Samoan Talas", 121], ["Saudi Riyals", 122], ["Serbian Dinars", 123], ["Seychellois Rupees", 124], ["Sierra Leonean Leones", 125], ["Singapore Dollars", 126], ["Singapore Dollars", 127], ["Solomon Islands Dollars", 128], ["Somali Shillings", 129], ["South African Rands", 130], ["South Korean Won", 131], ["Sri Lankan Rupees", 132], ["Sudanese Pounds", 133], ["Surinamese Dollars", 134], ["Swaziland Emalangeni", 135], ["Swedish Krona", 136], ["Swiss Francs", 137], ["Syrian Pounds", 138], ["Tajikistani Somonis", 139], ["Tanzanian Shillings", 140], ["Thai Bahts", 141], ["Tongan Pa", 142], ["Trinidad And Tobago Dollars", 143], ["Tunisian Dinars", 144], ["Turkish Lire", 145], ["Turkmenistani Manats", 146], ["Ugandan Shillings", 147], ["Ukrainian Hryvnias", 148], ["United Arab Emirates Dirhams", 149], ["United States Dollars", 150], ["Uruguayan Pesos", 151], ["Uzbekistani Soms", 152], ["Vanuatu Vatus", 153], ["Venezuelan Bol", 154], ["Vietnamese", 155], ["West African Cfa Francs", 156], ["Yemeni Rials", 157], ["Zambian Kwacha", 158], ["Zimbabwean Dollars", 159]]' data-select-dropdown=''>
+                                    <div class='opener' data-opener=''>
+                                        <span class='label'>Danish Kroner</span>
+                                        <i></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row text-field" data-field-name="hourly_rate"><label for="organization_hourly_rate">Hourly rate</label><div class="controls"><input class="hourly-rate" help_text="This is the default hourly rate. You can also set it specifically for each project." id="organization_hourly_rate" name="organization[hourly_rate]" type="text" value="850" /></div><div class="help">This is the default hourly rate. You can also set it specifically for each project.</div></div>
+                        <div class='form-actions'>
+                            <input class="button button-save" name="commit" type="submit" value="Save settings" />
+                        </div>
+                    </form>
+
+                    <div class='delete-account'>
+                        <h1>Delete organization</h1>
+                        <p>
+                            This will delete your organization, all your team members and any other data associated with the organization. If you do
+                            this there's no turning back – all your data will be gone for good.
+                        </p>
+                        <a class="button button-delete" data-delete-organization="" data-organization-name="Claus Hjort Bube" href="#">Delete organization</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class='time-tracker' data-time-tracker=''>
+            <div class='tab-bar' data-tab-switcher=''>
+                <a class='active' href='#'>Log time</a>
+                <a class='timer' href='#'>Timer</a>
+            </div>
+            <div class='tabs' data-tabs=''>
+                <div class='active log-time tab'>
+                    <div class='form-wrapper' data-logger=''>
+                        <form accept-charset="UTF-8" action="/entries" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="iBVahSp7wwiAL/hPQBG1BVYPBkgi9P2uKmiJh0ARb9M=" /></div><div class='time-and-date'>
+                                <div class='time'>
+                                    <input class="time" id="entry_time" name="entry[time]" tabindex="1" type="text" />
+                                </div>
+                                <div class='date' data-date-picker=''>
+                                    <input id="entry_date" name="entry[date]" type="hidden" value="today" />
+                                    <a class='opener' data-opener='' href='#' tabindex='2'>
+                                        <span data-label=''>Today</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class='project' data-clients='[{"id":3468,"name":"Lund Elmer Sandager"},{"id":3391,"name":"test"}]' data-last-project='{"id":5020,"name":"test","client":"test"}' data-project-picker='' data-projects='[{"id":5184,"name":"Konsulentbistand","client":"Lund Elmer Sandager"}]'>
+                                <input data-id-field="" id="entry_project_id" name="entry[project_id]" type="hidden" value="5020" />
+                                <a class='opener' data-opener='' href='#'>
+                                    <span class='client-name'>test</span>
+                                    <span class='project-name'>test</span>
+                                </a>
+                            </div>
+
+                            <div class='comment'>
+                                <textarea data-behaviour="textarea_autogrow" id="entry_comment" name="entry[comment]" placeholder="Optional comment" tabindex="4">
+                                </textarea>
+                            </div>
+                            <div class='actions'>
+                                <button class="submit-button disabled" name="button" tabindex="5" type="submit">Log time</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                <div class='tab timer' data-timer=''>
+                    <div class='time'>
+                        <div class='elapsed-time' data-time-field=''>
+                            <span class='hours'>00</span>
+                            <span class='separator'>:</span>
+                            <span class='minutes'>00</span>
+                            <span class='separator'>:</span>
+                            <span class='seconds'>00</span>
+                        </div>
+                        <a class='play toggle-timer' data-toggle-timer='' href='#'></a>
+                    </div>
+                    <div class='spent-on'>
+                        <span>Spent working on</span>
+                    </div>
+                    <div class='project' data-clients='[{"id":3468,"name":"Lund Elmer Sandager"},{"id":3391,"name":"test"}]' data-last-project='{"id":5020,"name":"test","client":"test"}' data-project-picker='' data-projects='[{"id":5184,"name":"Konsulentbistand","client":"Lund Elmer Sandager"}]'>
+                        <input data-id-field="" id="timer_project_id" name="timer_project_id" type="hidden" value="5020" />
+                        <a class='opener' data-opener='' href='#'>
+                            <span class='client-name'>test</span>
+                            <span class='project-name'>test</span>
+                        </a>
+                    </div>
+
+                    <div class='comment'>
+                        <textarea data-comment-field="" id="comment" name="comment" placeholder="Optional comment">
+                        </textarea>
+                    </div>
+                    <div class='actions'>
+                        <a class="button" data-delete="" href="#"><i class='icon-delete'></i>
+                        </a><a class="button" data-finish="" href="#"><i class='icon-finish'></i>
+                        </a></div>
+                </div>
+            </div>
+            <div class='notifications' data-time-tracker-notifications=''></div>
+        </section>
+
+    </div>
+</div>

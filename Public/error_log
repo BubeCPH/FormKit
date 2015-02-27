@@ -1,0 +1,350 @@
+[29-Jun-2014 22:56:58 Europe/Berlin] PHP Fatal error:  Class 'Kalna\Utilities\MenuBuilder' not found in /home/kalnadk/public_html/InkassoPortal/Kalna/Views/Assets/PageHeader.phtml on line 45
+[29-Jun-2014 22:58:10 Europe/Berlin] PHP Fatal error:  Class 'Kalna\Utilities\MenuBuilder' not found in /home/kalnadk/public_html/InkassoPortal/Kalna/Views/Assets/PageHeader.phtml on line 45
+[29-Jun-2014 23:00:41 Europe/Berlin] PHP Fatal error:  Class 'Kalna\Utilities\MenuBuilder' not found in /home/kalnadk/public_html/InkassoPortal/Kalna/Views/Assets/PageHeader.phtml on line 45
+[29-Jun-2014 23:03:47 Europe/Berlin] PHP Fatal error:  Class 'Kalna\Utilities\MenuBuilder' not found in /home/kalnadk/public_html/InkassoPortal/Kalna/Views/Assets/PageHeader.phtml on line 45
+[29-Jun-2014 23:04:20 Europe/Berlin] PHP Fatal error:  Class 'Kalna\Utilities\MenuBuilder' not found in /home/kalnadk/public_html/InkassoPortal/Kalna/Views/Assets/PageHeader.phtml on line 45
+[29-Jun-2014 23:08:55 Europe/Berlin] PHP Fatal error:  Undefined constant 'Kalna\Utilities\MenuBuilder' in /home/kalnadk/public_html/InkassoPortal/Kalna/Views/Assets/PageHeader.phtml on line 45
+[29-Jun-2014 23:09:14 Europe/Berlin] PHP Parse error:  syntax error, unexpected 'class' (T_CLASS), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/kalnadk/public_html/InkassoPortal/Kalna/Views/Assets/PageHeader.phtml on line 45
+[29-Jun-2014 23:10:05 Europe/Berlin] PHP Fatal error:  Class 'Kalna\Utilities\MenuBuilder' not found in /home/kalnadk/public_html/InkassoPortal/Kalna/Views/Assets/PageHeader.phtml on line 45
+[29-Jun-2014 23:10:37 Europe/Berlin] PHP Fatal error:  Class 'Kalna\Utilities\MenuBuilder' not found in /home/kalnadk/public_html/InkassoPortal/Kalna/Views/Assets/PageHeader.phtml on line 46
+[29-Jun-2014 23:10:51 Europe/Berlin] PHP Fatal error:  Class 'Kalna\Utilities\MenuBuilder' not found in /home/kalnadk/public_html/InkassoPortal/Kalna/Views/Assets/PageHeader.phtml on line 43
+[29-Jun-2014 23:12:11 Europe/Berlin] PHP Fatal error:  Class 'Kalna\Utilities\MenuBuilder' not found in /home/kalnadk/public_html/InkassoPortal/Kalna/Views/Assets/PageHeader.phtml on line 45
+[29-Jun-2014 23:12:17 Europe/Berlin] PHP Fatal error:  Class 'Kalna\Utilities\MenuBuilder' not found in /home/kalnadk/public_html/InkassoPortal/Kalna/Views/Assets/PageHeader.phtml on line 45
+[30-Jun-2014 18:01:41 Europe/Berlin] PHP Fatal error:  Class 'Kalna\Utilities\MenuBuilder' not found in /home/kalnadk/public_html/InkassoPortal/Kalna/Views/Assets/PageHeader.phtml on line 45
+[30-Jun-2014 18:02:41 Europe/Berlin] PHP Fatal error:  Class 'Kalna\Utilities\MenuBuilder' not found in /home/kalnadk/public_html/InkassoPortal/Kalna/Views/Assets/PageHeader.phtml on line 45
+[30-Jun-2014 18:02:53 Europe/Berlin] PHP Fatal error:  Class 'Kalna\Utilities\MenuBuilder' not found in /home/kalnadk/public_html/InkassoPortal/Kalna/Views/Assets/PageHeader.phtml on line 45
+[30-Jun-2014 18:08:32 Europe/Berlin] PHP Warning:  include(/home/kalnadk/public_html/InkassoPortal/Public/..//Kalna\Utilities\MenuBuilder.php): failed to open stream: No such file or directory in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 32
+[30-Jun-2014 18:08:32 Europe/Berlin] PHP Warning:  include(): Failed opening '/home/kalnadk/public_html/InkassoPortal/Public/..//Kalna\Utilities\MenuBuilder.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 32
+[30-Jun-2014 18:08:32 Europe/Berlin] PHP Fatal error:  Class 'Kalna\Utilities\MenuBuilder' not found in /home/kalnadk/public_html/InkassoPortal/Kalna/Views/Assets/PageHeader.phtml on line 45
+[30-Jun-2014 18:14:33 Europe/Berlin] PHP Parse error:  syntax error, unexpected '';' (T_CONSTANT_ENCAPSED_STRING) in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 33
+[30-Jun-2014 18:42:49 Europe/Berlin] PHP Warning:  require_once(/home/kalnadk/public_html/InkassoPortal/Public/../Kalna/Utilities/Includes/routing.php): failed to open stream: No such file or directory in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 46
+[30-Jun-2014 18:42:49 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '/home/kalnadk/public_html/InkassoPortal/Public/../Kalna/Utilities/Includes/routing.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 46
+[30-Jun-2014 18:51:13 Europe/Berlin] PHP Warning:  require_once(/../Kalna/Utilities/Includes/routing.php): failed to open stream: No such file or directory in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 46
+[30-Jun-2014 18:51:13 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '/../Kalna/Utilities/Includes/routing.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 46
+[30-Jun-2014 18:51:39 Europe/Berlin] PHP Warning:  require_once(/../Kalna/Utilities/Includes/routing.php): failed to open stream: No such file or directory in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 46
+[30-Jun-2014 18:51:39 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '/../Kalna/Utilities/Includes/routing.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 46
+[30-Jun-2014 18:51:51 Europe/Berlin] PHP Warning:  require_once(/home/kalnadk/public_html/InkassoPortal/Public/../Kalna/Utilities/Includes/routing.php): failed to open stream: No such file or directory in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 46
+[30-Jun-2014 18:51:51 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '/home/kalnadk/public_html/InkassoPortal/Public/../Kalna/Utilities/Includes/routing.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 46
+[30-Jun-2014 18:52:43 Europe/Berlin] PHP Warning:  require_once(/home/kalnadk/public_html/InkassoPortalKalna/Utilities/Includes/routing.php): failed to open stream: No such file or directory in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 46
+[30-Jun-2014 18:52:43 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '/home/kalnadk/public_html/InkassoPortalKalna/Utilities/Includes/routing.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 46
+[30-Jun-2014 18:52:52 Europe/Berlin] PHP Warning:  require_once(/home/kalnadk/public_htmlKalna/Utilities/Includes/routing.php): failed to open stream: No such file or directory in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 46
+[30-Jun-2014 18:52:52 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '/home/kalnadk/public_htmlKalna/Utilities/Includes/routing.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 46
+[30-Jun-2014 18:53:33 Europe/Berlin] PHP Warning:  require_once(/home/kalnadk/public_htmlKalnaBase/Utilities/Includes/routing.php): failed to open stream: No such file or directory in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 46
+[30-Jun-2014 18:53:33 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '/home/kalnadk/public_htmlKalnaBase/Utilities/Includes/routing.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 46
+[30-Jun-2014 18:53:48 Europe/Berlin] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/kalnadk/public_html/InkassoPortal/Public/index.php:30) in /home/kalnadk/public_html/KalnaBase/Utilities/SessionRegistry.php on line 14
+[30-Jun-2014 18:53:48 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'no template file HtmlHeader.phtml present in directory /home/kalnadk/public_html/KalnaBase/Views/Assets/' in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php:171
+Stack trace:
+#0 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(162): ViewLoader->renderHtmlHead()
+#1 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(191): callHook()
+#2 /home/kalnadk/public_html/InkassoPortal/Public/index.php(48): require_once('/home/kalnadk/p...')
+#3 {main}
+  thrown in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 171
+[30-Jun-2014 18:55:08 Europe/Berlin] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/kalnadk/public_html/InkassoPortal/Public/index.php:31) in /home/kalnadk/public_html/KalnaBase/Utilities/SessionRegistry.php on line 14
+[30-Jun-2014 18:55:08 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'no template file HtmlHeader.phtml present in directory /home/kalnadk/public_html/KalnaBase/Views/Assets/' in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php:171
+Stack trace:
+#0 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(162): ViewLoader->renderHtmlHead()
+#1 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(191): callHook()
+#2 /home/kalnadk/public_html/InkassoPortal/Public/index.php(49): require_once('/home/kalnadk/p...')
+#3 {main}
+  thrown in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 171
+[30-Jun-2014 18:55:19 Europe/Berlin] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/kalnadk/public_html/InkassoPortal/Public/index.php:31) in /home/kalnadk/public_html/KalnaBase/Utilities/SessionRegistry.php on line 14
+[30-Jun-2014 18:55:19 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'no template file HtmlHeader.phtml present in directory /home/kalnadk/public_html/KalnaBase/Views/Assets/' in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php:171
+Stack trace:
+#0 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(162): ViewLoader->renderHtmlHead()
+#1 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(191): callHook()
+#2 /home/kalnadk/public_html/InkassoPortal/Public/index.php(49): require_once('/home/kalnadk/p...')
+#3 {main}
+  thrown in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 171
+[30-Jun-2014 18:57:04 Europe/Berlin] PHP Warning:  require_once(/KalnaBase/Utilities/Includes/routing.php): failed to open stream: No such file or directory in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 47
+[30-Jun-2014 18:57:04 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '/KalnaBase/Utilities/Includes/routing.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 47
+[30-Jun-2014 18:57:21 Europe/Berlin] PHP Warning:  require_once(/KalnaBase/Utilities/Includes/routing.php): failed to open stream: No such file or directory in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 47
+[30-Jun-2014 18:57:21 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '/KalnaBase/Utilities/Includes/routing.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 47
+[30-Jun-2014 18:58:36 Europe/Berlin] PHP Warning:  require_once(/KalnaBase/Utilities/Includes/routing.php): failed to open stream: No such file or directory in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 47
+[30-Jun-2014 18:58:36 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '/KalnaBase/Utilities/Includes/routing.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 47
+[30-Jun-2014 18:58:46 Europe/Berlin] PHP Warning:  require_once(/KalnaBase/Utilities/Includes/routing.php): failed to open stream: No such file or directory in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 47
+[30-Jun-2014 18:58:46 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '/KalnaBase/Utilities/Includes/routing.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 47
+[30-Jun-2014 18:59:47 Europe/Berlin] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/kalnadk/public_html/InkassoPortal/Public/index.php:31) in /home/kalnadk/public_html/KalnaBase/Utilities/SessionRegistry.php on line 14
+[30-Jun-2014 18:59:47 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'no template file HtmlHeader.phtml present in directory /home/kalnadk/public_html/InkassoPortal/Views/Assets/' in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php:171
+Stack trace:
+#0 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(162): ViewLoader->renderHtmlHead()
+#1 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(191): callHook()
+#2 /home/kalnadk/public_html/InkassoPortal/Public/index.php(49): require_once('/home/kalnadk/p...')
+#3 {main}
+  thrown in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 171
+[30-Jun-2014 19:00:03 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'no template file HtmlHeader.phtml present in directory /home/kalnadk/public_html/InkassoPortal/Views/Assets/' in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php:171
+Stack trace:
+#0 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(162): ViewLoader->renderHtmlHead()
+#1 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(191): callHook()
+#2 /home/kalnadk/public_html/InkassoPortal/Public/index.php(49): require_once('/home/kalnadk/p...')
+#3 {main}
+  thrown in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 171
+[30-Jun-2014 19:02:27 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'no template file HtmlHeader.phtml present in directory /home/kalnadk/public_html/AppViews/Assets/' in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php:171
+Stack trace:
+#0 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(162): ViewLoader->renderHtmlHead()
+#1 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(191): callHook()
+#2 /home/kalnadk/public_html/InkassoPortal/Public/index.php(50): require_once('/home/kalnadk/p...')
+#3 {main}
+  thrown in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 171
+[30-Jun-2014 19:02:40 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'no template file HtmlHeader.phtml present in directory /home/kalnadk/public_html/App/Views/Assets/' in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php:171
+Stack trace:
+#0 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(162): ViewLoader->renderHtmlHead()
+#1 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(191): callHook()
+#2 /home/kalnadk/public_html/InkassoPortal/Public/index.php(50): require_once('/home/kalnadk/p...')
+#3 {main}
+  thrown in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 171
+[30-Jun-2014 19:03:11 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'no template file HtmlHeader.phtml present in directory /home/kalnadk/public_html/App/Views/Assets/' in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php:171
+Stack trace:
+#0 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(162): ViewLoader->renderHtmlHead()
+#1 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(191): callHook()
+#2 /home/kalnadk/public_html/InkassoPortal/Public/index.php(50): require_once('/home/kalnadk/p...')
+#3 {main}
+  thrown in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 171
+[30-Jun-2014 19:03:42 Europe/Berlin] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/kalnadk/public_html/InkassoPortal/Public/index.php:32) in /home/kalnadk/public_html/KalnaBase/Utilities/SessionRegistry.php on line 14
+[30-Jun-2014 19:03:42 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'no template file HtmlHeader.phtml present in directory /home/kalnadk/public_html/App/Views/Assets/' in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php:171
+Stack trace:
+#0 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(162): ViewLoader->renderHtmlHead()
+#1 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(191): callHook()
+#2 /home/kalnadk/public_html/InkassoPortal/Public/index.php(50): require_once('/home/kalnadk/p...')
+#3 {main}
+  thrown in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 171
+[30-Jun-2014 19:03:53 Europe/Berlin] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/kalnadk/public_html/InkassoPortal/Public/index.php:32) in /home/kalnadk/public_html/KalnaBase/Utilities/SessionRegistry.php on line 14
+[30-Jun-2014 19:03:53 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'no template file HtmlHeader.phtml present in directory /home/kalnadk/public_html/App/Views/Assets/' in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php:171
+Stack trace:
+#0 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(162): ViewLoader->renderHtmlHead()
+#1 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(191): callHook()
+#2 /home/kalnadk/public_html/InkassoPortal/Public/index.php(50): require_once('/home/kalnadk/p...')
+#3 {main}
+  thrown in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 171
+[30-Jun-2014 19:04:07 Europe/Berlin] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/kalnadk/public_html/InkassoPortal/Public/index.php:32) in /home/kalnadk/public_html/KalnaBase/Utilities/SessionRegistry.php on line 14
+[30-Jun-2014 19:04:07 Europe/Berlin] PHP Warning:  include(/home/kalnadk/public_html//Kalna/Utilities/MenuBuilder.php): failed to open stream: No such file or directory in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 34
+[30-Jun-2014 19:04:07 Europe/Berlin] PHP Warning:  include(): Failed opening '/home/kalnadk/public_html//Kalna/Utilities/MenuBuilder.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 34
+[30-Jun-2014 19:04:07 Europe/Berlin] PHP Fatal error:  Class 'Kalna\Utilities\MenuBuilder' not found in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 45
+[30-Jun-2014 19:04:15 Europe/Berlin] PHP Warning:  include(/home/kalnadk/public_html//Kalna/Utilities/MenuBuilder.php): failed to open stream: No such file or directory in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 34
+[30-Jun-2014 19:04:15 Europe/Berlin] PHP Warning:  include(): Failed opening '/home/kalnadk/public_html//Kalna/Utilities/MenuBuilder.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 34
+[30-Jun-2014 19:04:15 Europe/Berlin] PHP Fatal error:  Class 'Kalna\Utilities\MenuBuilder' not found in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 45
+[30-Jun-2014 19:04:51 Europe/Berlin] PHP Fatal error:  Class 'Kalna\Utilities\MenuBuilder' not found in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 45
+[30-Jun-2014 19:05:54 Europe/Berlin] PHP Fatal error:  Class 'Kalna\Utilities\HTML' not found in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/HtmlHeader.phtml on line 12
+[30-Jun-2014 19:06:20 Europe/Berlin] PHP Fatal error:  Class 'KalnaBase\Utilities\MenuBuilder' not found in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 45
+[30-Jun-2014 20:38:10 Europe/Berlin] PHP Fatal error:  Class 'KalnaBase\Utilities\MenuBuilder' not found in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 45
+[30-Jun-2014 22:16:13 Europe/Berlin] PHP Fatal error:  spl_autoload(): Class KalnaBase\Utilities\MenuBuilder could not be loaded in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 45
+[30-Jun-2014 22:40:42 Europe/Berlin] PHP Fatal error:  Class 'KalnaBase\Utilities\MenuBuilder' not found in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 45
+[30-Jun-2014 22:41:15 Europe/Berlin] PHP Fatal error:  Class 'KalnaBase\Utilities\MenuBuilder' not found in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 45
+[30-Jun-2014 22:43:50 Europe/Berlin] PHP Warning:  require_once(/home/kalnadk/public_html/KalnaBase/Utilities/HTML.php): failed to open stream: No such file or directory in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/HtmlHeader.phtml on line 1
+[30-Jun-2014 22:43:50 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '/home/kalnadk/public_html/KalnaBase/Utilities/HTML.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/HtmlHeader.phtml on line 1
+[30-Jun-2014 22:44:14 Europe/Berlin] PHP Fatal error:  Class 'KalnaBase\Utilities\HTML' not found in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/HtmlHeader.phtml on line 12
+[30-Jun-2014 22:45:11 Europe/Berlin] PHP Warning:  require_once(/home/kalnadk/public_html/KalnaBase/Utilities/HTML.php): failed to open stream: No such file or directory in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/HtmlHeader.phtml on line 1
+[30-Jun-2014 22:45:11 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '/home/kalnadk/public_html/KalnaBase/Utilities/HTML.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/HtmlHeader.phtml on line 1
+[30-Jun-2014 22:46:33 Europe/Berlin] PHP Fatal error:  Class 'KalnaBase\Utilities\MenuBuilder' not found in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 45
+[30-Jun-2014 23:00:20 Europe/Berlin] PHP Fatal error:  Uncaught exception 'LogicException' with message 'Class KalnaBase\Utilities\HTML could not be loaded' in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/HtmlHeader.phtml:15
+Stack trace:
+#0 /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/HtmlHeader.phtml(15): spl_autoload('KalnaBase\Utili...')
+#1 /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php(169): include('/home/kalnadk/p...')
+#2 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(162): ViewLoader->renderHtmlHead()
+#3 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(191): callHook()
+#4 /home/kalnadk/public_html/InkassoPortal/Public/index.php(52): require_once('/home/kalnadk/p...')
+#5 {main}
+  thrown in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/HtmlHeader.phtml on line 15
+[30-Jun-2014 23:12:12 Europe/Berlin] PHP Warning:  parse_ini_file(/home/kalnadk/public_html/KalnaBase//Config/config.ini.php): failed to open stream: No such file or directory in /home/kalnadk/public_html/KalnaBase/System/Config.php on line 45
+[30-Jun-2014 23:12:12 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 63
+[30-Jun-2014 23:43:52 Europe/Berlin] PHP Fatal error:  Uncaught exception 'LogicException' with message 'Class AppConfig could not be loaded' in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php:62
+Stack trace:
+#0 /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php(62): spl_autoload('AppConfig')
+#1 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(157): ViewLoader->__construct('Kreditor')
+#2 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(191): callHook()
+#3 /home/kalnadk/public_html/InkassoPortal/Public/index.php(53): require_once('/home/kalnadk/p...')
+#4 {main}
+  thrown in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 62
+[30-Jun-2014 23:46:06 Europe/Berlin] PHP Fatal error:  Uncaught exception 'LogicException' with message 'Class AppConfig could not be loaded' in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php:65
+Stack trace:
+#0 /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php(65): spl_autoload('AppConfig')
+#1 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(157): ViewLoader->__construct('Kreditor')
+#2 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(191): callHook()
+#3 /home/kalnadk/public_html/InkassoPortal/Public/index.php(53): require_once('/home/kalnadk/p...')
+#4 {main}
+  thrown in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 65
+[30-Jun-2014 23:47:20 Europe/Berlin] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/kalnadk/public_html/InkassoPortal/Public/index.php:34) in /home/kalnadk/public_html/KalnaBase/Utilities/SessionRegistry.php on line 14
+[30-Jun-2014 23:49:33 Europe/Berlin] PHP Fatal error:  Call to private Config::__construct() from context 'AppConfig' in /home/kalnadk/public_html/KalnaBase/System/AppConfig.php on line 33
+[01-Jul-2014 23:52:08 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Kreditor/Assets/PageHeader.phtml on line 50 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[02-Jul-2014 19:39:22 Europe/Berlin] PHP Warning:  Missing argument 2 for KalnaBase\Utilities\MenuBuilder::add(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Kreditor/Assets/PageHeader.phtml on line 51 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 39
+[02-Jul-2014 22:20:26 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[02-Jul-2014 22:20:26 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[02-Jul-2014 22:20:27 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[02-Jul-2014 22:20:27 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[02-Jul-2014 22:20:28 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[02-Jul-2014 22:20:28 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[02-Jul-2014 22:20:28 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[02-Jul-2014 22:20:28 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[02-Jul-2014 22:20:30 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[02-Jul-2014 22:20:30 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[02-Jul-2014 22:21:09 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[02-Jul-2014 22:21:09 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[02-Jul-2014 22:21:10 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[02-Jul-2014 22:21:10 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[02-Jul-2014 22:21:12 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[02-Jul-2014 22:21:12 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[02-Jul-2014 22:21:25 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[02-Jul-2014 22:21:25 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[02-Jul-2014 22:21:58 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[02-Jul-2014 22:21:58 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[02-Jul-2014 22:28:58 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[02-Jul-2014 22:28:58 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[02-Jul-2014 22:28:58 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[02-Jul-2014 22:28:58 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[02-Jul-2014 22:29:56 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[02-Jul-2014 22:29:56 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[02-Jul-2014 22:29:56 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[02-Jul-2014 22:29:56 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[03-Jul-2014 19:15:28 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[03-Jul-2014 19:15:28 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[03-Jul-2014 19:15:28 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[03-Jul-2014 19:15:28 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[03-Jul-2014 19:21:53 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[03-Jul-2014 19:21:53 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[03-Jul-2014 19:21:53 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[03-Jul-2014 19:21:53 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[03-Jul-2014 19:25:11 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[03-Jul-2014 19:25:11 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[03-Jul-2014 19:25:11 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[03-Jul-2014 19:25:11 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[03-Jul-2014 19:25:43 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[03-Jul-2014 19:25:43 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[03-Jul-2014 19:25:43 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[03-Jul-2014 19:25:43 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[03-Jul-2014 20:18:50 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[03-Jul-2014 20:18:50 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[05-Jul-2014 00:13:35 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[05-Jul-2014 00:13:35 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[05-Jul-2014 20:30:28 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[05-Jul-2014 20:30:28 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[05-Jul-2014 20:31:24 Europe/Berlin] PHP Warning:  Missing argument 1 for KalnaBase\Utilities\MenuBuilder::__construct(), called in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 46 and defined in /home/kalnadk/public_html/KalnaBase/Utilities/MenuBuilder.php on line 35
+[05-Jul-2014 20:31:24 Europe/Berlin] PHP Fatal error:  Call to undefined method KalnaBase\Utilities\MenuBuilder::construct() in /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/PageHeader.phtml on line 47
+[06-Jul-2014 01:15:33 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 157
+[06-Jul-2014 01:33:01 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'No sectionfile present in directory /home/kalnadk/public_html/InkassoPortal/App/Views//Debitor/-|-View: Frontpage-|-Action: Array (Array.phtml)-|-Task: 500145-|-Debug: 5' in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php:225
+Stack trace:
+#0 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(164): ViewLoader->render()
+#1 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(191): callHook()
+#2 /home/kalnadk/public_html/InkassoPortal/Public/index.php(53): require_once('/home/kalnadk/p...')
+#3 {main}
+  thrown in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 225
+[06-Jul-2014 01:36:05 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'no template file index.phtml present in directory /home/kalnadk/public_html/InkassoPortal/App/Views//Debitor/Assets/ or /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/' in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php:184
+Stack trace:
+#0 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(162): ViewLoader->renderHtmlHead()
+#1 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(191): callHook()
+#2 /home/kalnadk/public_html/InkassoPortal/Public/index.php(53): require_once('/home/kalnadk/p...')
+#3 {main}
+  thrown in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 184
+[06-Jul-2014 01:38:08 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'no template file index.phtml present in directory /home/kalnadk/public_html/InkassoPortal/App/Views//Frontpage/Assets/ or /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/' in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php:184
+Stack trace:
+#0 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(162): ViewLoader->renderHtmlHead()
+#1 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(191): callHook()
+#2 /home/kalnadk/public_html/InkassoPortal/Public/index.php(53): require_once('/home/kalnadk/p...')
+#3 {main}
+  thrown in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 184
+[06-Jul-2014 01:38:11 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'no template file index.phtml present in directory /home/kalnadk/public_html/InkassoPortal/App/Views//Frontpage/Assets/ or /home/kalnadk/public_html/InkassoPortal/App/Views/Assets/' in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php:184
+Stack trace:
+#0 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(162): ViewLoader->renderHtmlHead()
+#1 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(191): callHook()
+#2 /home/kalnadk/public_html/InkassoPortal/Public/index.php(53): require_once('/home/kalnadk/p...')
+#3 {main}
+  thrown in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 184
+[06-Jul-2014 01:41:23 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'No sectionfile present in directory /home/kalnadk/public_html/InkassoPortal/App/Views//Debitor/Frontpage/-|-View: Frontpage-|-Action: index (index.phtml)-|-Task: 500145-|-Debug: 5' in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php:227
+Stack trace:
+#0 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(164): ViewLoader->render()
+#1 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(191): callHook()
+#2 /home/kalnadk/public_html/InkassoPortal/Public/index.php(53): require_once('/home/kalnadk/p...')
+#3 {main}
+  thrown in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 227
+[06-Jul-2014 01:41:49 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'No sectionfile present in directory /home/kalnadk/public_html/InkassoPortal/App/Views//Debitor/Frontpage/-|-View: Frontpage-|-Section: index (index.phtml)-|-Task: 500145-|-Debug: 5' in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php:227
+Stack trace:
+#0 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(164): ViewLoader->render()
+#1 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(191): callHook()
+#2 /home/kalnadk/public_html/InkassoPortal/Public/index.php(53): require_once('/home/kalnadk/p...')
+#3 {main}
+  thrown in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 227
+[06-Jul-2014 02:50:34 Europe/Berlin] PHP Warning:  syntax error, unexpected TC_SECTION, expecting '=' in /home/kalnadk/public_html/InkassoPortal/App/AppConfig.ini on line 20
+ in /home/kalnadk/public_html/KalnaBase/System/AppConfig.php on line 46
+[06-Jul-2014 02:50:34 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 156
+[06-Jul-2014 02:50:50 Europe/Berlin] PHP Warning:  syntax error, unexpected TC_SECTION, expecting '=' in /home/kalnadk/public_html/InkassoPortal/App/AppConfig.ini on line 20
+ in /home/kalnadk/public_html/KalnaBase/System/AppConfig.php on line 46
+[06-Jul-2014 02:50:50 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 156
+[06-Jul-2014 02:50:51 Europe/Berlin] PHP Warning:  syntax error, unexpected TC_SECTION, expecting '=' in /home/kalnadk/public_html/InkassoPortal/App/AppConfig.ini on line 20
+ in /home/kalnadk/public_html/KalnaBase/System/AppConfig.php on line 46
+[06-Jul-2014 02:50:51 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 156
+[06-Jul-2014 02:50:55 Europe/Berlin] PHP Warning:  syntax error, unexpected TC_SECTION, expecting '=' in /home/kalnadk/public_html/InkassoPortal/App/AppConfig.ini on line 20
+ in /home/kalnadk/public_html/KalnaBase/System/AppConfig.php on line 46
+[06-Jul-2014 02:50:55 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 156
+[06-Jul-2014 02:50:57 Europe/Berlin] PHP Warning:  syntax error, unexpected TC_SECTION, expecting '=' in /home/kalnadk/public_html/InkassoPortal/App/AppConfig.ini on line 20
+ in /home/kalnadk/public_html/KalnaBase/System/AppConfig.php on line 46
+[06-Jul-2014 02:50:57 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 156
+[06-Jul-2014 02:58:41 Europe/Berlin] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 143
+[06-Jul-2014 03:01:14 Europe/Berlin] PHP Warning:  require_once(/home/kalnadk/public_html/vendor/propel/propel1/runtime/lib/Propel.php): failed to open stream: No such file or directory in /home/kalnadk/public_html/KalnaBase/Utilities/ModelLoader.php on line 3
+[06-Jul-2014 03:01:14 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '/home/kalnadk/public_html/vendor/propel/propel1/runtime/lib/Propel.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/kalnadk/public_html/KalnaBase/Utilities/ModelLoader.php on line 3
+[06-Jul-2014 03:02:56 Europe/Berlin] PHP Warning:  require_once(/home/kalnadk/public_html/vendor/propel/propel1/runtime/lib/Propel.php): failed to open stream: No such file or directory in /home/kalnadk/public_html/KalnaBase/Utilities/ModelLoader.php on line 3
+[06-Jul-2014 03:02:56 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '/home/kalnadk/public_html/vendor/propel/propel1/runtime/lib/Propel.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/kalnadk/public_html/KalnaBase/Utilities/ModelLoader.php on line 3
+[06-Jul-2014 03:03:00 Europe/Berlin] PHP Warning:  require_once(/home/kalnadk/public_html/vendor/propel/propel1/runtime/lib/Propel.php): failed to open stream: No such file or directory in /home/kalnadk/public_html/KalnaBase/Utilities/ModelLoader.php on line 3
+[06-Jul-2014 03:03:00 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '/home/kalnadk/public_html/vendor/propel/propel1/runtime/lib/Propel.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/kalnadk/public_html/KalnaBase/Utilities/ModelLoader.php on line 3
+[06-Jul-2014 03:06:24 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/kalnadk/public_html/KalnaBase/Repositories/Auth.php on line 97
+[06-Jul-2014 03:06:24 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/kalnadk/public_html/KalnaBase/Repositories/Auth.php on line 103
+[06-Jul-2014 03:06:36 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/kalnadk/public_html/KalnaBase/Repositories/Auth.php on line 97
+[06-Jul-2014 03:06:36 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/kalnadk/public_html/KalnaBase/Repositories/Auth.php on line 103
+[06-Jul-2014 03:07:29 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/kalnadk/public_html/KalnaBase/Repositories/Auth.php on line 97
+[06-Jul-2014 03:07:29 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/kalnadk/public_html/KalnaBase/Repositories/Auth.php on line 103
+[06-Jul-2014 03:08:36 Europe/Berlin] PHP Fatal error:  Uncaught exception 'LogicException' with message 'Class Propel could not be loaded' in /home/kalnadk/public_html/KalnaBase/Repositories/Auth.php:121
+Stack trace:
+#0 /home/kalnadk/public_html/KalnaBase/Repositories/Auth.php(121): spl_autoload('Propel')
+#1 /home/kalnadk/public_html/KalnaBase/Repositories/Auth.php(102): Auth->checkKey()
+#2 /home/kalnadk/public_html/KalnaBase/Repositories/Auth.php(54): Auth->checkUserTest()
+#3 /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php(149): Auth->login('K1000', 'zdhs')
+#4 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(157): ViewLoader->__construct('debitor/Overbli...')
+#5 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(191): callHook()
+#6 /home/kalnadk/public_html/InkassoPortal/Public/index.php(53): require_once('/home/kalnadk/p...')
+#7 {main}
+  thrown in /home/kalnadk/public_html/KalnaBase/Repositories/Auth.php on line 121
+[06-Jul-2014 03:40:14 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'No sectionfile present in directory /home/kalnadk/public_html/InkassoPortal/App/Views///-|-View: -|-Section:  (index.phtml)-|-Task: none-|-Debug: ' in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php:235
+Stack trace:
+#0 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(164): ViewLoader->render()
+#1 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(191): callHook()
+#2 /home/kalnadk/public_html/InkassoPortal/Public/index.php(53): require_once('/home/kalnadk/p...')
+#3 {main}
+  thrown in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 235
+[06-Jul-2014 03:49:08 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'No sectionfile present in directory /home/kalnadk/public_html/InkassoPortal/App/Views///-|-View: -|-Section:  (index.phtml)-|-Task: -|-Debug: login' in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php:239
+Stack trace:
+#0 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(164): ViewLoader->render()
+#1 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(191): callHook()
+#2 /home/kalnadk/public_html/InkassoPortal/Public/index.php(53): require_once('/home/kalnadk/p...')
+#3 {main}
+  thrown in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 239
+[06-Jul-2014 03:49:16 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'No sectionfile present in directory /home/kalnadk/public_html/InkassoPortal/App/Views///-|-View: -|-Section:  (index.phtml)-|-Task: -|-Debug: login' in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php:239
+Stack trace:
+#0 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(164): ViewLoader->render()
+#1 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(191): callHook()
+#2 /home/kalnadk/public_html/InkassoPortal/Public/index.php(53): require_once('/home/kalnadk/p...')
+#3 {main}
+  thrown in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 239
+[06-Jul-2014 03:50:23 Europe/Berlin] PHP Fatal error:  Uncaught exception 'Exception' with message 'No sectionfile present in directory /home/kalnadk/public_html/InkassoPortal/App/Views//Debitor/-|-View: Debitor-|-Section: Oversigt (Oversigt.phtml)-|-Task: -|-Debug: login' in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php:239
+Stack trace:
+#0 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(164): ViewLoader->render()
+#1 /home/kalnadk/public_html/KalnaBase/Utilities/Includes/shared.php(191): callHook()
+#2 /home/kalnadk/public_html/InkassoPortal/Public/index.php(53): require_once('/home/kalnadk/p...')
+#3 {main}
+  thrown in /home/kalnadk/public_html/KalnaBase/Utilities/ViewLoader.php on line 239
+[06-Jul-2014 15:11:20 Europe/Berlin] PHP Fatal error:  Using $this when not in object context in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 55
+[06-Jul-2014 15:11:20 Europe/Berlin] PHP Fatal error:  Using $this when not in object context in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 55
+[06-Jul-2014 15:11:20 Europe/Berlin] PHP Fatal error:  Using $this when not in object context in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 55
+[06-Jul-2014 15:11:21 Europe/Berlin] PHP Fatal error:  Using $this when not in object context in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 55
+[06-Jul-2014 15:11:21 Europe/Berlin] PHP Fatal error:  Using $this when not in object context in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 55
+[06-Jul-2014 15:11:21 Europe/Berlin] PHP Fatal error:  Using $this when not in object context in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 55
+[06-Jul-2014 15:11:23 Europe/Berlin] PHP Fatal error:  Using $this when not in object context in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 55
+[06-Jul-2014 15:11:23 Europe/Berlin] PHP Fatal error:  Using $this when not in object context in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 55
+[06-Jul-2014 15:11:23 Europe/Berlin] PHP Fatal error:  Using $this when not in object context in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 55
+[06-Jul-2014 15:11:23 Europe/Berlin] PHP Fatal error:  Using $this when not in object context in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 55
+[06-Jul-2014 15:11:24 Europe/Berlin] PHP Fatal error:  Using $this when not in object context in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 55
+[06-Jul-2014 15:11:24 Europe/Berlin] PHP Fatal error:  Using $this when not in object context in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 55
+[06-Jul-2014 15:11:26 Europe/Berlin] PHP Fatal error:  Using $this when not in object context in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 55
+[06-Jul-2014 15:11:26 Europe/Berlin] PHP Fatal error:  Using $this when not in object context in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 55
+[06-Jul-2014 15:11:26 Europe/Berlin] PHP Fatal error:  Using $this when not in object context in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 55
+[06-Jul-2014 15:11:26 Europe/Berlin] PHP Fatal error:  Using $this when not in object context in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 55
+[06-Jul-2014 15:11:27 Europe/Berlin] PHP Fatal error:  Using $this when not in object context in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 55
+[06-Jul-2014 15:12:21 Europe/Berlin] PHP Warning:  require_once(SYSPATHAppConfig.php): failed to open stream: No such file or directory in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 15
+[06-Jul-2014 15:12:21 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required 'SYSPATHAppConfig.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 15
+[06-Jul-2014 15:13:01 Europe/Berlin] PHP Fatal error:  Using $this when not in object context in /home/kalnadk/public_html/InkassoPortal/Public/index.php on line 33

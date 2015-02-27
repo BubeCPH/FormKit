@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>FormKit</title>
+        <!-- build:css -->
+        <!--<link href="bower_modules/components-bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+        <!--[if lt IE 7]>
+        <script>
+        window.top.location = 'http://desktop.sonspring.com/ie.html';
+        </script>
+        <![endif]-->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/desktop.css" />
+        <!--[if lt IE 9]>
+        <link rel="stylesheet" href="css/ie.css" />
+        <![endif]-->
+        <!-- endbuild -->
+        <!-- build:js -->
+        <!--        <script src="app/require.config.js"></script>
+                <script data-main="app/startup" src="bower_modules/requirejs/require.js"></script>-->
+        <script src="app/jquery.min.js"></script>
+        <script src="app/jquery.ui.js"></script>
+        <script src="app/jquery.desktop.js"></script>
+        <script src="app/knockout.js"></script>
+        <script src="app/knockout.ajax.js"></script>
+        <script src="app/knockout.protectedObservable.js"></script>
+        <!-- endbuild -->
+    </head>
+    <!--<body>-->
+    <!--    <nav-bar params="route: route"></nav-bar>
+        <div id="page" class="container" data-bind="component: { name: route().page, params: route }"></div>-->
+    <body>
+        <div class="abs" id="wrapper">
+            <div class="abs" id="desktop">
+                <a class="abs icon" style="left:20px;top:20px;" href="#icon_dock_computer">
+                    <img src="images/icons/icon_32_computer.png" />
+                    Computer
+                </a>
+                <a class="abs icon" style="left:20px;top:100px;" href="#icon_dock_drive">
+                    <img src="images/icons/icon_32_drive.png" />
+                    Hard Drive
+                </a>
+                <a class="abs icon" style="left:20px;top:180px;" href="#icon_dock_disc">
+                    <img src="images/icons/icon_32_disc.png" />
+                    Audio CD
+                </a>
+                <a class="abs icon" style="left:20px;top:260px;" href="#icon_dock_network">
+                    <img src="images/icons/icon_32_network.png" />
+                    Network
+                </a>
+                <div id="window_data_types" class="abs window">
+                    <div class="abs window_inner">
+                        <div class="window_top">
+                            <span class="float_left">
+                                <img src="images/icons/icon_16_computer.png" />
+                                Datatyper
+                            </span>
+                            <span class="float_right">
+                                <a href="#" class="window_min"></a>
+                                <a href="#" class="window_resize"></a>
+                                <a href="#icon_dock_data_types" class="window_close"></a>
+                            </span>
+                        </div>
+                        <div class="abs window_full_content">
+<!--                            <div class="window_aside">
+                                Hej. You look nice today!
+                            </div>-->
+                            <div class="window_full">
+                                <table class="data">
+                                    <thead>
+                                        <tr>
+                                            <th hidden>
+                                                ID
+                                            </th>
+                                            <th>
+                                                Name
+                                            </th>
+                                            <th>
+                                                MySQL data type
+                                            </th>
+                                            <th>
+                                                Description
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody data-bind="foreach: datatypes">
+                                        <tr>
+                                            <td hidden>
+                                                <input data-bind="value: id" />
+                                            </td>
+                                            <td>
+                                                <input data-bind="value: name" size="8" maxlength="30" />
+                                            </td>
+                                            <td>
+                                                <input data-bind="value: datatype" size="15" maxlength="30" />
+                                            </td>
+                                            <td>
+                                                <input data-bind="value: description" size="50" maxlength="250" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="abs window_bottom">
+                            Build: TK421
+                        </div>
+                    </div>
+                    <span class="abs ui-resizable-handle ui-resizable-se"></span>
+                </div>
+            </div>
+            <div class="abs" id="bar_top">
+                <span class="float_right" id="clock"></span>
+                <ul>
+                    <li>
+                        <a class="menu_trigger" href="#">Kalna FormKit</a>
+                        <ul class="menu">
+                            <li>
+                                <a class="punkt" href="#icon_dock_computer">Computer</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="menu_trigger" href="#">Rediger</a>
+                        <ul class="menu">
+                            <li>
+                                <a class="punkt" href="#icon_dock_datatyper">Fortryd<span class="symbol">⌥⌘Z</span></a>
+                            </li>
+                            <li>
+                                <a class="punkt" href="#icon_dock_felttyper">Gentag<span class="symbol">⇧⌥⌘Z</span></a>
+                            </li>
+                            <li>
+                                <a class="punkt" href="#icon_dock_bloktyper">Bloktyper</a>
+                            </li>
+                            <li>
+                                <a class="punkt" href="#icon_dock_egenskabtyper">Egenskabtyper</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="menu_trigger" href="#">Opsætning</a>
+                        <ul class="menu">
+                            <li>
+                                <a class="punkt" href="#icon_dock_applikation">Applikation</a>
+                            </li>
+                            <li>
+                                <a class="punkt" href="#icon_dock_modul">Modul<span class="symbol">⌥⌘⎋</span></a>
+                            </li>
+                            <li>
+                                <a class="submenu_trigger" href="#">Data<span class="symbol">></span></a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a class="subpunkt" href="#icon_dock_model">Model</a>
+                                    </li>
+                                    <li>
+                                        <a class="subpunkt" href="#icon_dock_kollektion">Kollektion</a>
+                                    </li>
+                                    <li>
+                                        <a class="subpunkt" href="#icon_dock_element">Element</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="submenu_trigger" href="#">Layout<span class="symbol">></span></a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a class="subpunkt" href="#icon_dock_form">Form</a>
+                                    </li>
+                                    <li>
+                                        <a class="subpunkt" href="#icon_dock_blok">Blok</a>
+                                    </li>
+                                    <li>
+                                        <a class="subpunkt" href="#icon_dock_felt">Felt</a>
+                                    </li>
+                                    <li>
+                                        <a class="subpunkt" href="#icon_dock_resource">Resource</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="menu_trigger" href="#">System</a>
+                        <ul class="menu">
+                            <li>
+                                <a class="punkt" href="#icon_dock_data_types">Datatyper</a>
+                            </li>
+                            <li>
+                                <a class="punkt" href="#icon_dock_felttyper">Felttyper</a>
+                            </li>
+                            <li>
+                                <a class="punkt" href="#icon_dock_bloktyper">Bloktyper</a>
+                            </li>
+                            <li>
+                                <a class="punkt" href="#icon_dock_egenskabtyper">Egenskabtyper</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="menu_trigger" href="#">Hjælp</a>
+                        <ul class="menu">
+                            <li>
+                                <a class="punkt" href="#icon_dock_tastaturgenveje">Tastaturgenveje</a>
+                            </li>
+                            <li>
+                                <a class="punkt" href="#icon_dock_nyheder_i_formkit">Nyheder i FormKit</a>
+                            </li>
+                            <li>
+                                <a class="punkt" href="#icon_dock_om_formkit">Om FormKit</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="abs" id="bar_tool">
+                <ul>
+                    <li>
+                        
+                <a class="abs toolmenu_trigger icon" href="#icon_dock_computer">
+                    <img src="images/icons/icon_32_computer.png" />
+                    Computer
+                </a>
+                    </li>
+                    <li>
+                        
+                <a class="abs toolmenu_trigger icon" href="#icon_dock_computer">
+                    <img src="images/icons/icon_32_computer.png" />
+                    Computer
+                </a>
+                    </li>
+                    <li>
+                        <a class="toolmenu_trigger" href="#">Opsætning</a>
+                    </li>
+                    <li>
+                        <a class="toolmenu_trigger" href="#">System</a>
+                    </li>
+                    <li>
+                        <a class="toolmenu_trigger" href="#">Hjælp</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="abs" id="bar_bottom">
+                <a class="float_left" href="#" id="show_desktop" title="Show Desktop">
+                    <img src="images/icons/icon_22_desktop.png" />
+                </a>
+                <ul id="dock">
+                    <li id="icon_dock_data_types">
+                        <a href="#window_data_types">
+                            <img src="images/icons/icon_22_computer.png" />
+                            Datatyper
+                        </a>
+                    </li>
+                    <li id="icon_dock_drive">
+                        <a href="#window_drive">
+                            <img src="images/icons/icon_22_drive.png" />
+                            Hard Drive
+                        </a>
+                    </li>
+                    <li id="icon_dock_disc">
+                        <a href="#window_disc">
+                            <img src="images/icons/icon_22_disc.png" />
+                            Audio CD
+                        </a>
+                    </li>
+                    <li id="icon_dock_network">
+                        <a href="#window_network">
+                            <img src="images/icons/icon_22_network.png" />
+                            Network
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            function Datatype(id, name, datatype, description) {
+                var me = this;
+                me.id = ko.observable(id);
+                me.name = ko.protectedObservable(name);
+                me.datatype = ko.protectedObservable(datatype);
+                me.description = ko.protectedObservable(description);
+
+                me.dirtyFlag = ko.computed(function () {
+                    return me.name.isDirty() || me.datatype.isDirty() || me.description.isDirty();
+                });
+                me.deleteFlag = ko.observable(false);
+
+                me.remove = function () {
+                    me.deleteFlag(true);
+                };
+
+                me.commit = function () {
+                    me.name.commit();
+                    me.datatype.commit();
+                    me.description.commit();
+                    self.update(me);
+                    me.deleteFlag(false);
+                };
+//
+//                            me.commitOnEnter = function (data, event) {
+//                                var keyCode = (event.which ? event.which : event.keyCode);
+//                                if (keyCode === 13) {
+//                                    me.commit();
+//                                    return false;
+//                                }
+//                                return true;
+//                            };
+
+                me.reset = function () {
+                    me.name.reset();
+                    me.name.notifySubscribers();
+                    me.datatype.reset();
+                    me.datatype.notifySubscribers();
+                    me.description.reset();
+                    me.description.notifySubscribers();
+                    me.deleteFlag(false);
+                };
+            }
+            function DataTypesViewModel(initialData) {
+                var self = this;
+
+                self.datatypes = ko.observableArray();
+
+//                            self.addPerson = function () {
+//                                self.people.push({name: "New at " + new Date()});
+//                            };
+//
+//                            self.removePerson = function () {
+//                                self.people.remove(this);
+//                            };
+
+                self.fetchDatatypes = function (initialData) {
+                    if (typeof initialData !== 'undefined') {
+                        self.fillDatatypes(initialData);
+                    } else {
+                        URI = 'http://localhost/FormKit/App/API/datatypes';
+//                                    var now = new Date();
+                        ajaxGet(URI).done(function (data) {
+//                                ajaxGet(URI).done(function (data) {
+                            self.fillDatatypes(data);
+                        });
+                    }
+//                                appendTooltips();
+                };
+
+                self.fillDatatypes = function (data) {
+                    self.datatypes.removeAll();
+                    for (var i = 0; i < data.length; i++) {
+                        self.datatypes.push(new Datatype(data[i].id, data[i].name, data[i].datatype, data[i].description));
+                    }
+                    self.datatypes.push(new Datatype(null, null, null, null));
+//                                appendTooltips();
+                };
+
+                self.fetchDatatypes(initialData);
+
+            }
+            var init;// = '[{"id":"1","name":"String","datatype":"VARCHAR(4000)","description":""},{"id":"2","name":"Text","datatype":"TEXT","description":""},{"id":"3","name":"Number","datatype":"DECIMAL(15,4)","description":""},{"id":"4","name":"Boolean","datatype":"BIT(1)","description":""},{"id":"5","name":"Time","datatype":"TIME","description":""},{"id":"6","name":"Date","datatype":"DATE","description":""}]';
+            var dataTypesViewModel = new DataTypesViewModel(init);
+            ko.applyBindings(dataTypesViewModel, $('#window_data_types')[0]);
+        </script>
+    </body>
+</html>

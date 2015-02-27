@@ -1,0 +1,30 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+#RewriteBase /public/
+
+# Exclude the API folder
+#RewriteCond %{REQUEST_URI} !^/API/
+#
+#RewriteCond %{REQUEST_FILENAME} !\.(pjs)$ [NC]
+# 
+## Exclude the following foldes CSS_styles, IMG_files and JS_lib
+#RewriteCond %{REQUEST_URI} !^/Stylesheets/
+#RewriteCond %{REQUEST_URI} !^/Images/
+#RewriteCond %{REQUEST_URI} !^/JSLibraries/
+#RewriteCond %{REQUEST_FILENAME} !\.(gif|png|jpg|jpeg|jfif|bmp|css|js)$ [NC]
+##RewriteCond %{REQUEST_URI} !\.(css|gif|ico|jpg|js|png|swf|txt)$
+##RewriteRule ^(CSS_styles|IMG_files|JS_lib)($|/) - [L]
+#
+## Treats the %{REQUEST_FILENAME} as a pathname and tests whether or not it exists, and is a directory.
+##RewriteCond %{REQUEST_FILENAME} !-d
+## Treats the %{REQUEST_FILENAME} as a pathname and tests whether or not it exists, and is a regular file.
+#RewriteCond %{REQUEST_FILENAME} !-f
+## Rewrite all other URLs to index.php/URL
+RewriteRule ^(.*)$ / [PT,QSA]
+
+#RewriteRule ^(.+/?)$ index.php?url=$1 [NC,QSA,L]
+</IfModule>
+<IfModule !mod_rewrite.c>
+	ErrorDocument 404 index.php
+</IfModule>
+Options -Indexes
