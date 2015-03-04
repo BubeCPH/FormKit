@@ -1,5 +1,5 @@
 <?php
-
+header('Content-Type: application/javascript');
 if (file_exists(VIEWPARTPATH .'JS/'. $this->task . '')) {
     include $this->task . '';
 }
