@@ -133,8 +133,8 @@ class REST {
 //        print_r($this->request);
         $this->request['request'] = explode("/", $this->request['request']);
         if (!trim($this->request['request'][0]) == "") {
-            $this->request['function'] = trim($this->request['request'][0]);
-            if ($this->request['function'] === 'metadata') {
+            $this->request['function'] = trim(Functions\stringFunctions::transform($this->request['request'][0], Functions\stringFunctions::CAMEL_CASE));
+            if (in_array($this->request['function'], $this->dedicatedApiFunctions)) {
                 array_shift($this->request['request']);
             }
             $this->request['collection'] = Functions\stringFunctions::transform($this->request['request'][0], Functions\stringFunctions::UNDER_SCORE);
