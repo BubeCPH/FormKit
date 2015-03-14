@@ -178,7 +178,7 @@ class ArrayFunctions {
         self::transformKeys(['self', 'toUnderscore'], $array);
         return $array;
     }
-    
+
     public static function transformValues($transform, &$array, $keyName) {
         foreach (array_keys($array) as $key) {
             # Working with references here to avoid copying the value.
@@ -186,11 +186,11 @@ class ArrayFunctions {
 //            print_r($value);
             if (!is_array($value) && $keyName = $key) {
 //            print_r($value . '=>' . $instruction[$value] . "\n");
-                if ($transform ==='toCamelCase'){
+                if ($transform === 'toCamelCase') {
                     $newValue = lcfirst(str_replace(' ', '', ucwords(str_replace('_', ' ', $value))));
-                } elseif ($transform ==='toPascalCase'){
+                } elseif ($transform === 'toPascalCase') {
                     $newValue = ucfirst(str_replace(' ', '', ucwords(str_replace('_', ' ', $value))));
-                } elseif ($transform ==='toUnderscore'){
+                } elseif ($transform === 'toUnderscore') {
                     $newValue = self::toUnderscore($value);
                 }
             } else {
@@ -283,6 +283,79 @@ class ArrayFunctions {
 
     public static function replaceValues($instruction, $array) {
         self::replaceValuesInt($instruction, $array);
+        return $array;
+    }
+
+    public static function castValuesInt($instruction, &$array) {
+//        print_r($instruction);
+        foreach (array_keys($array) as $key) {
+            # Working with references here to avoid copying the value.
+            $value = &$array[$key];
+//            print_r($key . '=>' . $value.'<br>' . "\n");
+//            if (is_numeric($value)) {
+//                print_r('is_integer => true '.'<br>' . "\n");
+//            } else {
+//                print_r('is_integer => false '.'<br>' . "\n");
+//            }
+            if (!is_array($value) && !empty($instruction['boolean']) && in_array($key, $instruction['boolean']) && in_array($value, ['true', 'false'])) {
+//            print_r($key . '=>' . $value . '=>' . 'boolean<br>' . "\n");
+                if ($value === 'false') {
+                    $newValue = FALSE;
+                } else {
+                    $newValue = TRUE;
+                }
+//                $newValue = (boolean) $value;
+            } elseif (!is_array($value) && !empty($instruction['integer']) && in_array($key, $instruction['integer']) && is_numeric($value)) {
+//            print_r($key . '=>' . $value . '=>' . 'integer<br>' . "\n");
+                $newValue = (integer) $value;
+            } elseif (!is_array($value) && !empty($instruction['float']) && in_array($key, $instruction['float']) && is_float($value)) {
+//            print_r($key . '=>' . $value . '=>' . 'float<br>' . "\n");
+                $newValue = (float) $value;
+            } else {
+//            print_r($value . '=>' . 'no match' . "\n");
+                $newValue = $value;
+            }
+            # Work recursively
+            if (!is_array($value)) {
+                # Store with new value
+                $array[$key] = $newValue;
+            } else {
+                self::castValuesInt($instruction, $value);
+            }
+            # Do not forget to unset references!
+            unset($value);
+//            print_r($key);
+//            print_r($array);
+//            print_r("\n");
+        }
+    }
+
+    public static function castValues($instruction, $array) {
+        self::castValuesInt($instruction, $array);
+        return $array;
+    }
+
+    public static function removeEmptyKeysInt(&$array) {
+        foreach (array_keys($array) as $key) {
+            # Working with references here to avoid copying the value.
+            $value = &$array[$key];
+            unset($array[$key]);
+            print_r($key . '=>' . $value . '<br>' . "\n");
+            if (!empty($value)) {
+//                print_r($instruction[$key]);
+                $array[$key] = $value;
+            }
+            # Work recursively
+            if (is_array($value)) {
+                self::removeEmptyKeysInt($value);
+            }
+            # Do not forget to unset references!
+            unset($value);
+        }
+    }
+
+    public static function removeEmptyKeys($array) {
+        self::removeEmptyKeysInt($array);
         return $array;
     }
 

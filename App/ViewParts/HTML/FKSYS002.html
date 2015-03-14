@@ -2,7 +2,7 @@
     <div class="window_top">
         <div class="nav">
             <div class="panel">
-                <div class="buttonset">
+<!--                <div class="buttonset">
                     <button class="prev" title="Forrige (&uarr;)" data-bind="disable: vm().searchmode"><i class="fa fa-chevron-up"></i></button>
                     <button class="next" title="Næste (&darr;)" data-bind="disable: vm().searchmode"><i class="fa fa-chevron-down"></i></button>
                 </div>
@@ -21,7 +21,7 @@
                     <button class="cancel_search" title="Annuller søgning (esc)" data-bind="click: cancelSearch(), disable: !vm().searchmode">
                         <i class="fa fa-search-minus"></i>
                     </button>
-                </div>
+                </div>-->
             </div>
             <div class="window_controls">
                 <a href="#" class="window_min" title="Minimer vindue"></a>
@@ -34,7 +34,6 @@
         </div>
     </div>
     <div class="window_content">
-        <!-- ko with: vm() -->
         <table id="FKSYS002_table_001" class="data">
             <thead>
                 <tr>
@@ -53,23 +52,22 @@
                 </tr>
             </thead>
             <tbody data-bind="foreach: datatypes">
-                <tr data-bind="css: {deleted: deleteFlag(), active: $parent.isActiveDatatype($data)}, click: $parent.setActiveDatatype">
+                <tr data-bind="css: {active: $parent.isActiveDatatype($data)}, click: $parent.activateDatatype">
                     <td hidden>
                         <span class="id" data-bind="text: id"></span>
                     </td>
                     <td>
-                        <input data-bind="value: name, attr:{readonly: deleteFlag()}, event: {focus: $parent.setActiveDatatype, keydown: $parent.isActiveDatatype}" size="8" maxlength="30" />
+                        <input data-bind="value: name, event: {focus: $parent.activateDatatype, keydown: $parent.isActiveDatatype}" size="8" maxlength="30" />
                     </td>
                     <td>
-                        <input data-bind="value: datatype, attr:{readonly: deleteFlag()}, event: {focus: $parent.setActiveDatatype, keydown: $parent.isActiveDatatype}" size="15" maxlength="30" />
+                        <input data-bind="value: datatype, event: {focus: $parent.activateDatatype, keydown: $parent.isActiveDatatype}" size="15" maxlength="30" />
                     </td>
                     <td>
-                        <input data-bind="value: description, attr:{readonly: deleteFlag()}, event: {focus: $parent.setActiveDatatype, keydown: $parent.isActiveDatatype}" size="50" maxlength="250" />
+                        <input data-bind="value: description, event: {focus: $parent.activateDatatype, keydown: $parent.isActiveDatatype}" size="50" maxlength="250" />
                     </td>
                 </tr>
             </tbody>
         </table>
-        <!-- /ko -->
     </div>
     <div class="abs window_bottom">
         <div class="left"></div>

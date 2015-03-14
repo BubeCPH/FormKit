@@ -395,8 +395,8 @@ class DatabaseAbstraction extends Database {
                            data_type, 
                            ifnull(CHARACTER_MAXIMUM_LENGTH, NUMERIC_PRECISION) max_length,
                            case COLUMN_KEY
-                                when 'PRI' THEN 1
-                                else 0
+                                when 'PRI' THEN 'true'
+                                else 'false'
                            end primary_key
                     FROM    information_schema.COLUMNS
                     where   TABLE_NAME IN (" . $inValue . ")

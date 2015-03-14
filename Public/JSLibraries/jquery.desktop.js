@@ -198,11 +198,17 @@ var JQD = (function ($, window, document, undefined) {
                     if (actionType === 'dock') {
                         if (document.getElementById('window_' + formname) === null) {
                             $('<div id="window_' + formname + '" class="abs window"></div>').insertBefore("#bar_top");
-                            ensure({js: '/FormKit/JS/' + formname + '.js', html: '/FormKit/HTML/' + formname + '.html', parent: 'window_' + formname}, function ()
+//                            ensure({js: ['/FormKit/JS/' + formname + 'DataService.js', '/FormKit/JS/' + formname + 'ViewModel.js', '/FormKit/JS/' + formname + 'Main.js'], html: '/FormKit/HTML/' + formname + '.html', parent: 'window_' + formname}, function ()
+                            ensure({js: ['/FormKit/JS/' + formname + 'Main.js'], html: '/FormKit/HTML/' + formname + '.html', parent: 'window_' + formname}, function ()
                             {
-                                window[formname + '_mvm' ] = new window[formname + '_MasterViewModel' ];
-                                //var FKSYS001_mvm = new FKSYS001_MasterViewModel;
-                                ko.applyBindings(window[formname + '_mvm' ], $('#window_' + formname)[0]);
+//                                window[formname + 'Main' ];
+//                                $(function () {
+//                                    var serviceName = '/FormKit/App/API/';
+//                                    var dataservice = new FKSYS002DataService(serviceName);
+//                                    var FKSYS002VM = new FKSYS002ViewModel(dataservice);
+//                                    FKSYS002VM.activate();
+//                                    ko.applyBindings(FKSYS002VM, $('#window_FKSYS002')[0]);
+//                                });
 
 
                                 $.get('/FormKit/CSS/' + formname + '.css', function (data) {
@@ -469,7 +475,7 @@ var JQD = (function ($, window, document, undefined) {
                     var cellAndRow = $(this).parents('td,tr');
                     var cellIndex = cellAndRow[0].cellIndex;
                     var rowIndex = cellAndRow[1].rowIndex;
-                    switch (event.keyCode) {              
+                    switch (event.keyCode) {
                         case 40:
                             rowIndex = rowIndex + 1;
                             break;
@@ -516,7 +522,7 @@ var JQD = (function ($, window, document, undefined) {
                     }
 
                     var id = $(this).closest('.window_inner').find('tr.active td span.id').text();
-                    var window_id = $(this).closest('.window').attr('id').replace('window_','');
+                    var window_id = $(this).closest('.window').attr('id').replace('window_', '');
                     window[window_id + '_mvm' ].vm().selectedId(id);
 
                     $(this).closest('.window_inner').find('.window_bottom .left').text((rowIndex + 1) + '/' + rowCount);
@@ -526,7 +532,7 @@ var JQD = (function ($, window, document, undefined) {
                     JQD.util.clear_active();
 
                     var window_id = $(this).closest('.window').attr('id');
-                    window[window_id.replace('window_','') + '_mvm' ].vm().selectedId(0);
+                    window[window_id.replace('window_', '') + '_mvm' ].vm().selectedId(0);
 
                     $(this).closest('.window_inner').find('.window_bottom .left').text('');
 //                    }
