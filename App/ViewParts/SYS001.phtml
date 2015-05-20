@@ -44,20 +44,6 @@ namespace App\ViewParts;
     }
 </style>
 
-<!--<div class="window_inner">
-    <div class="window_top">
-        <div class="nav">
-            <div class="panel">
-                <div class="buttonset">
-                    <button class="add" title="Tilføj" data-bind="click: add(), disable: searchmode"><i class="fa fa-plus"></i></button>
-                    <button class="remove" title="Slet" data-bind="disable: (selectedId() === 0 || searchmode), click: remove()"><i class="fa fa-minus"></i></button>
-                </div>
-            </div>
-            <div class="titel">
-                <span>Datatyper</span>
-            </div>
-        </div>
-    </div>-->
 <div id="FKSYS001">
     <div class="abs" id="toolbar">
         <div class="panel">
@@ -99,23 +85,10 @@ namespace App\ViewParts;
     </div>
     <div class="TAB001 table-body">
         <table id="TAB001" class="TAB001 data">
-    <!--        <caption>
-                <div class="panel">
-                    <div class="buttonset">
-                        <button class="add" title="Tilføj" data-bind="click: addDatatype()"><i class="fa fa-plus"></i></button>
-                        <button class="remove" title="Slet" data-bind="disable: (selectedDatatype() === 'undefined'), click: removeDatatype()"><i class="fa fa-minus"></i></button>
-                    </div>
-                </div>
-                <div class="titel">
-                    <span>Datatyper</span>
-                </div>
-            </caption>-->
             <thead>
                 <tr>
                     <th class="rowhead">
                     </th>
-    <!--                <th>
-                    </th>-->
                     <th class="id" hidden>
                         id
                     </th>
@@ -137,11 +110,6 @@ namespace App\ViewParts;
                         <img src="/FormKit/Public/Images/Icons/appbar.new.png" height="16px" width="16px" data-bind="visible: isNew"/>
                         <img src="/FormKit/Public/Images/Icons/appbar.delete.png" height="16px" width="16px" data-bind="visible: isDeleted"/>
                     </th>
-    <!--                <th>
-                        <button data-bind="click: $delete">
-                            <img src="/FormKit/Public/Images/Icons/appbar.delete.png" height="22px" width="22px"/>
-                        </button>
-                    </th>-->
                     <td  hidden>
                         <input data-bind="value: id, event: {focus: $parent.selectedDatatype}, selectOnFocus: true" maxlength="30" readonly />
                     </td>
@@ -156,15 +124,6 @@ namespace App\ViewParts;
                     </td>
                 </tr>
             </tbody>
-    <!--        <tfoot>
-                <tr>
-                    <th colspan="5">
-            <div class="left">
-                <span data-bind="text: selectedDatatype() ? selectedDatatype().id : 'Intet valgt'"></span>
-            </div>
-            </th>
-            </tr>
-            </tfoot>-->
         </table>
     </div>
     <div class="TAB001 table-footer">
@@ -172,85 +131,13 @@ namespace App\ViewParts;
         <div class="right"></div>
         <div class="center">TAB001</div>
     </div>
-    <!--<button data-bind="click: addDatatype">Tilføj</button>-->
     <div class="abs window_bottom">
         <div class="left"><span data-bind="text: selectedDatatype() ? selectedDatatype().id : 'Intet valgt'"></span></div>
         <div class="right"></div>
         <div class="center">Form: SYS002</div>
     </div>
 </div>
-<!--</div>-->
 
-<?php
-/*
-  $elements = array();
-
-  ////
-  // An array of 10,000 elements with random string values
-  ////
-  for($i = 0; $i < 10000; $i++) {
-  $elements[] = (string)rand(10000000, 99999999);
-  }
-
-  $time_start = microtime(true);
-
-  ////
-  // for test
-  ////
-  $numb = count($elements);
-  for($i = 0; $i < $numb; $i++) { }
-
-  $time_end = microtime(true);
-  $for_time = $time_end - $time_start;
-
-  $time_start = microtime(true);
-
-  ////
-  // for with count() inside loop test
-  ////
-  for($i = 0; $i < count($elements); $i++) { }
-
-  $time_end = microtime(true);
-  $for_count_time = $time_end - $time_start;
-
-  $time_start = microtime(true);
-
-  ////
-  // for with size_of() inside loop test
-  ////
-  $numb = sizeOf($elements);
-  for($i = 0; $i < $numb; $i++) { }
-
-  $time_end = microtime(true);
-  $for_size_of_time = $time_end - $time_start;
-
-  $time_start = microtime(true);
-
-  ////
-  // foreach test
-  ////
-  foreach($elements as $element) { }
-
-  $time_end = microtime(true);
-  $foreach_time = $time_end - $time_start;
-
-  $time_start = microtime(true);
-
-  ////
-  // foreach key test
-  ////
-  foreach($elements as $key => $element) { }
-
-  $time_end = microtime(true);
-  $foreach_key_time = $time_end - $time_start;
-
-  echo "For took: " . number_format($for_time * 1000, 3) . "ms\n";
-  echo "For with count() took: " . number_format($for_count_time * 1000, 3) . "ms\n";
-  echo "For with sizeOf() took: " . number_format($for_size_of_time * 1000, 3) . "ms\n";
-  echo "Foreach took: " . number_format($foreach_time * 1000, 3) . "ms\n";
-  echo "Foreach with key took: " . number_format($foreach_key_time * 1000, 3) . "ms\n";
- */
-?>
 <script type="text/javascript">
 
     function FKSYS001_ViewModel(initialData, searchmode) {
@@ -269,9 +156,6 @@ namespace App\ViewParts;
         self.selectedDatatype = ko.observable();
 
         self.isSelectedDatatype = function (data) {
-//            console.log('isSelectedDatatype: self.selectedDatatype().id');
-//            self.selectedDatatype() ? '' : self.selectedDatatype(self.datatypes()[0]);
-//            console.log('isSelectedDatatype: ' + self.selectedDatatype().id);
             return self.selectedDatatype() ? self.selectedDatatype() === data : false;
         };
 
@@ -279,9 +163,6 @@ namespace App\ViewParts;
             self.datatypes.addNew();
         };
         self.removeDatatype = function () {
-
-//            self.datatypes.addNew();
-//            self.selectedDatatype() ? console.log('removeDatatype: self.selectedDatatype().id'+self.selectedDatatype().id) : '';
             self.selectedDatatype() ? self.selectedDatatype().$delete() : '';
         };
         self.save = function () {
@@ -293,9 +174,7 @@ namespace App\ViewParts;
         };
 
         self.refetch = function () {
-//        self.fetchDatatypes();
             self.datatypes = Datatype.$query();
-//            self.datatypes.valueHasMutated();
         };
     }
 
