@@ -35,19 +35,22 @@ use KalnaBase\Utilities;
                 <script data-main="app/startup" src="bower_modules/requirejs/require.js"></script>
         <?= Utilities\HTML::includeJs('jquery.min'); ?>
         <?= Utilities\HTML::includeJs('jquery.ui'); ?>-->
+        <script src="/FormKit/JS/GLOBAL_VARS.js"></script>
         <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
         <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.2.0/knockout-debug.js"></script>
-        <!-- <?= Utilities\HTML::includeJs('knockout'); ?>
+        <!-- <?= Utilities\HTML::includeJs('knockout'); ?>-->
         <?= Utilities\HTML::includeJs('knockout.viewmodel'); ?>
         <?= Utilities\HTML::includeJs('knockout.ajax'); ?>
-        <?= Utilities\HTML::includeJs('knockout.protectedObservable'); ?>-->
+        <?= Utilities\HTML::includeJs('knockout.protectedObservable'); ?>
+        <?= Utilities\HTML::includeJs('ko-genius'); ?>
+        <?= Utilities\HTML::includeJs('knockout.selectOnFocus'); ?>
         <?= Utilities\HTML::includeJs('ensure'); ?>
         <?= Utilities\HTML::includeJs('jquery.desktop'); ?>
-        <script src="/FormKit/JS/q.js"></script>
+<!--        <script src="/FormKit/JS/q.js"></script>
         <script src="/FormKit/JS/toastr.js"></script>
         <?= Utilities\HTML::includeJs('breeze.debug'); ?>
-<!--        <script src="/FormKit/JS/DataService.js"></script>
+        <script src="/FormKit/JS/DataService.js"></script>
         <script src="/FormKit/JS/ViewModel.js"></script>
         <script src="/FormKit/JS/app.js"></script>-->
         <!-- endbuild -->

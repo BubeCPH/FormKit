@@ -1,6 +1,7 @@
 <?php
-
-require_once UTILPATH . 'SessionRegistry.php';
+namespace App\ViewModels;
+use KalnaBase\Utilities;
+//require_once UTILPATH . 'SessionRegistry.php';
 
 class BaseViewModel {
 
@@ -8,7 +9,7 @@ class BaseViewModel {
     public $task;
 
     public function __construct() {
-        $this->registry = SessionRegistry::getInstance();
+        $this->registry = Utilities\SessionRegistry::getInstance();
     }
 
     public function __set($name, $value) {

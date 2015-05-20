@@ -65,6 +65,7 @@ class ViewLoader {
         $this->viewsWithAccessControl = $this->appConfig->values['view_access']['restricted'];
 
         $this->standardView = $this->appConfig->values['defaults']['view'];
+//        var_dump($_REQUEST);
         /**
          * Security check
          * http://wblinks.com/notes/secure-session-management-tips

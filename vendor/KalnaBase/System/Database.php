@@ -16,6 +16,13 @@
 
 namespace KalnaBase\System;
 
+//use KalnaBase\Classes;
+//defined('DIRSEP') or define('DIRSEP', DIRECTORY_SEPARATOR);
+//defined('SITEPATH') or define('SITEPATH', realpath(dirname(__FILE__) . DIRSEP . '..' . DIRSEP . '..' . DIRSEP . '..') . DIRSEP);
+//defined('VENDORPATH') or define('VENDORPATH', realpath(SITEPATH) . DIRSEP . 'vendor' . DIRSEP);
+//defined('COREPATH') or define('COREPATH', VENDORPATH . 'KalnaBase' . DIRSEP);
+//require_once COREPATH.'/Classes/EPDOStatement.php';
+
 class Database {
 
     /**
@@ -26,6 +33,10 @@ class Database {
     private static $driver = NULL;
     public static $FETCH_OBJ;
     public static $FETCH_ASSOC;
+    private static $sql = '';
+    public static $boundParameters = [];
+    public static $unusedParameters = [];
+    public static $sqlWithValues = '';
 
     /**
      *
@@ -69,6 +80,7 @@ class Database {
             switch (self::$driver) {
                 case 'PDO':
                     self::$instance = new \PDO("$db_type:host=$hostname;port=$db_port;dbname=$dbname", $db_username, $db_password);
+                    self::$instance->setAttribute(\PDO::ATTR_STATEMENT_CLASS, array("KalnaBase\System\EPDOStatement", array(self::$instance)));
                     self::$instance->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
                     self::$FETCH_ASSOC = \PDO::FETCH_ASSOC;
                     self::$FETCH_OBJ = \PDO::FETCH_OBJ;
@@ -92,6 +104,29 @@ class Database {
     public static function getConnection() {
         return self::getInstance();
     }
+
+//    public function bindParam($parameter, &$variable, $data_type = 'PDO::PARAM_STR', $length = null, $driver_options = null) {
+//        $this->boundParameters[$parameter] = $variable;
+//        return self::$instance->bindParam($parameter, $variable, $data_type, $length, $driver_options);
+//    }
+//
+//    public function prepare($statement, array $driver_options = NULL) {
+//        die(__METHOD__);
+//        $this->sql = $statement;
+//        return self::$instance->prepare($statement, $driver_options);
+//    }
+//
+//    public function execute(array $input_parameters = NULL) {
+//        foreach ($this->boundParameters as $parameterKey => $parameterValue) {
+//            if (strpos($this->sql, $parameterKey) !== FALSE) {
+//                $this->sql = str_replace($parameterKey, $parameterValue, $this->sql, 1);
+//            } else {
+//                $this->unusedParameters[$parameterKey] = $parameterValue;
+//            }
+//        }
+//        $this->boundParameters = [];
+//        return self::$instance->execute($input_parameters);
+//    }
 
     /**
      *

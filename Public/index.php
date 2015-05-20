@@ -39,6 +39,7 @@ defined('PUBLICHTMLPATH') or define('PUBLICHTMLPATH', PUBLICBASEPATH . 'Public' 
 defined('HOMEVIEW') or define('HOMEVIEW', 'Home');
 
 $url = $_GET['url'];
+
 require_once (UTILPATH . 'shared.php');
 require_once (UTIL_FUNC_PATH . 'getSubmittedValues.php');
 /**

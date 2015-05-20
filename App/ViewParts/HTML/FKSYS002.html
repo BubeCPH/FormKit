@@ -2,17 +2,17 @@
     <div class="window_top">
         <div class="nav">
             <div class="panel">
-<!--                <div class="buttonset">
+                <div class="buttonset">
                     <button class="prev" title="Forrige (&uarr;)" data-bind="disable: vm().searchmode"><i class="fa fa-chevron-up"></i></button>
                     <button class="next" title="Næste (&darr;)" data-bind="disable: vm().searchmode"><i class="fa fa-chevron-down"></i></button>
                 </div>
                 <div class="buttonset">
-                    <button class="add" title="Tilføj" data-bind="click: add(), disable: vm().searchmode"><i class="fa fa-plus"></i></button>
-                    <button class="remove" title="Slet" data-bind="disable: (vm().selectedId() === 0 || vm().searchmode), click: remove()"><i class="fa fa-minus"></i></button>
+                    <button class="add" title="Tilføj" data-bind="click: vm().add(), disable: vm().searchmode"><i class="fa fa-plus"></i></button>
+                    <button class="remove" title="Slet" data-bind="disable: (vm().selectedId() === 0 || vm().searchmode), click: vm().remove()"><i class="fa fa-minus"></i></button>
                 </div>
                 <div class="buttonset">
-                    <button class="save" title="Gem (⌘S)" data-bind="click: save(), disable: (!vm().isDirty() && !vm().containsDeleted()) || vm().searchmode"><i class="fa fa-check"></i></button>
-                    <button class="refresh" title="Genindlæs (⌘H)" data-bind="click: refetch(), disable: vm().searchmode"><i class="fa fa-refresh"></i></button>
+                    <button class="save" title="Gem (⌘S)" data-bind="click: vm().save(), disable: (!vm().isDirty() && !vm().containsDeleted()) || vm().searchmode"><i class="fa fa-check"></i></button>
+                    <button class="refresh" title="Genindlæs (⌘R)" data-bind="click: vm().refetch(), disable: vm().searchmode"><i class="fa fa-refresh"></i></button>
                 </div>
                 <div class="buttonset">
                     <button class="init_search" title="Start søgning (⌘F)" data-bind="click: initSearch(), disable: vm().searchmode"><i class="fa fa-search"></i></button>
@@ -21,7 +21,7 @@
                     <button class="cancel_search" title="Annuller søgning (esc)" data-bind="click: cancelSearch(), disable: !vm().searchmode">
                         <i class="fa fa-search-minus"></i>
                     </button>
-                </div>-->
+                </div>
             </div>
             <div class="window_controls">
                 <a href="#" class="window_min" title="Minimer vindue"></a>
@@ -34,10 +34,15 @@
         </div>
     </div>
     <div class="window_content">
+        <!--<img src="/FormKit/Public/Images/spinner.gif" data-bind="visible: vm().datatypes().isLoading" />-->
         <table id="FKSYS002_table_001" class="data">
             <thead>
                 <tr>
-                    <th hidden>
+                    <th>
+                    </th>
+                    <th>
+                    </th>
+                    <th >
                         id
                     </th>
                     <th>
@@ -51,23 +56,47 @@
                     </th>
                 </tr>
             </thead>
-            <tbody data-bind="foreach: datatypes">
-                <tr data-bind="css: {active: $parent.isActiveDatatype($data)}, click: $parent.activateDatatype">
+            <tbody data-bind="foreach: vm().datatypes">
+<!--                <tr data-bind="css: {deleted: deleteFlag()}">
                     <td hidden>
                         <span class="id" data-bind="text: id"></span>
                     </td>
                     <td>
-                        <input data-bind="value: name, event: {focus: $parent.activateDatatype, keydown: $parent.isActiveDatatype}" size="8" maxlength="30" />
+                        <input data-bind="value: name, attr:{readonly: deleteFlag()} " size="8" maxlength="30" />
                     </td>
                     <td>
-                        <input data-bind="value: datatype, event: {focus: $parent.activateDatatype, keydown: $parent.isActiveDatatype}" size="15" maxlength="30" />
+                        <input data-bind="value: datatype, attr:{readonly: deleteFlag()}" size="15" maxlength="30" />
                     </td>
                     <td>
-                        <input data-bind="value: description, event: {focus: $parent.activateDatatype, keydown: $parent.isActiveDatatype}" size="50" maxlength="250" />
+                        <input data-bind="value: description, attr:{readonly: deleteFlag()}" size="50" maxlength="250" />
+                    </td>
+                </tr>-->
+                <tr>
+                    <th>
+                        <img src="/FormKit/Public/Images/Icons/appbar.edit.png" height="16px" width="16px" data-bind="visible: isDirty"/>
+                        <img src="/FormKit/Public/Images/Icons/appbar.new.png" height="16px" width="16px" data-bind="visible: isNew"/>
+                        <img src="/FormKit/Public/Images/Icons/appbar.delete.png" height="16px" width="16px" data-bind="visible: isDeleted"/>
+                    </th>
+                    <th>
+                        <button data-bind="click: $delete" >Fjern</button>
+                    </th>
+                    <td >
+                        <span data-bind="text: id"></span>
+                    </td>
+                    <td>
+                        <input data-bind="value: name" size="8" maxlength="30" />
+                    </td>
+                    <td>
+                        <input data-bind="value: datatype" size="15" maxlength="30" />
+                    </td>
+                    <td>
+                        <input data-bind="value: description" size="50" maxlength="250" />
                     </td>
                 </tr>
             </tbody>
         </table>
+        <button data-bind="click: vm().add()">Tilføj</button>
+        
     </div>
     <div class="abs window_bottom">
         <div class="left"></div>

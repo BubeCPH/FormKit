@@ -148,9 +148,9 @@ var JQD = (function ($, window, document, undefined) {
                         ev.preventDefault();
                         ev.stopPropagation();
                     }
-//                    else {
-//                        $(this).attr('target', '_blank');
-//                    }
+                    else {
+                        $(this).attr('target', '_blank');
+                    }
                 });
                 // Make top menus active.
                 d.on('mousedown', 'a.menu_trigger', function () {
@@ -188,57 +188,51 @@ var JQD = (function ($, window, document, undefined) {
                     JQD.util.clear_active_sub();
                 });
                 // Respond to menu-click.
-//                d.on('mousedown', 'a.punkt, a.subpunkt', function () {
-//                    // Get the link's target.
-//                    var x = $(this).attr('href');
-//                    var y = $(x).find('a').attr('href');
-//
-//                    var actionType = x.substr(1, 4);
-//                    var formname = x.substr(6, 100);
-//                    if (actionType === 'dock') {
-//                        if (document.getElementById('window_' + formname) === null) {
-//                            $('<div id="window_' + formname + '" class="abs window"></div>').insertBefore("#bar_top");
-////                            ensure({js: ['/FormKit/JS/' + formname + 'DataService.js', '/FormKit/JS/' + formname + 'ViewModel.js', '/FormKit/JS/' + formname + 'Main.js'], html: '/FormKit/HTML/' + formname + '.html', parent: 'window_' + formname}, function ()
-//                            ensure({js: ['/FormKit/JS/' + formname + 'Main.js'], html: '/FormKit/HTML/' + formname + '.html', parent: 'window_' + formname}, function ()
-//                            {
-////                                window[formname + 'Main' ];
-////                                $(function () {
-////                                    var serviceName = '/FormKit/App/API/';
-////                                    var dataservice = new FKSYS002DataService(serviceName);
-////                                    var FKSYS002VM = new FKSYS002ViewModel(dataservice);
-////                                    FKSYS002VM.activate();
-////                                    ko.applyBindings(FKSYS002VM, $('#window_FKSYS002')[0]);
-////                                });
-//
-//
-//                                $.get('/FormKit/CSS/' + formname + '.css', function (data) {
-//                                    $('#global_dyn_style').append(data);
-//                                });
-//                            });
-//                        }
-//
-//                        // Show the taskbar button.
-//                        if ($(x).is(':hidden')) {
-//                            $(x).remove().appendTo('#dock');
-//                            $(x).find('img.minimize_window').show();
-//                            $(x).show('fast');
-//                        }
-//
-//                        // Bring window to front.
-//                        JQD.util.window_flat();
-//                        $(y).addClass('window_stack').show();
-//
-//                        if ($('ul.menu').is(':visible')) {
-//                            JQD.util.clear_active();
-//                            $(this).addClass('active').next('ul.menu').show();
-//                        }
-//                    } else {
-//                        if ($('ul.menu').is(':visible')) {
-//                            JQD.util.clear_active();
-//                            $(this).addClass('active').next('ul.menu').show();
-//                        }
-//                    }
-//                });
+                d.on('mousedown', 'a.punkt, a.subpunkt', function () {
+                    // Get the link's target.
+                    var x = $(this).attr('href');
+                    var y = $(x).find('a').attr('href');
+
+                    var actionType = x.substr(1, 4);
+                    var formname = x.substr(6, 100);
+                    if (actionType === 'dock') {
+                        if (document.getElementById('window_' + formname) === null) {
+                            $('<div id="window_' + formname + '" class="abs window"></div>').insertBefore("#menubar");
+                            ensure({js: '/FormKit/JS/' + formname + '.js', html: '/FormKit/HTML/' + formname + '.html', parent: 'window_' + formname}, function ()
+                            {
+                                window[formname + '_mvm' ] = new window[formname + '_MasterViewModel' ];
+                                //var FKSYS001_mvm = new FKSYS001_MasterViewModel;
+                                ko.applyBindings(window[formname + '_mvm' ], $('#window_' + formname)[0]);
+
+
+                                $.get('/FormKit/CSS/' + formname + '.css', function (data) {
+                                    $('#global_dyn_style').append(data);
+                                });
+                            });
+                        }
+
+                        // Show the taskbar button.
+                        if ($(x).is(':hidden')) {
+                            $(x).remove().appendTo('#dock');
+                            $(x).find('img.minimize_window').show();
+                            $(x).show('fast');
+                        }
+
+                        // Bring window to front.
+                        JQD.util.window_flat();
+                        $(y).addClass('window_stack').show();
+
+                        if ($('ul.menu').is(':visible')) {
+                            JQD.util.clear_active();
+                            $(this).addClass('active').next('ul.menu').show();
+                        }
+                    } else {
+                        if ($('ul.menu').is(':visible')) {
+                            JQD.util.clear_active();
+                            $(this).addClass('active').next('ul.menu').show();
+                        }
+                    }
+                });
                 // Cancel single-click.
                 d.on('mousedown', 'a.icon', function () {
                     // Highlight the icon.
@@ -475,8 +469,7 @@ var JQD = (function ($, window, document, undefined) {
                     var cellAndRow = $(this).parents('td,tr');
                     var cellIndex = cellAndRow[0].cellIndex;
                     var rowIndex = cellAndRow[1].rowIndex;
-//                    alert(rowIndex+'/'+cellIndex);
-                    switch (event.keyCode) {
+                    switch (event.keyCode) {              
                         case 40:
                             rowIndex = rowIndex + 1;
                             break;
@@ -486,59 +479,58 @@ var JQD = (function ($, window, document, undefined) {
                             break;
                             // up arrow
                     }
-//                    alert(rowIndex+'/'+cellIndex);
-                    target = $('table tr').eq(rowIndex).find('td').eq(cellIndex-1).find("input:text");
+                    target = $('table tr').eq(rowIndex).find('td').eq(cellIndex).find("input:text");
                     if (target !== undefined) {
                         target.focus();
                     }
                 });
-//                d.on('focus', 'table.data tr td input:text', function (e) {
-//
-//                    $(this).select();
-//                    // Clear active state.
-//                    JQD.util.clear_active();
-//                    // Highlight row, ala Mac OS X.
-//
-////                    $(this).closest('tr').addClass('active');
-////                    $(this).closest('td').addClass('active');
-//
-//                    var rowCount = $(this).closest('tbody').find('tr').length;
-//                    var row = $(this).closest('tbody').find('tr.active');
-//                    var rowIndex = row.index();
-//                    if (rowCount > 0) {
-//                        if (rowIndex === 0) {
-//                            $(this).closest('.window_inner').find('button.prev').addClass('inactive');
-//                        }
-//                        else if ($(this).closest('.window_inner').find('button.prev').hasClass('inactive')) {
-//                            $(this).closest('.window_inner').find('button.prev').removeClass('inactive');
-//                        }
-//                        if (rowCount - 1 === rowIndex) {
-//                            $(this).closest('.window_inner').find('button.next').addClass('inactive');
-//                        }
-//                        else if ($(this).closest('.window_inner').find('button.next').hasClass('inactive')) {
-//                            $(this).closest('.window_inner').find('button.next').removeClass('inactive');
-//                        }
-//                    } else {
-//                        $(this).closest('.window_inner').find('button.prev').addClass('inactive');
-//                        $(this).closest('.window_inner').find('button.next').addClass('inactive');
+                d.on('focus', 'table.data tr td input:text', function (e) {
+
+                    $(this).select();
+                    // Clear active state.
+                    JQD.util.clear_active();
+                    // Highlight row, ala Mac OS X.
+
+//                    $(this).closest('tr').addClass('active');
+//                    $(this).closest('td').addClass('active');
+
+                    var rowCount = $(this).closest('tbody').find('tr').length;
+                    var row = $(this).closest('tbody').find('tr.active');
+                    var rowIndex = row.index();
+                    if (rowCount > 0) {
+                        if (rowIndex === 0) {
+                            $(this).closest('.window_inner').find('button.prev').addClass('inactive');
+                        }
+                        else if ($(this).closest('.window_inner').find('button.prev').hasClass('inactive')) {
+                            $(this).closest('.window_inner').find('button.prev').removeClass('inactive');
+                        }
+                        if (rowCount - 1 === rowIndex) {
+                            $(this).closest('.window_inner').find('button.next').addClass('inactive');
+                        }
+                        else if ($(this).closest('.window_inner').find('button.next').hasClass('inactive')) {
+                            $(this).closest('.window_inner').find('button.next').removeClass('inactive');
+                        }
+                    } else {
+                        $(this).closest('.window_inner').find('button.prev').addClass('inactive');
+                        $(this).closest('.window_inner').find('button.next').addClass('inactive');
+                    }
+
+                    var id = $(this).closest('.window_inner').find('tr.active td span.id').text();
+                    var window_id = $(this).closest('.window').attr('id').replace('window_','');
+                    window[window_id + '_mvm' ].vm().selectedId(id);
+
+                    $(this).closest('.window_inner').find('.window_bottom .left').text((rowIndex + 1) + '/' + rowCount);
 //                    }
-//
-//                    var id = $(this).closest('.window_inner').find('tr.active td span.id').text();
-//                    var window_id = $(this).closest('.window').attr('id').replace('window_', '');
-//                    window[window_id + '_mvm' ].vm().selectedId(id);
-//
-//                    $(this).closest('.window_inner').find('.window_bottom .left').text((rowIndex + 1) + '/' + rowCount);
-////                    }
-//                });
-//                d.on('blur', 'table.data tr td input:text', function (e) {
-//                    JQD.util.clear_active();
-//
-//                    var window_id = $(this).closest('.window').attr('id');
-//                    window[window_id.replace('window_', '') + '_mvm' ].vm().selectedId(0);
-//
-//                    $(this).closest('.window_inner').find('.window_bottom .left').text('');
-////                    }
-//                });
+                });
+                d.on('blur', 'table.data tr td input:text', function (e) {
+                    JQD.util.clear_active();
+
+                    var window_id = $(this).closest('.window').attr('id');
+                    window[window_id.replace('window_','') + '_mvm' ].vm().selectedId(0);
+
+                    $(this).closest('.window_inner').find('.window_bottom .left').text('');
+//                    }
+                });
             },
             wallpaper: function () {
                 // Add wallpaper last, to prevent blocking.
@@ -552,8 +544,7 @@ var JQD = (function ($, window, document, undefined) {
             // Clear active states, hide menus.
             //
             clear_active: function () {
-//                $('a.active, tr.active, td.active').removeClass('active');
-                $('a.active').removeClass('active');
+                $('a.active, tr.active, td.active').removeClass('active');
                 $('ul.menu').hide();
             },
             //

@@ -78,7 +78,7 @@ function FKSYS003_ViewModel(initialData, searchmode) {
         if (typeof initialData !== 'undefined') {
             self.fillDatatypes(initialData);
         } else {
-            URI = 'http://localhost/FormKit/App/API/datatypes';
+            URI = 'http://localhost/FormKit/App/API/dataTypes';
             ajaxGet(URI).done(function (data) {
                 self.fillDatatypes(data);
             });

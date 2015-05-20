@@ -1,0 +1,304 @@
+<?php
+
+namespace App\ViewParts;
+?>
+<style>
+    .TAB001 {
+        width: -moz-calc(600px - 2px);
+        width: -webkit-calc(600px - 2px);
+        width: calc(600px - 2px);
+        max-width: -moz-calc(600px - 2px);
+        max-width: -webkit-calc(600px - 2px);
+        max-width: calc(600px - 2px);
+        table-layout: fixed;
+        overflow: scroll;
+    }
+    .TAB001.table-caption,
+    .TAB001.table-footer {
+        width: -moz-calc(600px - 20px);
+        width: -webkit-calc(600px - 20px);
+        width: calc(600px - 20px);
+        max-width: -moz-calc(600px - 20px);
+        max-width: -webkit-calc(600px - 20px);
+        max-width: calc(600px - 20px);
+    }
+    table#TAB001 td {
+        overflow: hidden;
+        /*text-overflow: ellipsis;*/
+        width: auto;
+    }
+    table#TAB001 th.rowhead {
+        width: 10px;
+    }
+    table#TAB001 th.id {
+        width: 20px;
+    }
+    table#TAB001 th.name {
+        width: 100px;
+    }
+    table#TAB001 th.datatype {
+        width: 130px;
+    }
+    table#TAB001 th.description {
+        width: 100%;
+    }
+</style>
+
+<!--<div class="window_inner">
+    <div class="window_top">
+        <div class="nav">
+            <div class="panel">
+                <div class="buttonset">
+                    <button class="add" title="Tilføj" data-bind="click: add(), disable: searchmode"><i class="fa fa-plus"></i></button>
+                    <button class="remove" title="Slet" data-bind="disable: (selectedId() === 0 || searchmode), click: remove()"><i class="fa fa-minus"></i></button>
+                </div>
+            </div>
+            <div class="titel">
+                <span>Datatyper</span>
+            </div>
+        </div>
+    </div>-->
+<div id="FKSYS001">
+    <div class="abs" id="toolbar">
+        <div class="panel">
+            <div class="buttonset">
+                <button class="save" title="Gem (⌘S)" data-bind="click: save()"><i class="fa fa-check"></i> Gem</button>
+            </div>
+            <div class="buttonset">
+                <button class="refresh" title="Genindlæs (⌘R)" data-bind="click: refetch()"><i class="fa fa-refresh"></i> Genindlæs</button>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a class="menu_trigger" href="#">Kalna FormKit</a>
+            </li>
+            <li>
+                <a class="menu_trigger" href="#">Rediger</a>
+            </li>
+            <li>
+                <a class="menu_trigger" href="#">Ops&aelig;tning</a>
+            </li>
+            <li>
+                <a class="menu_trigger" href="#">System</a>
+            </li>
+            <li>
+                <a class="menu_trigger" href="#">Hj&aelig;lp</a>
+            </li>
+        </ul>
+    </div>
+    <div class="TAB001 table-caption">
+        <div class="panel">
+            <div class="buttonset">
+                <button class="add" title="Tilføj række" data-bind="click: addDatatype()"><i class="fa fa-plus"></i></button>
+                <button class="remove" title="Slet valgt række" data-bind="click: removeDatatype()"><i class="fa fa-minus"></i></button>
+            </div>
+        </div>
+        <div class="titel">
+            <span>Datatyper</span>
+        </div>
+    </div>
+    <div class="TAB001 table-body">
+        <table id="TAB001" class="TAB001 data">
+    <!--        <caption>
+                <div class="panel">
+                    <div class="buttonset">
+                        <button class="add" title="Tilføj" data-bind="click: addDatatype()"><i class="fa fa-plus"></i></button>
+                        <button class="remove" title="Slet" data-bind="disable: (selectedDatatype() === 'undefined'), click: removeDatatype()"><i class="fa fa-minus"></i></button>
+                    </div>
+                </div>
+                <div class="titel">
+                    <span>Datatyper</span>
+                </div>
+            </caption>-->
+            <thead>
+                <tr>
+                    <th class="rowhead">
+                    </th>
+    <!--                <th>
+                    </th>-->
+                    <th class="id" hidden>
+                        id
+                    </th>
+                    <th class="name">
+                        Name
+                    </th>
+                    <th class="datatype">
+                        MySQL data type
+                    </th>
+                    <th class="description">
+                        Description
+                    </th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: datatypes">
+                <tr data-bind="click: $parent.selectedDatatype, css: {active: $parent.isSelectedDatatype($data)}">
+                    <th>
+                        <img src="/FormKit/Public/Images/Icons/appbar.edit.png" height="16px" width="16px" data-bind="visible: isDirty"/>
+                        <img src="/FormKit/Public/Images/Icons/appbar.new.png" height="16px" width="16px" data-bind="visible: isNew"/>
+                        <img src="/FormKit/Public/Images/Icons/appbar.delete.png" height="16px" width="16px" data-bind="visible: isDeleted"/>
+                    </th>
+    <!--                <th>
+                        <button data-bind="click: $delete">
+                            <img src="/FormKit/Public/Images/Icons/appbar.delete.png" height="22px" width="22px"/>
+                        </button>
+                    </th>-->
+                    <td  hidden>
+                        <input data-bind="value: id, event: {focus: $parent.selectedDatatype}, selectOnFocus: true" maxlength="30" readonly />
+                    </td>
+                    <td>
+                        <input data-bind="value: name, event: {focus: $parent.selectedDatatype}, selectOnFocus: true" size="8" maxlength="30" />
+                    </td>
+                    <td>
+                        <input data-bind="value: datatype, event: {focus: $parent.selectedDatatype, blur:$parent.selectedDatatype(null)}, selectOnFocus: true" size="15" maxlength="30" />
+                    </td>
+                    <td>
+                        <input data-bind="value: description, event: {focus: $parent.selectedDatatype, blur:$parent.selectedDatatype(null)}, selectOnFocus: true" size="50" maxlength="250" />
+                    </td>
+                </tr>
+            </tbody>
+    <!--        <tfoot>
+                <tr>
+                    <th colspan="5">
+            <div class="left">
+                <span data-bind="text: selectedDatatype() ? selectedDatatype().id : 'Intet valgt'"></span>
+            </div>
+            </th>
+            </tr>
+            </tfoot>-->
+        </table>
+    </div>
+    <div class="TAB001 table-footer">
+        <div class="left"><span data-bind="text: selectedDatatype() ? selectedDatatype().id : 'Intet valgt'"></span></div>
+        <div class="right"></div>
+        <div class="center">TAB001</div>
+    </div>
+    <!--<button data-bind="click: addDatatype">Tilføj</button>-->
+    <div class="abs window_bottom">
+        <div class="left"><span data-bind="text: selectedDatatype() ? selectedDatatype().id : 'Intet valgt'"></span></div>
+        <div class="right"></div>
+        <div class="center">Form: SYS002</div>
+    </div>
+</div>
+<!--</div>-->
+
+<?php
+/*
+  $elements = array();
+
+  ////
+  // An array of 10,000 elements with random string values
+  ////
+  for($i = 0; $i < 10000; $i++) {
+  $elements[] = (string)rand(10000000, 99999999);
+  }
+
+  $time_start = microtime(true);
+
+  ////
+  // for test
+  ////
+  $numb = count($elements);
+  for($i = 0; $i < $numb; $i++) { }
+
+  $time_end = microtime(true);
+  $for_time = $time_end - $time_start;
+
+  $time_start = microtime(true);
+
+  ////
+  // for with count() inside loop test
+  ////
+  for($i = 0; $i < count($elements); $i++) { }
+
+  $time_end = microtime(true);
+  $for_count_time = $time_end - $time_start;
+
+  $time_start = microtime(true);
+
+  ////
+  // for with size_of() inside loop test
+  ////
+  $numb = sizeOf($elements);
+  for($i = 0; $i < $numb; $i++) { }
+
+  $time_end = microtime(true);
+  $for_size_of_time = $time_end - $time_start;
+
+  $time_start = microtime(true);
+
+  ////
+  // foreach test
+  ////
+  foreach($elements as $element) { }
+
+  $time_end = microtime(true);
+  $foreach_time = $time_end - $time_start;
+
+  $time_start = microtime(true);
+
+  ////
+  // foreach key test
+  ////
+  foreach($elements as $key => $element) { }
+
+  $time_end = microtime(true);
+  $foreach_key_time = $time_end - $time_start;
+
+  echo "For took: " . number_format($for_time * 1000, 3) . "ms\n";
+  echo "For with count() took: " . number_format($for_count_time * 1000, 3) . "ms\n";
+  echo "For with sizeOf() took: " . number_format($for_size_of_time * 1000, 3) . "ms\n";
+  echo "Foreach took: " . number_format($foreach_time * 1000, 3) . "ms\n";
+  echo "Foreach with key took: " . number_format($foreach_key_time * 1000, 3) . "ms\n";
+ */
+?>
+<script type="text/javascript">
+
+    function FKSYS001_ViewModel(initialData, searchmode) {
+        var self = this;
+
+        var Datatype = genius.Resource.extend({
+            uniqKey: "id",
+            id: genius.types.number({nullable: true, defaultTo: null}),
+            name: genius.types.string(),
+            datatype: genius.types.string(),
+            description: genius.types.string({nullable: true, defaultTo: null}),
+            url: GLOBAL_API_URL + "dataTypes/:id"
+        });
+        self.datatypes = Datatype.$query();
+
+        self.selectedDatatype = ko.observable();
+
+        self.isSelectedDatatype = function (data) {
+//            console.log('isSelectedDatatype: self.selectedDatatype().id');
+//            self.selectedDatatype() ? '' : self.selectedDatatype(self.datatypes()[0]);
+//            console.log('isSelectedDatatype: ' + self.selectedDatatype().id);
+            return self.selectedDatatype() ? self.selectedDatatype() === data : false;
+        };
+
+        self.addDatatype = function () {
+            self.datatypes.addNew();
+        };
+        self.removeDatatype = function () {
+
+//            self.datatypes.addNew();
+//            self.selectedDatatype() ? console.log('removeDatatype: self.selectedDatatype().id'+self.selectedDatatype().id) : '';
+            self.selectedDatatype() ? self.selectedDatatype().$delete() : '';
+        };
+        self.save = function () {
+            ko.utils.arrayForEach(self.datatypes(), function (item) {
+                if (item.isDirty()) {
+                    item.$save();
+                }
+            });
+        };
+
+        self.refetch = function () {
+//        self.fetchDatatypes();
+            self.datatypes = Datatype.$query();
+//            self.datatypes.valueHasMutated();
+        };
+    }
+
+    var FKSYS001_vm = new FKSYS001_ViewModel;
+    ko.applyBindings(FKSYS001_vm, $('#FKSYS001')[0]);
+</script>

@@ -40,9 +40,12 @@ class REST {
     public $connection;
     public $allow = array();
     public $content_type = "application/json";
+    public $getRequest;
     public $request = array();
+    public $jsonRequest;
     public $data = "";
-    private $dedicatedApiFunctions = ['metadata'];
+    public $errors = [];
+    private $dedicatedApiFunctions = ['metadata','generateModel'];
 
     public function __construct($format = 'object') {
         $this->inputs();
@@ -63,6 +66,7 @@ class REST {
                 $this->PDOformat = \PDO::FETCH_OBJ;
                 break;
         }
+//        var_dump($this->PDOformat);
         $this->connection = new System\DatabaseAbstraction($this->PDOformat);
     }
 
@@ -77,9 +81,14 @@ class REST {
 //        print_r($this->request);
         if (in_array($func, $this->dedicatedApiFunctions) && (int) method_exists($this, $func) > 0) {
             $this->$func();
-        } else {
-            $this->tableData();
-//            $this->response($func, 404); // If the method not exist with in this class "Page not found".
+        } elseif ($this->getRequestMethod() === "GET") {
+            $this->getTableData();
+        } elseif ($this->getRequestMethod() === "POST") {
+            $this->postTableData();
+        } elseif ($this->getRequestMethod() === "PUT") {
+            $this->putTableData();
+        } elseif ($this->getRequestMethod() === "DELETE") {
+            $this->deleteTableData();
         }
     }
 
@@ -87,10 +96,10 @@ class REST {
         return $_SERVER['HTTP_REFERER'];
     }
 
-    public function response($data, $status) {
+    public function response($status, $data = NULL) {
         $this->code = ($status) ? $status : 200;
         $this->setHeaders();
-        echo $data;
+        echo ($data) ? $data : $this->getStatusMessage;
         exit;
     }
 
@@ -100,9 +109,31 @@ class REST {
             200 => 'OK',
             201 => 'Created',
             204 => 'No Content',
+            209 => 'Updated',   //Not standard
+            400 => 'Bad Request',
             404 => 'Not Found',
-            406 => 'Not Acceptable');
+            405 => 'Method Not Allowed',
+            406 => 'Not Acceptable',
+            409 => 'Conflict',
+            480 => 'No such collection',   //Not standard
+            481 => 'No such instance collection',   //Not standard
+            500 => 'Internal Server Error',
+            501 => 'Not Implemented');
         return ($status[$this->code]) ? $status[$this->code] : $status[500];
+    }
+    protected function getErrorTitle($code) {
+        $errorTitle = array(
+            900 => 'General error',
+            901 => 'Value requered',
+            902 => 'Value too long',
+            920 => 'No such collection',
+            921 => 'No such instance collection',
+            930 => 'A delete request shall provide an entity identicator',
+            960 => 'General DBA error');
+        return ($errorTitle[$code]) ? $errorTitle[$code] : NULL;
+    }
+    protected function setError($code, $detail) {
+        $this->errors[] = ['code' => $code, 'title' => $this->getErrorTitle($code), 'detail' => $detail];
     }
 
     public function getRequestMethod() {
@@ -114,26 +145,34 @@ class REST {
 //        print_r($method);
         switch ($this->getRequestMethod()) {
             case "POST":
+                $this->getRequest = $this->cleanInputs($_GET);
                 $this->request = $this->cleanInputs($_POST);
+                $this->jsonRequest = json_decode(file_get_contents("php://input"));
                 break;
             case "GET":
             case "DELETE":
+                $this->getRequest = $this->cleanInputs($_GET);
                 $this->request = $this->cleanInputs($_GET);
                 break;
             case "PUT":
-                parse_str(file_get_contents("php://input"), $this->request);
+                $this->getRequest = $this->cleanInputs($_GET);
+                $file_get_contents = file_get_contents("php://input");
+                parse_str($file_get_contents, $this->request);
                 $this->request = $this->cleanInputs($this->request);
+                $this->jsonRequest = json_decode($file_get_contents);
                 break;
             default:
                 $this->response('', 406);
                 break;
         }
+//        var_dump($this->jsonRequest);
 //        echo "\n";
 //        echo '$this->request' . "\n";
 //        print_r($this->request);
-        $this->request['request'] = explode("/", $this->request['request']);
+        $this->request['request'] = explode("/", $this->getRequest['request']);
+//        var_dump($this->request);
         if (!trim($this->request['request'][0]) == "") {
-            $this->request['function'] = trim(Functions\stringFunctions::transform($this->request['request'][0], Functions\stringFunctions::CAMEL_CASE));
+            $this->request['function'] = trim(Functions\stringFunctions::transform(Functions\stringFunctions::transform($this->request['request'][0], Functions\stringFunctions::UNDER_SCORE), Functions\stringFunctions::CAMEL_CASE));
             if (in_array($this->request['function'], $this->dedicatedApiFunctions)) {
                 array_shift($this->request['request']);
             }

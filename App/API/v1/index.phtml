@@ -2,6 +2,8 @@
 
 defined('DIRSEP') or define('DIRSEP', DIRECTORY_SEPARATOR);
 defined('SITEPATH') or define('SITEPATH', realpath(dirname(__FILE__) . DIRSEP . '..' . DIRSEP . '..' . DIRSEP . '..') . DIRSEP);
+defined('VENDORPATH') or define('VENDORPATH', realpath(SITEPATH) . DIRSEP . 'vendor' . DIRSEP);
+defined('COREPATH') or define('COREPATH', VENDORPATH . 'KalnaBase' . DIRSEP);
 require_once (SITEPATH . 'vendor/autoload.php');
 $api = new \App\API\v1\API('json');
 $api->processApi();

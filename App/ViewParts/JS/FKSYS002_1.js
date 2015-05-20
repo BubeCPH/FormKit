@@ -35,17 +35,6 @@ function Datatype(id, name, datatype, description) {
 
 function FKSYS002_ViewModel(initialData, searchmode) {
     var self = this;
-
-    var datatype = genius.Resource.extend({
-        uniqKey: "id",
-        id: genius.types.number({nullable: true, defaultTo: null}),
-        name: genius.types.string(),
-        datatype: genius.types.string(),
-        description: genius.types.string({nullable: true, defaultTo: null}),
-        url: GLOBAL_API_URL + "dataTypes/:id"
-    });
-//    self.datatypes = datatype.$query();
-
     self.searchmode = searchmode;
     self.datatypes = ko.observableArray();
     self.selectedId = ko.observable(0);
@@ -56,11 +45,10 @@ function FKSYS002_ViewModel(initialData, searchmode) {
                 });
     });
 
-//    var temp_id = -1;
+    var temp_id = -1;
     self.add = function () {
-//        self.datatypes.push(new Datatype(temp_id));
-        self.datatypes.push(new datatype());
-//        temp_id--;
+        self.datatypes.push(new Datatype(temp_id));
+        temp_id--;
     };
     self.remove = function () {
         if (self.selectedId() > 0) {
@@ -72,25 +60,22 @@ function FKSYS002_ViewModel(initialData, searchmode) {
     };
     self.save = function () {
         ko.utils.arrayForEach(self.datatypes(), function (item) {
-            if (item.isDirty()) {
-                item.$save();
+            if (item.dirtyFlag()) {
+                item.commit();
             }
         });
     };
 
     self.update = function (datatype) {
-//        URI = GLOBAL_API_URL + 'dataTypes/' + datatype.id();
-//        var values = {startTime: datatype.startTime(), endTime: registration.endTime(), description: registration.description()};
-//        ajaxPost(URI, values).done(function (data) {
-//            self.fetchRegistrations();
-//        });
-//        self.datatypes = datatype.$query();
+        URI = GLOBAL_API_URL + 'dataTypes/' + datatype.id();
+        var values = {startTime: datatype.startTime(), endTime: registration.endTime(), description: registration.description()};
+        ajaxPost(URI, values).done(function (data) {
+            self.fetchRegistrations();
+        });
     };
-
+    
     self.refetch = function () {
-//        self.fetchDatatypes();
-        self.datatypes = datatype.$query();
-        self.datatypes.valueHasMutated();
+        self.fetchDatatypes();
     };
     self.executeSearch = function () {
         ko.utils.arrayForEach(self.datatypes(), function (item) {
@@ -99,36 +84,36 @@ function FKSYS002_ViewModel(initialData, searchmode) {
     };
 
     self.fetchDatatypes = function (initialData) {
-//        if (typeof initialData !== 'undefined') {
-//            self.fillDatatypes(initialData);
-//        } else {
-//            URI = GLOBAL_API_URL + 'dataTypes';
-//            ajaxGet(URI).done(function (data) {
-//                self.fillDatatypes(data);
-//            });
-//        }
+        if (typeof initialData !== 'undefined') {
+            self.fillDatatypes(initialData);
+        } else {
+            URI = GLOBAL_API_URL + 'dataTypes';
+            ajaxGet(URI).done(function (data) {
+                self.fillDatatypes(data);
+            });
+        }
     };
 
     self.fillDatatypes = function (data) {
-//        self.datatypes.removeAll();
-//        var underlaying = self.datatypes();
-//        for (var i = 0; i < data.length; i++) {
-//            underlaying.push(new Datatype(data[i].id, data[i].name, data[i].datatype, data[i].description));
-//        }
+        self.datatypes.removeAll();
+        var underlaying = self.datatypes();
+        for (var i = 0; i < data.length; i++) {
+            underlaying.push(new Datatype(data[i].id, data[i].name, data[i].datatype, data[i].description));
+        }
         self.datatypes.valueHasMutated();
     };
     self.dirtyItems = ko.computed(function () {
         return ko.utils.arrayFilter(self.datatypes(), function (item) {
-            return true;//item.isDirty();
+            return item.dirtyFlag();
         });
     }, self);
     self.isDirty = ko.computed(function () {
-        return true;//self.dirtyItems().length > 0;
+        return self.dirtyItems().length > 0;
     }, self);
 
     self.deletedItems = ko.computed(function () {
         return ko.utils.arrayFilter(self.datatypes(), function (item) {
-            return true;//item.isDeleted();
+            return item.deleteFlag();
         });
     }, self);
     self.containsDeleted = ko.computed(function () {

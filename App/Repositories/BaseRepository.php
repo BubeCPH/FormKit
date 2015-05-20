@@ -11,9 +11,10 @@ require_once UTILPATH . 'SessionRegistry.php';
 
 class BaseRepository {
 
-    protected $PDOformat;
+    protected $pdoformat;
     protected $format;
     public $connection;
+    public $dba;
     public $registry;
 
     public function __construct($format = 'object') {
@@ -21,19 +22,20 @@ class BaseRepository {
         $this->format = $format;
         switch ($this->format) {
             case 'object':
-                $this->PDOformat = \PDO::FETCH_OBJ;
+                $this->pdoformat = \PDO::FETCH_OBJ;
                 break;
             case 'array':
-                $this->PDOformat = \PDO::FETCH_ASSOC;
+                $this->pdoformat = \PDO::FETCH_ASSOC;
                 break;
             case 'json':
-                $this->PDOformat = \PDO::FETCH_ASSOC;
+                $this->pdoformat = \PDO::FETCH_ASSOC;
                 break;
             default:
-                $this->PDOformat = \PDO::FETCH_OBJ;
+                $this->pdoformat = \PDO::FETCH_OBJ;
                 break;
         }
         $this->connection = System\DatabaseAbstraction::getConnection();
+        $this->dba = new System\DatabaseAbstraction;
     }
 
 }

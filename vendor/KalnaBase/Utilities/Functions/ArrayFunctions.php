@@ -287,7 +287,7 @@ class ArrayFunctions {
     }
 
     public static function castValuesInt($instruction, &$array) {
-//        print_r($instruction);
+//        var_dump($instruction);
         foreach (array_keys($array) as $key) {
             # Working with references here to avoid copying the value.
             $value = &$array[$key];
@@ -299,7 +299,7 @@ class ArrayFunctions {
 //            }
             if (!is_array($value) && !empty($instruction['boolean']) && in_array($key, $instruction['boolean']) && in_array($value, ['true', 'false'])) {
 //            print_r($key . '=>' . $value . '=>' . 'boolean<br>' . "\n");
-                if ($value === 'false') {
+                if (strtolower($value) === 'false') {
                     $newValue = FALSE;
                 } else {
                     $newValue = TRUE;
@@ -311,8 +311,11 @@ class ArrayFunctions {
             } elseif (!is_array($value) && !empty($instruction['float']) && in_array($key, $instruction['float']) && is_float($value)) {
 //            print_r($key . '=>' . $value . '=>' . 'float<br>' . "\n");
                 $newValue = (float) $value;
+            } elseif (!is_array($value) && !empty($instruction['string']) && in_array($key, $instruction['string']) && is_float($value)) {
+//            print_r($key . '=>' . $value . '=>' . 'string<br>' . "\n");
+                $newValue = (string) $value;
             } else {
-//            print_r($value . '=>' . 'no match' . "\n");
+//            print_r($key . '=>' . $value . '=>' . 'no match<br>' . "\n");
                 $newValue = $value;
             }
             # Work recursively
@@ -331,6 +334,9 @@ class ArrayFunctions {
     }
 
     public static function castValues($instruction, $array) {
+        if(!is_array($array)){
+            $array[] = $array;
+        }
         self::castValuesInt($instruction, $array);
         return $array;
     }
